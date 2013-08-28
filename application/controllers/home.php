@@ -5,8 +5,7 @@ class Home extends CI_Controller {
 	/**
 	 * Index page for this controller. 
 	 *
-	 * Maps to the following URL
-	 * 		http://frosoco.stanford.edu/
+	 * URL: /
 	 */
 	public function index()
 	{
@@ -14,6 +13,17 @@ class Home extends CI_Controller {
         $this->template->stylesheet->add('assets/css/construction.css');
 		$this->template->content->view('maintenence/under_construction');
 		$this->template->publish();
+	}
+
+	/**
+	 * Function for testing things
+	 *
+	 * URL: /home/test
+	 */
+	public function test()
+	{
+		$username = $_SERVER['REMOTE_USER'];
+		echo $username;
 	}
 
 }
