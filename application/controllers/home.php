@@ -9,6 +9,7 @@ class Home extends CI_Controller {
 	 */
 	public function index()
 	{
+		session_start();
 		$this->template->title = 'Under Construction';
         $this->template->stylesheet->add('assets/css/construction.css');
 		$this->template->content->view('maintenence/under_construction');
@@ -22,8 +23,13 @@ class Home extends CI_Controller {
 	 */
 	public function test()
 	{
-		$username = $_SERVER['REMOTE_USER'];
-		echo $username;
+		include_once("stanford.authorization.php");
+		$auth = new StanfordAuthorization();
+		try {
+			$auth->require_webauth();
+		} catch (Exception $e) {
+			echo $e;
+		}
 	}
 
 }
