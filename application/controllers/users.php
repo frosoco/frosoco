@@ -16,10 +16,12 @@ class Users extends CI_Controller {
 
 		$users = new User();
 		$users->get();
-		foreach ($users as $user)
-		{
-			echo $user->first_name . ' ' . $user->last_name . '<br />';
-		}
+		$data['users'] = $users;
+
+        $this->template->title = 'Users';
+ 		$this->template->content->view('users/index', $data);
+		$this->template->publish();
+
 	}
 
 	/**
@@ -29,7 +31,14 @@ class Users extends CI_Controller {
 	 */
 	public function view($id)
 	{
-		echo $id;
+
+		$user = new User($id);
+		$data['user'] = $user;
+
+        $this->template->title = $user->first_name . ' ' . $user->last_name;
+ 		$this->template->content->view('users/view', $data);
+		$this->template->publish();
+
 	}
 
 	private function authorized() {

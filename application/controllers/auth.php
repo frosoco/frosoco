@@ -9,7 +9,8 @@ class Auth extends CI_Controller {
 	 */
 	public function index()
 	{
-		echo 'hi';
+		print_r($this->session->all_userdata());
+		print_r($this->session->userdata('user'));
 	}
 
 	/**
@@ -19,6 +20,7 @@ class Auth extends CI_Controller {
 	 */
 	public function login()
 	{
+		session_start();
 		// Punts to a directory for WebAuth to do its thing
 		header('Location: /login');
 	}
@@ -30,8 +32,10 @@ class Auth extends CI_Controller {
 	 */
 	public function success()
 	{
+
+		// We're going to leverage native sessions
 		session_start();
-		
+
 		// Check if the database has the user
 		$user = new User();
 		$user->where('sunet', $_SESSION['WEBAUTH_USER']);
@@ -39,16 +43,19 @@ class Auth extends CI_Controller {
 
 		// If it doesn't have the user, create a new entry for them
 		if (!$user->exists()) {
-			$user->sunet = $_SESSION['WEBAUTH_USER'];
-			$user->save();
+			//header('Location: /');
+			//$user->sunet = $_SESSION['WEBAUTH_USER'];
+			//$user->save();
 		}
 
 		// Keep the user in our session
 		$this->session->set_userdata('id', $user->id);
-		session_destroy();
+		$this->session->set_userdata('first_name', $user->first_name);
+		$this->session->set_userdata('role', $user->role);
 
 		// Now redirect somewhere useful
 		header('Location: /');
+
 	}
 
 	/**

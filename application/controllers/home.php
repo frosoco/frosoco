@@ -9,7 +9,6 @@ class Home extends CI_Controller {
 	 */
 	public function index()
 	{
-		session_start();
 		$this->template->title = 'Under Construction';
         $this->template->stylesheet->add('assets/css/construction.css');
 		$this->template->content->view('maintenence/under_construction');
