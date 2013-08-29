@@ -31,9 +31,18 @@ class Auth extends CI_Controller {
 	public function success()
 	{
 		session_start();
-		$this->session->set_userdata('sunet',$_SESSION['WEBAUTH_USER']);
+		
+		// Check if the database has the user
+		$user = new User();
+		$user->get_where(array('sunet' => $_SESSION['WEBAUTH_USER']));
+
+		// If it doesn't have the user, create a new entry for them
+		if (!$this->exists()) {
+			$user->sunet = $_SESSION['WEBAUTH_USER'];
+		}
+
+		$this->session->set_userdata('id', $user->id);
 		session_destroy();
-		print_r($this->session->all_userdata());
 	}
 
 	/**
