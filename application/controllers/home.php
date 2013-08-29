@@ -51,6 +51,18 @@ class Home extends CI_Controller {
 		$this->template->publish();
 	}
 
+	/**
+	 * Arbitrary photos and stuff
+	 *
+	 * URL: /home/photos
+	 */
+	public function photos()
+	{
+		$this->template->title = 'Photos';
+		$this->template->content->view('static/photos');
+		$this->template->publish();
+	}
+
 }
 
 /* End of file home.php */

@@ -25,6 +25,7 @@
     				<ul class="nav navbar-nav navbar-right">
     					<li><a href="/home/location">Location</a></li>
     					<li><a href="/events">Events</a></li>
+       					<li><a href="/home/photos">Photos</a></li>
     					<li class="dropdown">
     						<a class="dropdown-toggle" data-toggle="dropdown" href="#">People</a>
     						<ul class="dropdown-menu">
