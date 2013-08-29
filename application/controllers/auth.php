@@ -34,15 +34,21 @@ class Auth extends CI_Controller {
 		
 		// Check if the database has the user
 		$user = new User();
-		$user->get_where(array('sunet' => $_SESSION['WEBAUTH_USER']));
+		$user->where('sunet', $_SESSION['WEBAUTH_USER']);
+		$user->get();
 
 		// If it doesn't have the user, create a new entry for them
-		if (!$this->exists()) {
+		if (!$user->exists()) {
 			$user->sunet = $_SESSION['WEBAUTH_USER'];
+			$user->save();
 		}
 
+		// Keep the user in our session
 		$this->session->set_userdata('id', $user->id);
 		session_destroy();
+
+		// Now redirect somewhere useful
+		header('Location: /');
 	}
 
 	/**
@@ -52,6 +58,7 @@ class Auth extends CI_Controller {
 	 */
 	public function logout()
 	{
+		$this->session->sess_destroy();
 		include_once("stanford.authorization.php");
 		StanfordAuthorization::force_webauth_logout();
 	}
