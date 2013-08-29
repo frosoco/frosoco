@@ -10,6 +10,16 @@ class Events extends CI_Controller {
 	public function index() 
 	{
 
+		// Load all of the available events
+		$event = new Event();
+		$event->get();
+		$data['events'] = $event;
+
+		// Create the view
+		$this->template->title = 'Events';
+		$this->template->content->view('events/index', $data);
+		$this->template->publish();
+
 	}
 
 	/**

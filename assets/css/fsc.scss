@@ -1,6 +1,54 @@
 .navbar {
-	opacity: 0.9;
-}
+  opacity: 0.9; }
+
 #content {
-	margin-top: 80px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+p {
+	margin: 15px 0px;
+	line-height: 1.8em;
+}
+
+.profile {
+	margin-top: 30px;
+}
+
+.caption {
+	padding: 5px 10px;
+	font-size: 0.8em;
+	text-align: center;
+}
+
+.events {
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+.event {
+	display: inline-block;
+	width: 280px;
+	border: 1px solid #CCC;
+}
+
+.event-details {
+	margin: 10px 0px;
+}
+
+.event-header {
+	padding: 4px 10px;
+}
+
+.event-title {
+	font-weight: bold;
+}
+
+.event-host {
+	margin-top: 5px;
+}
+
+.event-description {
+	margin-top: 5px;
+	padding: 4px 10px;
 }

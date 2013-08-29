@@ -23,8 +23,19 @@
 			  	</div>
 		  	  	<div class="collapse navbar-collapse navbar-ex1-collapse">
     				<ul class="nav navbar-nav navbar-right">
+    					<li><a href="/home/location">Location</a></li>
+    					<li><a href="/events">Events</a></li>
+    					<li class="dropdown">
+    						<a class="dropdown-toggle" data-toggle="dropdown" href="#">People</a>
+    						<ul class="dropdown-menu">
+		      					<? if ($this->session->userdata('id')) { ?>
+		      					<li><a href="/users">Residents</a></li>
+		      					<? } ?>
+		      					<li><a href="/home/staff">Staff</a></li>
+		      					<li><a href="/home/seniorstaff">Senior Staff</a></li>
+		      				</ul>
+						</li>
       					<? if ($this->session->userdata('id')) { ?>
-      					<li><a href="/users">People</a></li>
       					<li class="dropdown">
 	      					<a class="dropdown-toggle" data-toggle="dropdown" href="#"><? echo $this->session->userdata('first_name'); ?></a>
 	      					<ul class="dropdown-menu">

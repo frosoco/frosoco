@@ -15,6 +15,8 @@ class Users extends CI_Controller {
 		}
 
 		$users = new User();
+		$users->order_by("last_name", "asc");
+		$users->order_by("first_name", "asc");
 		$users->get();
 		$data['users'] = $users;
 
@@ -31,6 +33,10 @@ class Users extends CI_Controller {
 	 */
 	public function view($id)
 	{
+
+		if (!$this->authorized()) {
+			header('Location: /auth/login');
+		}
 
 		$user = new User($id);
 		$data['user'] = $user;

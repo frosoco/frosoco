@@ -16,19 +16,39 @@ class Home extends CI_Controller {
 	}
 
 	/**
-	 * Function for testing things
+	 * Location information.
 	 *
-	 * URL: /home/test
+	 * URL: /home/location
 	 */
-	public function test()
+	public function location()
 	{
-		include_once("stanford.authorization.php");
-		$auth = new StanfordAuthorization();
-		try {
-			$auth->require_webauth();
-		} catch (Exception $e) {
-			echo $e;
-		}
+		$this->template->title = 'Location';
+		$this->template->content->view('static/location');
+		$this->template->publish();
+	}
+
+	/**
+	 * Staff information
+	 *
+	 * URL: /home/staff
+	 */
+	public function staff()
+	{
+		$this->template->title = 'Staff';
+		$this->template->content->view('static/staff');
+		$this->template->publish();
+	}
+
+	/**
+	 * Senior staff information
+	 *
+	 * URL: /home/seniorstaff
+	 */
+	public function seniorstaff()
+	{
+		$this->template->title = 'Senior Staff';
+		$this->template->content->view('static/seniorstaff');
+		$this->template->publish();
 	}
 
 }

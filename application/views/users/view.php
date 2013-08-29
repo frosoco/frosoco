@@ -1,3 +1,4 @@
+<div class="profile">
 <div class="row">
 	<div class="col-md-4">
 		<? if ($user->photo == null) { ?>
@@ -9,4 +10,5 @@
 		<h4><? echo $user->sunet;?>@stanford.edu</h4>
 	</div>
 	<div class="col-md-8">Feed here</div>
+</div>
 </div>
