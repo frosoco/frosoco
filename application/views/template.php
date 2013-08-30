@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title><?php echo $this->template->title->default("FroSoCo"); ?></title>
+		<title><?php echo $this->template->title->default("FroSoCo"); ?> | FroSoCo</title>
 		<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
 		<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
 		<link href="/assets/css/fsc.css" rel="stylesheet">
@@ -19,13 +19,12 @@
 				    <span class="icon-bar"></span>
 		    		<span class="icon-bar"></span>
 				    </button>
-				    <a class="navbar-brand" href="/">FroSoCo</a>
+				    <a class="navbar-brand logo" href="/"><img src="/assets/images/logo.png" /></a>
 			  	</div>
 		  	  	<div class="collapse navbar-collapse navbar-ex1-collapse">
     				<ul class="nav navbar-nav navbar-right">
     					<li><a href="/home/location">Location</a></li>
     					<li><a href="/events">Events</a></li>
-       					<li><a href="/home/photos">Photos</a></li>
     					<li class="dropdown">
     						<a class="dropdown-toggle" data-toggle="dropdown" href="#">People</a>
     						<ul class="dropdown-menu">
@@ -51,7 +50,7 @@
 			  	</div>
 			  </div>
 		</nav>
-		<div class="container" id="content">
+		<div id="content">
 		<?php echo $this->template->content; ?>
 		</div>
 	</body>

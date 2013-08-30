@@ -1,3 +1,4 @@
+<div class="container">
 <div class="page-header">
 	<h1>Residents</h1>
 </div>
@@ -20,6 +21,7 @@
 	</tr>
 	<? } ?>
 </table>
+</div>
 <script>
 $('#user-search').keyup(function() {
 	var query = $(this).val().toLowerCase();

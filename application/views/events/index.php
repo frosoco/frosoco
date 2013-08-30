@@ -1,7 +1,7 @@
+<div class="container">
 <div class="page-header">
 	<h1>Events</h1>
 </div>
-<h3>This Week</h3>
 <div class="events">
 <? foreach ($events as $event)  { ?>
 	<div class="event">
@@ -18,7 +18,4 @@
 	</div>
 <? } ?>
 </div>
-<h3>Future Events</h3>
-<div class="events">
-
 </div>

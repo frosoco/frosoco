@@ -10,7 +10,18 @@ class Events extends CI_Controller {
 	public function index() 
 	{
 
+		/*
 		// Load all of the available events
+		$current_event = new Event();
+		$current_event->get();
+		$data['current'] = $current_event;
+
+		// Get future events
+		$future_event = new Event();
+		$future_event->get();
+		$data['future'] = $future_event;
+		*/
+
 		$event = new Event();
 		$event->get();
 		$data['events'] = $event;
