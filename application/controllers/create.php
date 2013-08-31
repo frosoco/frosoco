@@ -17,4 +17,31 @@ class Create extends CI_Controller {
 
 	}
 
+	/**
+	 * Form for creating an event
+	 *
+	 * Route: /create/event
+	 */
+	public function event()
+	{
+
+		// Create the view
+		$this->template->title = 'Create Event';
+        $this->template->stylesheet->add('assets/css/bootstrap-datetimepicker.min.css');
+        $this->template->javascript->add('assets/js/bootstrap-datetimepicker.min.js');
+		$this->template->content->view('create/event');
+		$this->template->publish();		
+
+	}
+
+	public function post()
+	{
+
+		// Create the view
+		$this->template->title = 'Create Post';
+		$this->template->content->view('create/post');
+		$this->template->publish();		
+
+	}
+
 }

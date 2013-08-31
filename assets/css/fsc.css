@@ -1,3 +1,6 @@
+html {
+  font-family: 'Open Sans', sans-serif; }
+
 .photos img {
   height: 385px;
   margin-right: 2px;
@@ -80,3 +83,18 @@ p {
 
 .profile {
   margin-top: 60px; }
+
+.crcard {
+  border: 1px solid #CCC;
+  padding: 10px 20px;
+  text-align: center; }
+  .crcard span.glyphicon {
+    font-size: 5em; }
+  .crcard .crcard-title {
+    margin-top: 10px;
+    font-size: 2em; }
+  .crcard:hover {
+    background-color: #EFF; }
+
+.crevent-timepicker {
+  top: 0px; }

@@ -50,6 +50,9 @@ class Users extends CI_Controller {
 
 	}
 
+	/**
+	 * Used as the action target for a profile picture upload
+	 */
 	public function upload_profile()
 	{
 		
