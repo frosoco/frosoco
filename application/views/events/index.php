@@ -14,6 +14,9 @@
 			<div class="event-description">
 				<? echo $event->description; ?>
 			</div>
+			<div class="event-buttons">
+				<a href="#"><button type="button" class="btn btn-default">Sign up</button></a>
+			</div>
 		</div>
 	</div>
 <? } ?>

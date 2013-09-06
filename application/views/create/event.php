@@ -2,31 +2,31 @@
 	<div class="page-header">
 		<h1>Create Event</h1>
 	</div>
-	<form class="form-horizontal" role="form">
+	<form class="form-horizontal" role="form" action="/events/add" method="POST">
 		<div class="form-group">
 			<label for="name" class="col-lg-2 control-label">Event name</label>
 			<div class="col-lg-3">
-				<input type="text" class="form-control" id="name" placeholder="Name">
+				<input type="text" class="form-control" name="name" placeholder="Name">
 			</div>
 		</div>
 		<div class="form-group">
 			<label for="name" class="col-lg-2 control-label">Start time</label>
 			<div class="col-lg-3 input-group settime">
-				<input data-format="MM/dd/yyyy HH:mm:ss PP" class="form-control" type="text">
+				<input data-format="MM/dd/yyyy HH:mm:ss PP" class="form-control" name="start" type="text">
 				<span class="crevent-timepicker input-group-addon add-on glyphicon glyphicon-calendar"></span>
 			</div>
 		</div>
 		<div class="form-group">
 			<label for="name" class="col-lg-2 control-label">End time</label>
 			<div class="col-lg-3 input-group settime">
-				<input data-format="MM/dd/yyyy HH:mm:ss PP" class="form-control" type="text">
+				<input data-format="MM/dd/yyyy HH:mm:ss PP" class="form-control" name="end" type="text">
 				<span class="crevent-timepicker input-group-addon add-on glyphicon glyphicon-calendar"></span>
 			</div>
 		</div>
 		<div class="form-group">
 			<label for="description" class="col-lg-2 control-label">Description</label>
 			<div class="col-lg-10">
-				<textarea class="form-control" rows="5" placeholder="Description"></textarea>
+				<textarea class="form-control" rows="5" placeholder="Description" name="description"></textarea>
 			</div>
 		</div>
 		<div class="form-group">
@@ -38,7 +38,7 @@
 </div>
 <script>
 	$('.settime').datetimepicker({
-		format: 'MM/dd/yyyy hh:mm:ss',
+		format: 'yyyy-MM-dd hh:mm:ss',
 		language: 'en',
 		pick12HourFormat: true
 	});

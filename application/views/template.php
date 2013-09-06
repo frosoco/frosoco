@@ -42,6 +42,7 @@
 	      					<a class="dropdown-toggle" data-toggle="dropdown" href="#"><? echo $this->session->userdata('first_name'); ?></a>
 	      					<ul class="dropdown-menu">
 	      						<li><a href="/users/view/<? echo $this->session->userdata('id'); ?>">Profile</a></li>
+	      						<li><a href="/create/">Create</a></li>
 	      						<li><a href="/auth/logout">Logout</a></li>
 	      					</ul>
 	      				</div>

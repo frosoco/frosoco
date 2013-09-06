@@ -40,7 +40,14 @@ class Events extends CI_Controller {
 	 */
 	public function view($id)
 	{
-		echo $id;
+
+		$data['id'] = $id;
+
+		// Create the view
+		$this->template->title = 'Events';
+		$this->template->content->view('events/view', $data);
+		$this->template->publish();
+
 	}
 
 
@@ -51,6 +58,20 @@ class Events extends CI_Controller {
 	 */
 	public function add()
 	{
+
+		// Get the POST parameters
+		$e = new Event();
+		$e->name = $this->input->post('name');
+		
+		$e->start = date("Y-m-d H:i:s", strtotime($this->input->post('start')));		
+		$e->end = date("Y-m-d H:i:s", strtotime($this->input->post('end')));
+
+		$e->user_id = $this->session->userdata('id');
+		$e->description = $this->input->post('description');
+		$e->save(); 
+
+		// Redirect to page for that event
+		header('Location: /events/view/' . $e->id);
 
 	}
 

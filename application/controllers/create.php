@@ -10,6 +10,10 @@ class Create extends CI_Controller {
 	public function index() 
 	{
 
+		if (!$this->authorized()) {
+			header('Location: /login');
+		}
+
 		// Create the view
 		$this->template->title = 'Create';
 		$this->template->content->view('create/index');
@@ -25,6 +29,10 @@ class Create extends CI_Controller {
 	public function event()
 	{
 
+		if (!$this->authorized()) {
+			header('Location: /login');
+		}
+
 		// Create the view
 		$this->template->title = 'Create Event';
         $this->template->stylesheet->add('assets/css/bootstrap-datetimepicker.min.css');
@@ -37,11 +45,24 @@ class Create extends CI_Controller {
 	public function post()
 	{
 
+		if (!$this->authorized()) {
+			header('Location: /login');
+		}
+
 		// Create the view
 		$this->template->title = 'Create Post';
 		$this->template->content->view('create/post');
 		$this->template->publish();		
 
+	}
+
+	/**
+	 * Checks to see if a user is authorized based on session storage
+	 */
+	private function authorized() {
+		if (!$this->session->userdata('id')) {
+			return false;
+		} return true;
 	}
 
 }
