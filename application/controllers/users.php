@@ -45,6 +45,9 @@ class Users extends CI_Controller {
 		$data['profile_pic'] = $upload->url;
 
         $this->template->title = $user->first_name . ' ' . $user->last_name;
+        $this->template->javascript->add('assets/js/vendor/jquery.ui.widget.js');
+        $this->template->javascript->add('assets/js/jquery.iframe-transport.js');
+        $this->template->javascript->add('assets/js/jquery.fileupload.js');
  		$this->template->content->view('users/view', $data);
 		$this->template->publish();
 
@@ -60,6 +63,8 @@ class Users extends CI_Controller {
 		$config['upload_path'] = './uploads/profiles';
 		$config['allowed_types'] = 'gif|jpg|jpeg|png';
 		$this->upload->initialize($config);
+
+		print_r($this->upload->data());
 		
 		// Check to see if it is an upload
 		if (!$this->upload->do_upload()) 
@@ -71,18 +76,19 @@ class Users extends CI_Controller {
 		{
 			
 			$data = $this->upload->data();
+			print_r($data);
 			
 			$upload = new Upload();
 			$upload->url = '/uploads/profiles/' . $data['file_name'];
-			$upload->user_id = $this->session->userdata('id');
+			$upload->user_id = $data['userid'];
 			$upload_id = $upload->save();
 
 			$user = new User();
-			$user->get_by_id($this->session->userdata('id'));
+			$user->get_by_id($data['userid']);
 			$user->photo_id = $upload_id;
 			$user->save();
 
-			header('Location: /users/view/' . $this->session->userdata('id'));
+			// header('Location: /users/view/' . $data['userid']);
 
 		}
 

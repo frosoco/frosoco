@@ -2,8 +2,8 @@
 
 class Event extends DataMapper {
 
-	var $has_one = array("user");
-	var $has_many = array("signup");
+	var $has_one = array('user');
+	var $has_many = array('signup');
 	
 	function __construct($id = NULL)
 	{

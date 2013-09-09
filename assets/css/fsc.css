@@ -1,5 +1,5 @@
-html {
-  font-family: 'Open Sans', sans-serif; }
+body {
+  background-color: #FCFCFC; }
 
 .photos img {
   height: 385px;
@@ -28,11 +28,14 @@ p {
 .events {
   margin-top: 30px;
   margin-bottom: 30px; }
+  .events a {
+    color: black;
+    text-decoration: none; }
 
 .event {
   display: inline-block;
   width: 280px;
-  border: 1px solid #CCC; }
+  background-color: white; }
 
 .event-details {
   margin: 10px 0px; }
@@ -52,6 +55,51 @@ p {
 
 .event-buttons {
   margin: 8px; }
+
+.event-si-container {
+  background-color: white;
+  margin: 20px 0px 10px 0px; }
+
+.event-si-picture {
+  width: 250px;
+  height: 250px; }
+  .event-si-picture img {
+    width: 100%; }
+
+.event-si-details {
+  margin-top: 15px; }
+  .event-si-details .event-si-name {
+    font-weight: 400;
+    font-size: 2em; }
+  .event-si-details .event-si-time {
+    margin-top: 10px;
+    font-weight: 300; }
+    .event-si-details .event-si-time span {
+      margin-right: 10px; }
+  .event-si-details .event-si-location {
+    margin-top: 10px;
+    font-weight: 300; }
+    .event-si-details .event-si-location span {
+      margin-right: 10px; }
+  .event-si-details .event-si-description {
+    margin-top: 10px;
+    font-weight: 300;
+    max-height: 70px;
+    min-height: 70px; }
+    .event-si-details .event-si-description span {
+      margin-right: 10px; }
+
+.event-si-actions {
+  margin-top: 5px; }
+  .event-si-actions button {
+    margin-right: 10px; }
+  .event-si-actions i#action-spinner {
+    display: none; }
+
+.event-si-creator {
+  margin-top: 15px; }
+  .event-si-creator img {
+    width: 120px; }
 
 .highlight {
   margin-top: 40px;
@@ -82,7 +130,7 @@ p {
   position: absolute;
   top: -18px; }
   .logo img {
-    width: 150px; }
+    height: 50px; }
 
 .profile {
   margin-top: 60px; }

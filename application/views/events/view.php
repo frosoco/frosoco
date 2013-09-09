@@ -1,22 +1,46 @@
 <div class="container">
-<div class="profile">
-<div class="row">
-	<div class="col-md-4">
-		<? if ($pic == null) { ?>
-		<img width="100%" src="/assets/images/default-event.jpg" />
-		<? } else { ?>
-		<img height="350px" width="350px" src="<? echo $image; ?>" />
-		<? } ?>
-		<h2>Title</h2>
-		<h4>Subtitle</h4>
-		<!-- <form method="post" action="/users/upload_profile" enctype="multipart/form-data" />
-			<input type="file" name="userfile" size="20" />
-			<input type="submit" value="upload" />
-		</form> -->
-	</div>
-	<div class="col-md-8">
-		Attendees
+
+<div class="event-si-container">
+	<div class="row">
+		<div class="col-md-3">
+			<div class="event-si-picture">
+				<img src="https://sphotos-a-pao.xx.fbcdn.net/hphotos-ash4/310245_436163156480251_114456726_n.jpg" />
+			</div>
+		</div>
+		<div class="col-md-6">
+			<div class="event-si-details">
+				<div class="event-si-name"><? echo $event->name; ?></div>
+				<div class="event-si-time"><span class="glyphicon glyphicon-time"></span><? echo $event->start; ?> to <? echo $event->end; ?></div>
+				<div class="event-si-location"><span class="glyphicon glyphicon-globe"></span><? echo $event->location; ?></div>
+				<div class="event-si-description"><? echo $event->description; ?></div>
+				<div class="event-si-actions">
+					<? if ($signedup) { ?>
+						<button type="button" class="btn btn-success" disabled="disabled">Signed up!</button>
+					<? } else { ?>
+						<button type="button" id="signup" class="btn btn-default">Sign up</button>
+					<? } ?>
+					<button type="button" id="contact" class="btn btn-default">Contact organizer</button>
+					<i style="display: none;" id="action-spinner" class="icon-spinner icon-spin icon-large"></i>
+				</div>
+			</div>
+		</div>
 	</div>
 </div>
+
+<div class="event-si-attendees">
+<? foreach ($event->signup->get()->user->get() as $user) { ?>
+	<li><? echo $user->first_name; ?></li>
+<? } ?>
 </div>
+
+<script>
+	$('#signup').click(function() {
+		$('#action-spinner').show();
+		$.post("/events/signup", { event_id: <? echo $event->id; ?>}, function(data) {
+			$('#action-spinner').hide();
+			$('#signup').removeClass('btn-default').addClass('btn-success').attr('disabled','disabled').text('Signed up!');
+		});
+	});
+</script>
+
 </div>

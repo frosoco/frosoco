@@ -1,5 +1,7 @@
 html {
-	font-family: 'Open Sans', sans-serif;
+}
+body {
+	background-color: #FCFCFC;
 }
 .photos {
 	img {
@@ -35,12 +37,19 @@ p {
 .events {
 	margin-top: 30px;
 	margin-bottom: 30px;
+	a {
+		color: black;
+		text-decoration: none;
+	}
 }
 
 .event {
 	display: inline-block;
 	width: 280px;
-	border: 1px solid #CCC;
+	background-color: white;
+	&:hover {
+
+	}
 }
 
 .event-details {
@@ -66,6 +75,67 @@ p {
 
 .event-buttons {
 	margin: 8px;
+}
+
+.event-si-container {
+	background-color: white;
+	margin: 20px 0px 10px 0px;
+}
+
+.event-si-picture {
+	width: 250px;
+	height: 250px;
+	img {
+		width: 100%;
+	}
+}
+
+.event-si-details {
+	margin-top: 15px;
+	.event-si-name {
+		font-weight: 400;
+		font-size: 2em;
+	}
+	.event-si-time {
+		margin-top: 10px;
+		font-weight: 300;
+		span {
+			margin-right: 10px;
+		}
+	}
+	.event-si-location {
+		margin-top: 10px;
+		font-weight: 300;
+		span {
+			margin-right: 10px;
+		}
+	}
+	.event-si-description {
+		margin-top: 10px;
+		font-weight: 300;
+		max-height: 70px;
+		min-height: 70px;
+		span {
+			margin-right: 10px;
+		}
+	}
+}
+
+.event-si-actions {
+	margin-top: 5px;
+	button {
+		margin-right: 10px;
+	}
+	i#action-spinner {
+		display: none;	
+	}
+}
+
+.event-si-creator {
+	margin-top: 15px;
+	img {
+		width: 120px;
+	}
 }
 
 .highlight {
@@ -108,7 +178,7 @@ p {
 	position: absolute;
 	top: -18px;
 	img {
-		width: 150px;
+		height: 50px;
 	}
 }
 
@@ -131,6 +201,7 @@ p {
 		background-color: #EFF;
 	}
 }
+
 
 .crevent-timepicker {
 	top: 0px;

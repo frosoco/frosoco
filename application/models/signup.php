@@ -2,7 +2,7 @@
 
 class Signup extends DataMapper {
 
-	var $has_one = array("event");
+	var $has_one = array('event', 'user');
 	
 	function __construct($id = NULL)
 	{

@@ -4,6 +4,7 @@
 </div>
 <div class="events">
 <? foreach ($events as $event)  { ?>
+	<a href="/events/view/<? echo $event->id; ?>">
 	<div class="event">
 		<img width="100%" src="http://farm8.staticflickr.com/7309/9533422213_6cafb0b578_n.jpg" />
 		<div class="event-details">
@@ -19,6 +20,7 @@
 			</div>
 		</div>
 	</div>
+	</a>
 <? } ?>
 </div>
 </div>

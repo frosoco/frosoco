@@ -24,6 +24,12 @@
 			</div>
 		</div>
 		<div class="form-group">
+			<label for="location" class="col-lg-2 control-label">Location</label>
+			<div class="col-lg-3">
+				<input type="text" class="form-control" name="location" placeholder="Location">
+			</div>
+		</div>
+		<div class="form-group">
 			<label for="description" class="col-lg-2 control-label">Description</label>
 			<div class="col-lg-10">
 				<textarea class="form-control" rows="5" placeholder="Description" name="description"></textarea>

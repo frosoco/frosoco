@@ -2,7 +2,7 @@
 
 class User extends DataMapper {
 	
-	var $has_many = array('event', 'upload');
+	var $has_many = array('event', 'upload', 'signup');
 
 	function __construct($id = NULL)
 	{
