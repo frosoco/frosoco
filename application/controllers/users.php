@@ -40,9 +40,7 @@ class Users extends CI_Controller {
 
 		$user = new User($id);
 		$data['user'] = $user;
-
-		$upload = new Upload($user->photo_id);
-		$data['profile_pic'] = $upload->url;
+		$data['profile_pic'] = $user->getPhoto();
 
         $this->template->title = $user->first_name . ' ' . $user->last_name;
         $this->template->javascript->add('assets/js/vendor/jquery.ui.widget.js');
@@ -62,6 +60,7 @@ class Users extends CI_Controller {
 		// Set the upload path for the profile pictures
 		$config['upload_path'] = './uploads/profiles';
 		$config['allowed_types'] = 'gif|jpg|jpeg|png';
+		$config['file_name'] = uniqid() . '.jpg';
 		$this->upload->initialize($config);
 
 		print_r($this->upload->data());
@@ -80,11 +79,11 @@ class Users extends CI_Controller {
 			
 			$upload = new Upload();
 			$upload->url = '/uploads/profiles/' . $data['file_name'];
-			$upload->user_id = $data['userid'];
+			$upload->user_id = $this->input->post('userid');
 			$upload_id = $upload->save();
 
 			$user = new User();
-			$user->get_by_id($data['userid']);
+			$user->get_by_id($this->input->post('userid'));
 			$user->photo_id = $upload_id;
 			$user->save();
 

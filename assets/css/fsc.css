@@ -107,7 +107,8 @@ p {
   .event-si-attendees .event-si-attendees-title {
     font-weight: 300;
     font-size: 1.4em;
-    padding: 10px; }
+    padding: 10px;
+    padding-bottom: 0px; }
   .event-si-attendees a {
     text-decoration: none; }
   .event-si-attendees .event-si-attendee {

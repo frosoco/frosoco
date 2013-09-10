@@ -11,9 +11,13 @@
 			<h2><b><? echo $user->first_name; ?></b> <? echo $user->last_name; ?></h2>
 			<h4><? echo $user->sunet;?>@stanford.edu</h4>
 		</div>
-		<? if ($user->id == $this->session->userdata('id') || $user->role == 'staff') { ?>
+		<? if ($user->id == $this->session->userdata('id') || $this->session->userdata('role') == 'staff') { ?>
 		<div class="profile-modifications">
-
+			<form enctype="multipart/form-data" action="/users/upload_profile" method="post">
+				<input type="file" name="userfile" />
+				<input type="hidden" name="userid" value="<? echo $user->id; ?>" />
+				<input type="submit" value="upload" />
+			</form>
 		</div>
 		<? } ?>
 	</div>
