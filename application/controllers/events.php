@@ -55,6 +55,12 @@ class Events extends CI_Controller {
 			$data['signedup'] = false;
 		}
 
+		// Get all of the people who are signed up
+		$signups = new Signup();
+		$signups->where('event_id', $id);
+		$signups->get();
+		$data['signups'] = $signups;
+
 		// Create the view
 		$this->template->title = 'Events';
 		$this->template->content->view('events/view', $data);

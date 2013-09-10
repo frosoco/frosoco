@@ -3,24 +3,18 @@
 	<h1>Events</h1>
 </div>
 <div class="events">
+<table class="table">
+<tr>
+	<th>Name</th>
+	<th>Creator</th>
+	<th>View</th>
+</tr>
 <? foreach ($events as $event)  { ?>
-	<a href="/events/view/<? echo $event->id; ?>">
-	<div class="event">
-		<img width="100%" src="http://farm8.staticflickr.com/7309/9533422213_6cafb0b578_n.jpg" />
-		<div class="event-details">
-			<div class="event-header">
-				<div class="event-title"><? echo $event->name; ?></div>
-				<div class="event-host">Created by <? echo $event->user->first_name . ' ' . $event->user->last_name; ?></div>
-			</div>
-			<div class="event-description">
-				<? echo $event->description; ?>
-			</div>
-			<div class="event-buttons">
-				<a href="#"><button type="button" class="btn btn-default">Sign up</button></a>
-			</div>
-		</div>
-	</div>
-	</a>
+<tr>
+	<td><? echo $event->name; ?></td>
+	<td><? echo $event->user->first_name . ' ' . $event->user->last_name; ?></td>
+	<td><a href="/events/view/<? echo $event->id; ?>">View</a></td>
 <? } ?>
+</table>
 </div>
 </div>

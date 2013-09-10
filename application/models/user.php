@@ -9,6 +9,15 @@ class User extends DataMapper {
 		parent::__construct($id);
 	}
 
+	function getPhoto() {
+		$pic = new Upload($this->photo_id);
+		if ($pic->exists()) {
+			return $pic->url;
+		} else {
+			return '/assets/images/default.jpg';
+		}
+	}
+
 }
 
 /* End of file user.php */

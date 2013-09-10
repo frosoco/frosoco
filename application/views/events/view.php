@@ -14,11 +14,13 @@
 				<div class="event-si-location"><span class="glyphicon glyphicon-globe"></span><? echo $event->location; ?></div>
 				<div class="event-si-description"><? echo $event->description; ?></div>
 				<div class="event-si-actions">
+					<? if ($this->session->userdata('id')) { ?>
 					<? if ($signedup) { ?>
 						<button type="button" class="btn btn-success" disabled="disabled">Signed up!</button>
 					<? } else { ?>
 						<button type="button" id="signup" class="btn btn-default">Sign up</button>
 					<? } ?>
+				 	<? } ?>
 					<button type="button" id="contact" class="btn btn-default">Contact organizer</button>
 					<i style="display: none;" id="action-spinner" class="icon-spinner icon-spin icon-large"></i>
 				</div>
@@ -28,8 +30,15 @@
 </div>
 
 <div class="event-si-attendees">
-<? foreach ($event->signup->get()->user->get() as $user) { ?>
-	<li><? echo $user->first_name; ?></li>
+	<div class="event-si-attendees-title">Attendees</div>
+<? foreach ($signups as $signup) { ?>
+<? $attendee = $signup->user->get(); ?>
+<a href="/users/view/<? echo $attendee->id; ?>">
+<div class="event-si-attendee">
+	<img src="<? echo $attendee->getPhoto(); ?>" />
+	<div class="event-si-attendee-name"><? echo $attendee->first_name; ?></div>
+</div>
+</a>
 <? } ?>
 </div>
 

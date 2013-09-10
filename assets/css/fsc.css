@@ -64,7 +64,8 @@ p {
   width: 250px;
   height: 250px; }
   .event-si-picture img {
-    width: 100%; }
+    width: 250px;
+    height: 250px; }
 
 .event-si-details {
   margin-top: 15px; }
@@ -100,6 +101,27 @@ p {
   margin-top: 15px; }
   .event-si-creator img {
     width: 120px; }
+
+.event-si-attendees {
+  background-color: white; }
+  .event-si-attendees .event-si-attendees-title {
+    font-weight: 300;
+    font-size: 1.4em;
+    padding: 10px; }
+  .event-si-attendees a {
+    text-decoration: none; }
+  .event-si-attendees .event-si-attendee {
+    display: inline-block;
+    margin: 10px;
+    height: 120px;
+    width: 100px; }
+    .event-si-attendees .event-si-attendee img {
+      width: 100px;
+      height: 100px; }
+    .event-si-attendees .event-si-attendee .event-si-attendee-name {
+      margin-top: 5px;
+      text-align: center;
+      font-weight: 300; }
 
 .highlight {
   margin-top: 40px;
