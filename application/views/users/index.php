@@ -9,6 +9,7 @@
 		<th>Last Name</th>
 		<th>Email</th>
 		<th>Location</th>
+		<th>Role</th>
 		<th>Profile</th>
 	</tr>
 	<? foreach ($users as $user) { ?>
@@ -17,6 +18,7 @@
 		<td><? echo $user->last_name; ?></td>
 		<td><? echo $user->sunet; ?>@stanford.edu</td>
 		<td><? echo ucfirst($user->house) . ' ' . $user->room; ?></td>
+		<td><? echo ucfirst($user->role); ?></td>
 		<td><a href="/users/view/<? echo $user->id; ?>">View</a></td>
 	</tr>
 	<? } ?>

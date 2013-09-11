@@ -51,6 +51,29 @@ class Users extends CI_Controller {
 
 	}
 
+
+	/**
+	 * View a user
+	 *
+	 * Route: /users/flashcards
+	 */
+	public function flashcards()
+	{
+
+		$user = new User();
+		$user->where('role !=', 'staff');
+		$user->where('role !=', 'seniorstaff');
+		$user->get();
+
+		$data['people'] = $user;
+
+        $this->template->title = 'Flashcards';
+        $this->template->javascript->add('assets/js/jquery.flippy.min.js');
+ 		$this->template->content->view('users/flashcards', $data);
+		$this->template->publish();
+
+	}
+
 	/**
 	 * Used as the action target for a profile picture upload
 	 */
@@ -62,8 +85,6 @@ class Users extends CI_Controller {
 		$config['allowed_types'] = 'gif|jpg|jpeg|png';
 		$config['file_name'] = uniqid() . '.jpg';
 		$this->upload->initialize($config);
-
-		print_r($this->upload->data());
 		
 		// Check to see if it is an upload
 		if (!$this->upload->do_upload()) 
@@ -75,7 +96,6 @@ class Users extends CI_Controller {
 		{
 			
 			$data = $this->upload->data();
-			print_r($data);
 			
 			$upload = new Upload();
 			$upload->url = '/uploads/profiles/' . $data['file_name'];
@@ -83,11 +103,11 @@ class Users extends CI_Controller {
 			$upload_id = $upload->save();
 
 			$user = new User();
-			$user->get_by_id($this->input->post('userid'));
-			$user->photo_id = $upload_id;
+			$user->get_by_id($upload->user_id);
+			$user->photo_id = $upload->id;
 			$user->save();
 
-			// header('Location: /users/view/' . $data['userid']);
+			header('Location: /users/view/' . $upload->user_id);
 
 		}
 

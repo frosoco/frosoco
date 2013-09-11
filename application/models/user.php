@@ -18,6 +18,10 @@ class User extends DataMapper {
 		}
 	}
 
+	function getName() {
+		return $this->first_name . ' ' . $this->last_name;
+	}
+
 }
 
 /* End of file user.php */

@@ -33,6 +33,9 @@
 		      					<? if ($this->session->userdata('id')) { ?>
 		      					<li><a href="/users">Residents</a></li>
 		      					<? } ?>
+		      					<? if (strstr($this->session->userdata('role'), 'staff')) { ?>
+		      					<li><a href="/users/flashcards">Flashcards</a></li>
+		      					<? } ?>
 		      					<li><a href="/home/staff">Staff</a></li>
 		      					<li><a href="/home/seniorstaff">Senior Staff</a></li>
 		      				</ul>

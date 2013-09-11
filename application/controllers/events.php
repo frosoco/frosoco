@@ -62,7 +62,7 @@ class Events extends CI_Controller {
 		$data['signups'] = $signups;
 
 		// Create the view
-		$this->template->title = 'Events';
+		$this->template->title = $data['event']->name;
 		$this->template->content->view('events/view', $data);
 		$this->template->publish();
 

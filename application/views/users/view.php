@@ -3,11 +3,7 @@
 <div class="row">
 	<div class="col-md-4">
 		<div class="profile-properties">
-			<? if ($profile_pic == null) { ?>
-			<img id="profile-picture" width="100%" src="/assets/images/default.jpg" />
-			<? } else { ?>
-			<img id="profile-picture" height="350px" width="350px" src="<? echo $profile_pic; ?>" />
-			<? } ?>
+			<img id="profile-picture" width="350px" height="350px" src="<? echo $user->getPhoto(); ?>" />
 			<h2><b><? echo $user->first_name; ?></b> <? echo $user->last_name; ?></h2>
 			<h4><? echo $user->sunet;?>@stanford.edu</h4>
 		</div>

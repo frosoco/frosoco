@@ -8,8 +8,33 @@ class Messages extends CI_Controller {
 	 * Location: /messages
 	 */
 	public function index() {
-		
+	
+
+
 	}
+
+	/*
+	 * View a specific message.
+	 *
+	 * Location: /messages/view
+	 */
+	public function view($id = null) {
+	
+
+	}
+
+
+	/*
+	 * Send a message (JSON endpoint)
+	 *
+	 * Location: /messages/send
+	 */
+	public function send($id = null) {
+	
+
+	}
+
+
 
 }
 
