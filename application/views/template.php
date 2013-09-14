@@ -1,65 +1,65 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title><?php echo $this->template->title->default("FroSoCo"); ?> | FroSoCo</title>
-		<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
-		<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
-		<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
-		<link href="/assets/css/fsc.css" rel="stylesheet">
-	    <?php echo $this->template->stylesheet; ?>
-	    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-		<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-		<?php echo $this->template->javascript; ?>
-	</head>
-	<body>
-		<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-			<div class="container">
-				<div class="navbar-header">
-				    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-				    <span class="sr-only">Toggle navigation</span>
-				    <span class="icon-bar"></span>
-				    <span class="icon-bar"></span>
-		    		<span class="icon-bar"></span>
-				    </button>
-				    <a class="navbar-brand logo" href="/"><img src="/assets/images/logo.png" /></a>
-			  	</div>
-		  	  	<div class="collapse navbar-collapse navbar-ex1-collapse">
-    				<ul class="nav navbar-nav navbar-right">
-    					<li><a href="/home/location">Location</a></li>
-    					<li><a href="/events">Events</a></li>
-    					<li><a href="/posts">Posts</a></li>
-    					<li class="dropdown">
-    						<a class="dropdown-toggle" data-toggle="dropdown" href="#">People</a>
-    						<ul class="dropdown-menu">
-		      					<? if ($this->session->userdata('id')) { ?>
-		      					<li><a href="/users">Directory</a></li>
-		      					<? } ?>
-		      					<? if (strstr($this->session->userdata('role'), 'staff')) { ?>
-		      					<li><a href="/users/flashcards">Flashcards</a></li>
-		      					<? } ?>
-		      					<li><a href="/home/staff">Staff</a></li>
-		      					<li><a href="/home/seniorstaff">Senior Staff</a></li>
-		      				</ul>
-						</li>
-      					<? if ($this->session->userdata('id')) { ?>
-      					<li class="dropdown">
-	      					<a class="dropdown-toggle" data-toggle="dropdown" href="#"><? echo $this->session->userdata('first_name'); ?></a>
-	      					<ul class="dropdown-menu">
-	      						<li><a href="/users/view/<? echo $this->session->userdata('id'); ?>">Profile</a></li>
-	      						<li><a href="/create/">Create</a></li>
-	      						<li><a href="/auth/logout">Logout</a></li>
-	      					</ul>
-	      				</div>
-      					<? } else { ?>
-      					<li><a href="/login">Login</a></li>
-      					<? } ?>
-      				</ul>
-			  	</div>
-			  </div>
-		</nav>
-		<div id="content">
-		<?php echo $this->template->content; ?>
+<!doctype html>
+<head>
+	<title><?php echo $this->template->title->default("FroSoCo"); ?> | FroSoCo</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+	<!-- Font Awesome -->
+	<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+	<!-- FSC theme -->
+	<link rel="stylesheet" href="/assets/css/fsc.css">
+	<!-- Obligatory jQuery -->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+	<?php echo $this->template->javascript; ?>
+</head>
+<body>
+	<div class="row">
+		<div class="sidebar col-xs-2">
+			<div class="sidebar-content">
+				<? if ($this->session->userdata('id')) {
+					$user = new User($this->session->userdata('id'));
+				} ?>
+				<div class="sidebar-image">
+					<? if ($this->session->userdata('id')) { ?>
+						<img src="<? echo $user->getPhoto(); ?>" class="img-circle" />
+					<? } else { ?>
+						<img src="/assets/images/shield.png" class="img-circle" />
+					<? } ?>
+				</div>
+				<div class="sidebar-profile">
+					<? if ($this->session->userdata('id')) { ?>
+					<div class="sidebar-name">Roger Chen</div>
+					<div class="sidebar-edit">
+						<span><a href="/create/post">Create</a></span> |
+						<span><a href="/auth/logout">Logout</a></span>
+					</div>
+					<? } else { ?>
+					<div class="sidebar-name">Visitor</div>
+					<div class="sidebar-edit">
+						<span><a href="/login">Login</a></span>
+					</div>			
+					<? } ?>
+				</div>
+				<div class="sidebar-menu">
+					<ul>
+						<a href="/home"><li>Home</li></a>
+						<? if ($this->session->userdata('id')) { ?>
+						<a href="/users"><li>Directory</li></a>
+						<? } ?>
+						<a href="/events"><li>Events</li></a>
+						<a href="/posts"><li>Posts</li></a>
+						<a href="/quotes"><li>Quotes</li></a>
+					</ul>
+				</div>
+				<div class="sidebar-logo">
+					<img src="/assets/images/logo.png" />
+				</div>
+			</div>
 		</div>
-	</body>
+		<div class="content col-xs-10">
+			<?php echo $this->template->content; ?>
+		</div>
+	</div>
+</body>
 </html>

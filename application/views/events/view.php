@@ -1,4 +1,52 @@
-<div class="container">
+<div class="panel view-content">
+	<div class="view-content-title"><? echo $event->name; ?></div>
+	<div class="view-content-start"><? echo $event->start; ?></div>
+	<div class="view-content-body"><? echo $event->description; ?></div>
+</div>
+<div class="panel view-addendum">
+	<div class="view-addendum-author">
+		<div class="view-addendum-author-image">
+			<img class="img-rounded" src="<? echo $event->user->get()->getPhoto(); ?>" /> 
+		</div>
+		<div class="view-addendum-author-name">
+			<? echo $event->user->get()->getName(); ?>
+			<div class="view-addendum-author-email">
+				<? echo $event->user->get()->getEmail(); ?>
+			</div>
+		</div>
+	</div>
+	<div class="view-addendum-attendees">
+		<? foreach ($signups as $signup) { ?>
+		<? $attendee = $signup->user->get(); ?>
+		<a href="/users/view/<? echo $attendee->id; ?>">
+		<div class="view-addendum-attendee">
+			<img class="img-rounded" src="<? echo $attendee->getPhoto(); ?>" />
+		</div>
+		</a>
+		<? } ?>
+	</div>
+	<div class="view-addendum-actions">
+		<? if ($this->session->userdata('id')) { ?>
+		<? if ($signedup) { ?>
+			<button type="button" class="btn btn-success" disabled="disabled">Signed up!</button>
+		<? } else { ?>
+			<button type="button" id="signup" class="btn btn-default">Sign up</button>
+		<? } ?>
+		<i style="display: none;" id="action-spinner" class="icon-spinner icon-spin icon-large"></i>
+		<? } ?>
+	</div>
+</div>
+<script>
+	$('#signup').click(function() {
+		$('#action-spinner').show();
+		$.post("/events/signup", { event_id: <? echo $event->id; ?>}, function(data) {
+			$('#action-spinner').hide();
+			$('#signup').removeClass('btn-default').addClass('btn-success').attr('disabled','disabled').text('Signed up!');
+		});
+	});
+</script>
+
+<!-- <div class="container">
 
 <div class="event-si-container">
 	<div class="row">
@@ -42,14 +90,6 @@
 <? } ?>
 </div>
 
-<script>
-	$('#signup').click(function() {
-		$('#action-spinner').show();
-		$.post("/events/signup", { event_id: <? echo $event->id; ?>}, function(data) {
-			$('#action-spinner').hide();
-			$('#signup').removeClass('btn-default').addClass('btn-success').attr('disabled','disabled').text('Signed up!');
-		});
-	});
-</script>
 
-</div>
+
+</div>-->

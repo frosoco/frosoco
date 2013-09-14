@@ -2,7 +2,7 @@
 
 class User extends DataMapper {
 	
-	var $has_many = array('event', 'upload', 'signup', 'post');
+	var $has_many = array('event', 'upload', 'signup', 'post', 'quote');
 
 	function __construct($id = NULL)
 	{
@@ -16,6 +16,10 @@ class User extends DataMapper {
 		} else {
 			return '/assets/images/default.jpg';
 		}
+	}
+
+	function getEmail() {
+		return $this->sunet . '@stanford.edu';
 	}
 
 	function getName() {

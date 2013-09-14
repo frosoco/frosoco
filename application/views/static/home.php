@@ -1,4 +1,4 @@
-<div class="home-feature"></div>
+<!-- <div class="home-feature"></div>
 <div class="container">
 <p class="lead front-lead">The Freshman-Sophomore College has the vibrant residential intellectual community of a small, elite, liberal-arts college while providing enhanced access to the academic resources of one of the world's premier research universities.</p>
 <div class="row highlight">
@@ -32,4 +32,10 @@
 		<h3>It's going to be a blast</h3>
 	</div>
 </div>
-</div>
+</div> -->
+<script>
+	var container = document.querySelector('.content-cards');
+	var msnry = new Masonry(container, {
+		itemSelector: '.content-card'
+	});
+</script>

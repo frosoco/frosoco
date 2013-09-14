@@ -1,7 +1,4 @@
-<div class="container">
-<div class="page-header">
-	<h1>Directory</h1>
-</div>
+<div class="panel-users">
 <input id="user-search" type="text" class="form-control" placeholder="Search" /><br />
 <table class="table table-hover">
 	<tr>
@@ -10,7 +7,7 @@
 		<th>Email</th>
 		<th>Location</th>
 		<th>Role</th>
-		<th>Profile</th>
+		<!-- <th>Profile</th> -->
 	</tr>
 	<? foreach ($users as $user) { ?>
 	<tr class="user-row">
@@ -19,7 +16,7 @@
 		<td><? echo $user->sunet; ?>@stanford.edu</td>
 		<td><? echo ucfirst($user->house) . ' ' . $user->room; ?></td>
 		<td><? echo ucfirst($user->role); ?></td>
-		<td><a href="/users/view/<? echo $user->id; ?>">View</a></td>
+		<!-- <td><a href="/users/view/<? echo $user->id; ?>">View</a></td>-->
 	</tr>
 	<? } ?>
 </table>

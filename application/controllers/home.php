@@ -10,6 +10,7 @@ class Home extends CI_Controller {
 	public function index()
 	{
 		$this->template->title = 'Home';
+		$this->template->javascript->add('assets/js/masonry.min.js');
 		$this->template->content->view('static/home');
 		$this->template->publish();	
 	}

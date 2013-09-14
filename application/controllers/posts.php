@@ -29,7 +29,7 @@ class Posts extends CI_Controller {
 		$this->load->library('markdown');
 
 		$data['title'] = $post->title;
-		$data['author'] = $post->user->get()->getName();
+		$data['author'] = $post->user->get();
 		$data['post'] = $this->markdown->parse($post->text);
 
 		// Create the view

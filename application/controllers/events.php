@@ -10,24 +10,13 @@ class Events extends CI_Controller {
 	public function index() 
 	{
 
-		/*
-		// Load all of the available events
-		$current_event = new Event();
-		$current_event->get();
-		$data['current'] = $current_event;
-
-		// Get future events
-		$future_event = new Event();
-		$future_event->get();
-		$data['future'] = $future_event;
-		*/
-
 		$event = new Event();
 		$event->get();
 		$data['events'] = $event;
 
 		// Create the view
-		$this->template->title = 'Events';
+		$this->template->title = 'Events';		
+		$this->template->javascript->add('assets/js/masonry.min.js');
 		$this->template->content->view('events/index', $data);
 		$this->template->publish();
 
