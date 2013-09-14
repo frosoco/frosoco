@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title><?php echo $this->template->title->default("FroSoCo"); ?> | FroSoCo</title>
 		<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
 		<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
@@ -27,11 +28,12 @@
     				<ul class="nav navbar-nav navbar-right">
     					<li><a href="/home/location">Location</a></li>
     					<li><a href="/events">Events</a></li>
+    					<li><a href="/posts">Posts</a></li>
     					<li class="dropdown">
     						<a class="dropdown-toggle" data-toggle="dropdown" href="#">People</a>
     						<ul class="dropdown-menu">
 		      					<? if ($this->session->userdata('id')) { ?>
-		      					<li><a href="/users">Residents</a></li>
+		      					<li><a href="/users">Directory</a></li>
 		      					<? } ?>
 		      					<? if (strstr($this->session->userdata('role'), 'staff')) { ?>
 		      					<li><a href="/users/flashcards">Flashcards</a></li>

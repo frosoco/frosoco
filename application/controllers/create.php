@@ -51,6 +51,7 @@ class Create extends CI_Controller {
 
 		// Create the view
 		$this->template->title = 'Create Post';
+        $this->template->javascript->add('assets/js/markdown.js');
 		$this->template->content->view('create/post');
 		$this->template->publish();		
 

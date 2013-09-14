@@ -51,6 +51,31 @@ class Users extends CI_Controller {
 
 	}
 
+	/**
+	 * Edit a user
+	 *
+	 * Route: /users/edit/{id}
+	 */
+	public function edit($id)
+	{
+
+		if (!$this->authorized() && (strstr($this->session->userdata('role'), 'staff') || $id = $this->session->userdata('id'))) {
+			header('Location: /auth/login');
+		}
+
+		$user = new User($id);
+		$data['user'] = $user;
+		$data['profile_pic'] = $user->getPhoto();
+
+        $this->template->title = $user->first_name . ' ' . $user->last_name;
+        $this->template->javascript->add('assets/js/vendor/jquery.ui.widget.js');
+        $this->template->javascript->add('assets/js/jquery.iframe-transport.js');
+        $this->template->javascript->add('assets/js/jquery.fileupload.js');
+ 		$this->template->content->view('users/view', $data);
+		$this->template->publish();
+
+	}
+
 
 	/**
 	 * View a user

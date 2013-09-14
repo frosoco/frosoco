@@ -2,7 +2,7 @@
 
 class User extends DataMapper {
 	
-	var $has_many = array('event', 'upload', 'signup');
+	var $has_many = array('event', 'upload', 'signup', 'post');
 
 	function __construct($id = NULL)
 	{
@@ -20,6 +20,10 @@ class User extends DataMapper {
 
 	function getName() {
 		return $this->first_name . ' ' . $this->last_name;
+	}
+
+	function getLocation() {
+		return ucfirst($this->house . ' ' . $this->room);
 	}
 
 }

@@ -9,6 +9,47 @@ class Posts extends CI_Controller {
 	 */
 	public function index() {
 		
+		$post = new Post();
+		$data['posts'] = $post->get();
+
+		// Create the view
+		$this->template->title = 'Posts';
+		$this->template->content->view('posts/index', $data);
+		$this->template->publish();	
+
+	}
+
+	public function edit() {
+
+	}
+
+	public function view($id = null) {
+
+		$post = new Post($id);
+		$this->load->library('markdown');
+
+		$data['title'] = $post->title;
+		$data['author'] = $post->user->get()->getName();
+		$data['post'] = $this->markdown->parse($post->text);
+
+		// Create the view
+		$this->template->title = $post->title;
+		$this->template->content->view('posts/view', $data);
+		$this->template->publish();	
+
+	}
+
+	public function add() {
+
+		$post = new Post();
+		$post->user_id = $this->session->userdata('id');
+		$post->title = $this->input->post('post-title');
+		$post->text = $this->input->post('post-body');
+		$post->save();
+
+		// Redirect to view mode
+		header('Location: /posts/view/' . $post->id);
+
 	}
 
 }

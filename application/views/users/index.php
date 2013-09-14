@@ -1,6 +1,6 @@
 <div class="container">
 <div class="page-header">
-	<h1>Residents</h1>
+	<h1>Directory</h1>
 </div>
 <input id="user-search" type="text" class="form-control" placeholder="Search" /><br />
 <table class="table table-hover">

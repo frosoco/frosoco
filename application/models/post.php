@@ -9,6 +9,10 @@ class Post extends DataMapper {
 		parent::__construct($id);
 	}
 
+	function getPreview() {
+		return substr($this->text, 0, 100);
+	}
+
 }
 
 /* End of file post.php */
