@@ -222,6 +222,9 @@ p {
 	span.glyphicon {
 		font-size: 5em;
 	}
+	i {
+		font-size: 5em;
+	}
 	.crcard-title {
 		margin-top: 10px;
 		font-size: 2em;
@@ -338,5 +341,26 @@ button.event-signup {
 		&:hover {
 			border: 1px solid #CCC;
 		}
+	}
+}
+
+.create-quote {
+	margin-top: 30px;
+	i {
+		font-size: 4em;
+		color: #888;
+	}
+	textarea {
+		font-weight: 300;
+		resize: none;
+		width: 100%;
+		font-size: 2em;
+		border: none;
+		outline: none;
+		background-color: #FCFCFC;
+	}
+	input[type="text"] {
+		border: 1px solid #FCFCFC;
+		outline: none;
 	}
 }

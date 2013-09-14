@@ -23,6 +23,7 @@
 		</script>
 	</div>
 	<div class="post-actions row">
+		<div class="col-md-8">Not familiar with Markdown? Check out this <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Here-Cheatsheet">cheat sheet</a> for a guide on how Markdown works.</div>
 		<div class="col-md-2 col-md-offset-10">
 			<button id="post-save" type="submit" class="btn btn-success">Save</button>
 			<button id="post-cancel" type="button" class="btn btn-default">Cancel</button>

@@ -165,6 +165,8 @@ p {
   text-align: center; }
   .crcard span.glyphicon {
     font-size: 5em; }
+  .crcard i {
+    font-size: 5em; }
   .crcard .crcard-title {
     margin-top: 10px;
     font-size: 2em; }
@@ -254,3 +256,20 @@ button.event-signup {
       font-size: 1.2em; }
     .posts .post-card:hover {
       border: 1px solid #CCC; }
+
+.create-quote {
+  margin-top: 30px; }
+  .create-quote i {
+    font-size: 4em;
+    color: #888; }
+  .create-quote textarea {
+    font-weight: 300;
+    resize: none;
+    width: 100%;
+    font-size: 2em;
+    border: none;
+    outline: none;
+    background-color: #FCFCFC; }
+  .create-quote input[type="text"] {
+    border: 1px solid #FCFCFC;
+    outline: none; }

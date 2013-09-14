@@ -57,6 +57,23 @@ class Create extends CI_Controller {
 
 	}
 
+	public function quote()
+	{
+
+		if (!$this->authorized()) {
+			header('Location: /login');
+		}
+
+		// Get all the users
+		
+
+		// Create the view
+		$this->template->title = 'Create Quote';
+		$this->template->content->view('create/quote');
+		$this->template->publish();		
+
+	}
+
 	/**
 	 * Checks to see if a user is authorized based on session storage
 	 */

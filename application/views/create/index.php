@@ -15,5 +15,11 @@
 				<div class="crcard-title">Event</div>
 			</div></a>
 		</div>
+		<div class="col-md-3">
+			<a href="/create/quote"><div id="crquote" class="crcard">
+				<i class="icon-quote-left"></i>
+				<div class="crcard-title">Quote</div>
+			</div></a>
+		</div>
 	</div>
 </div>
