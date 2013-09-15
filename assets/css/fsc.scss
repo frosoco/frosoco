@@ -227,8 +227,15 @@ body {
 			span {
 				margin-right: 4%;
 			}
+			margin-bottom: 4%;
 			.create-type-selected {
 				font-weight: 600;
+			}
+		}
+		.create-text {
+			input[type="text"] {
+				font-size: 1em;
+				margin-bottom: 3%;
 			}
 		}
 		.create-title {

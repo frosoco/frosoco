@@ -9,6 +9,11 @@ class Home extends CI_Controller {
 	 */
 	public function index()
 	{
+
+		$post = new Post();
+		$post->limit(10);
+		$post->get();
+
 		$this->template->title = 'Home';
 		$this->template->javascript->add('assets/js/masonry.min.js');
 		$this->template->content->view('static/home');

@@ -142,10 +142,15 @@ body {
     border-top: 1px solid #CCC;
     padding-top: 10px;
     font-size: 1em; }
-  .content .create-editor .create-types span {
-    margin-right: 4%; }
-  .content .create-editor .create-types .create-type-selected {
-    font-weight: 600; }
+  .content .create-editor .create-types {
+    margin-bottom: 4%; }
+    .content .create-editor .create-types span {
+      margin-right: 4%; }
+    .content .create-editor .create-types .create-type-selected {
+      font-weight: 600; }
+  .content .create-editor .create-text input[type="text"] {
+    font-size: 1em;
+    margin-bottom: 3%; }
   .content .create-editor .create-title {
     margin-top: 2%; }
   .content .create-editor .create-body {

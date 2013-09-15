@@ -36,8 +36,10 @@ class Create extends CI_Controller {
 
 		// Create the view
 		$this->template->title = 'Create Event';
-        $this->template->stylesheet->add('assets/css/bootstrap-datetimepicker.min.css');
-        $this->template->javascript->add('assets/js/bootstrap-datetimepicker.min.js');
+        $this->template->javascript->add('assets/js/markdown.js');
+        $this->template->stylesheet->add('//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/smoothness/jquery-ui.min.css');
+        $this->template->stylesheet->add('assets/css/jquery-ui-timepicker-addon.css');
+        $this->template->javascript->add('assets/js/jquery-ui-timepicker-addon.js');
 		$this->template->content->view('create/event');
 		$this->template->publish();		
 

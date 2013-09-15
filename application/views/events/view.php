@@ -1,7 +1,7 @@
 <div class="panel view-content">
 	<div class="view-content-title"><? echo $event->name; ?></div>
 	<div class="view-content-start"><? echo $event->start; ?></div>
-	<div class="view-content-body"><? echo $event->description; ?></div>
+	<div class="view-content-body"><? echo $this->markdown->parse($event->description); ?></div>
 </div>
 <div class="panel view-addendum">
 	<div class="view-addendum-author">

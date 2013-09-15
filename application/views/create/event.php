@@ -4,21 +4,38 @@
 		<span id="create-event" class="create-type-selected">Event</span>
 		<span id="create-quote"><a href="/create/quote">Quote</a></span>
 	</div>
-	<div class="create-title">
-		<input type="text" name="title" placeholder="Title" />
+	<form action="/events/add" method="post">
+	<div class="create-text">
+		<input type="text" name="event-name" placeholder="Name" />
+	</div>
+	<div class="create-text">
+		<input type="text" name="event-location" placeholder="Location" />
+	</div>
+	<div class="create-text">
+		<input type="text" id="event-dtpicker-start" name="event-start" placeholder="Start time" />
+	</div>
+	<div class="create-text">
+		<input type="text" id="event-dtpicker-end" name="event-end" placeholder="End time" />
 	</div>
 	<div class="create-body">
-		<textarea name="body" id="create-body" oninput="this.editor.update()" placeholder="Start typing here"></textarea>
+		<textarea name="event-description" id="create-body" oninput="this.editor.update()" placeholder="Description"></textarea>
 	</div>
 	<div class="create-actions">
 		<button class="btn btn-default">Submit</button>
 	</div>
+	</form>
 </div>
 <div class="panel create-preview">
 	<div class="create-preview-title">Preview</div>
 	<div id="create-preview" class="create-preview-body"> </div>
 </div>
 <script>
+	$('#event-dtpicker-start').datetimepicker({
+		timeFormat: "hh:mm tt"
+	});
+	$('#event-dtpicker-end').datetimepicker({
+		timeFormat: "hh:mm tt"
+	});
 	function Editor(input, preview) {
 		this.update = function() {
 			preview.innerHTML = markdown.toHTML(input.value);

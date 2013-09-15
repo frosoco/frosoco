@@ -30,6 +30,8 @@ class Events extends CI_Controller {
 	public function view($id)
 	{
 
+		$this->load->library('markdown');
+
 		$data['id'] = $id;
 		$data['event'] = new Event($id);
 
@@ -68,14 +70,14 @@ class Events extends CI_Controller {
 
 		// Get the POST parameters
 		$e = new Event();
-		$e->name = $this->input->post('name');
-		$e->location = $this->input->post('location');
+		$e->name = $this->input->post('event-name');
+		$e->location = $this->input->post('event-location');
 		
-		$e->start = date("Y-m-d H:i:s", strtotime($this->input->post('start')));		
-		$e->end = date("Y-m-d H:i:s", strtotime($this->input->post('end')));
+		$e->start = date("Y-m-d H:i:s", strtotime($this->input->post('event-start')));		
+		$e->end = date("Y-m-d H:i:s", strtotime($this->input->post('event-end')));
 
 		$e->user_id = $this->session->userdata('id');
-		$e->description = $this->input->post('description');
+		$e->description = $this->input->post('event-description');
 		$e->save(); 
 
 		// Redirect to page for that event
