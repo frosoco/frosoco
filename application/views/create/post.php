@@ -4,15 +4,17 @@
 		<span id="create-event"><a href="/create/event">Event</a></span>
 		<span id="create-quote"><a href="/create/quote">Quote</a></span>
 	</div>
+	<form action="/posts/add" method="post">
 	<div class="create-title">
-		<input type="text" name="title" placeholder="Title" />
+		<input type="text" name="post-title" placeholder="Title" />
 	</div>
 	<div class="create-body">
-		<textarea name="body" id="create-body" oninput="this.editor.update()" placeholder="Start typing here"></textarea>
+		<textarea name="post-body" id="create-body" oninput="this.editor.update()" placeholder="Start typing here"></textarea>
 	</div>
 	<div class="create-actions">
 		<button class="btn btn-default">Submit</button>
 	</div>
+	</form>
 </div>
 <div class="panel create-preview">
 	<div class="create-preview-title">Preview</div>

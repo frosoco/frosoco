@@ -14,6 +14,7 @@ class Posts extends CI_Controller {
 
 		// Create the view
 		$this->template->title = 'Posts';
+		$this->template->javascript->add('assets/js/masonry.min.js');
 		$this->template->content->view('posts/index', $data);
 		$this->template->publish();	
 

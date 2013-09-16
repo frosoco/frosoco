@@ -45,7 +45,7 @@
 				</div>
 				<div class="sidebar-menu">
 					<ul>
-						<a href="/home"><li>Home</li></a>
+						<a href="/"><li>Home</li></a>
 						<? if ($this->session->userdata('id')) { ?>
 						<a href="/users"><li>Directory</li></a>
 						<? } ?>
