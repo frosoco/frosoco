@@ -9,7 +9,7 @@
 		<input type="text" name="post-title" placeholder="Title" />
 	</div>
 	<div class="create-body">
-		<textarea name="post-body" id="create-body" oninput="this.editor.update()" placeholder="Start typing here"></textarea>
+		<textarea name="post-body" id="create-body" oninput="this.editor.update()" placeholder="Start typing here (Markdown enabled)"></textarea>
 	</div>
 	<div class="create-actions">
 		<button class="btn btn-default">Submit</button>

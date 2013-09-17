@@ -18,7 +18,7 @@
 		<input type="text" id="event-dtpicker-end" name="event-end" placeholder="End time" />
 	</div>
 	<div class="create-body">
-		<textarea name="event-description" id="create-body" oninput="this.editor.update()" placeholder="Description"></textarea>
+		<textarea name="event-description" id="create-body" oninput="this.editor.update()" placeholder="Description (Markdown enabled)"></textarea>
 	</div>
 	<div class="create-actions">
 		<button class="btn btn-default">Submit</button>

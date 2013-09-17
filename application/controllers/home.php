@@ -42,6 +42,18 @@ class Home extends CI_Controller {
 	}
 
 	/**
+	 * Location information.
+	 *
+	 * URL: /home/dining
+	 */
+	public function dining()
+	{
+		$this->template->title = 'Dining';
+		$this->template->content->view('static/dining');
+		$this->template->publish();
+	}
+
+	/**
 	 * Staff information
 	 *
 	 * URL: /home/staff

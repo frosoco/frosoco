@@ -154,9 +154,12 @@ body {
 		vertical-align: top;
 		width: 47%;
 		background-color: white;
-		margin: 1.8% 0.8% 0.3% 1%;
+		margin: 1.8% 0.8% 1.8% 1%;
 		padding: 1.4%;
 		height: 80%;
+		img {
+			width: 100%;
+		}
 	}
 
 	.panel-users {
@@ -314,6 +317,18 @@ body {
 		line-height: 1.8em;
 		margin-bottom: 20px;
 	}
+}
+
+.dining {
+	p {
+		line-height: 1.8em;
+		margin-bottom: 20px;
+	}
+	.notification {
+		background-color: $sandstone-25;
+		padding: 0.9% 2.0%;
+		margin: 2% 0%;		
+	}	
 }
 
 .feed {

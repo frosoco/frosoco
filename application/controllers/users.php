@@ -15,6 +15,7 @@ class Users extends CI_Controller {
 		}
 
 		$users = new User();
+		$users->where('role = "resident" OR role = "staff"');
 		$users->order_by("last_name", "asc");
 		$users->order_by("first_name", "asc");
 		$users->get();

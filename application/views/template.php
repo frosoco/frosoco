@@ -45,17 +45,18 @@
 				</div>
 				<div class="sidebar-menu">
 					<ul>
-						<a href="/"><li>Home</li></a>
+						<a href="/users"><li>People</li></a>
 						<? if ($this->session->userdata('id')) { ?>
 						<a href="/users"><li>Directory</li></a>
 						<? } ?>
+						<a href="/home/dining"><li>Dining</li></a>
 						<a href="/events"><li>Events</li></a>
 						<a href="/posts"><li>Posts</li></a>
 						<a href="/quotes"><li>Quotes</li></a>
 					</ul>
 				</div>
 				<div class="sidebar-logo">
-					<img src="/assets/images/logo.png" />
+					<a href="/"><img src="/assets/images/logo.png" /></a>
 				</div>
 			</div>
 		</div>
