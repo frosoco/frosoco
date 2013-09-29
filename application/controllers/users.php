@@ -7,7 +7,7 @@ class Users extends CI_Controller {
 	 *
 	 * Route: /users
 	 */
-	public function index() 
+	public function index($view) 
 	{
 		
 		if (!$this->authorized()) {
@@ -22,7 +22,12 @@ class Users extends CI_Controller {
 		$data['users'] = $users;
 
         $this->template->title = 'Users';
- 		$this->template->content->view('users/index', $data);
+        if ($view == 'grid') {
+			$this->template->javascript->add('assets/js/masonry.min.js');
+	 		$this->template->content->view('users/grid', $data);
+	 	} else {
+	 		$this->template->content->view('users/index', $data);
+	 	}
 		$this->template->publish();
 
 	}

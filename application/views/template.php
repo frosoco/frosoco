@@ -31,7 +31,7 @@
 				</div>
 				<div class="sidebar-profile">
 					<? if ($this->session->userdata('id')) { ?>
-					<div class="sidebar-name">Roger Chen</div>
+					<div class="sidebar-name"><? echo $user->getName(); ?></div>
 					<div class="sidebar-edit">
 						<span><a href="/create/post">Create</a></span> |
 						<span><a href="/auth/logout">Logout</a></span>
@@ -45,14 +45,15 @@
 				</div>
 				<div class="sidebar-menu">
 					<ul>
-						<a href="/users"><li>People</li></a>
+						<a href="/home/seniorstaff"><li>Senior Staff</li></a>
 						<? if ($this->session->userdata('id')) { ?>
-						<a href="/users"><li>Directory</li></a>
+						<a href="/users/index/list"><li>Directory</li></a>
 						<? } ?>
 						<a href="/home/dining"><li>Dining</li></a>
 						<a href="/events"><li>Events</li></a>
 						<a href="/posts"><li>Posts</li></a>
 						<a href="/quotes"><li>Quotes</li></a>
+						<a href="/marketplace"><li>Marketplace</li></a>
 					</ul>
 				</div>
 				<div class="sidebar-logo">

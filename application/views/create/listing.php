@@ -1,16 +1,19 @@
 <div class="panel create-editor">
 	<div class="create-types">
-		<span id="create-post" class="create-type-selected">Post</span>
+		<span id="create-post"><a href="/create/post">Post</a></span>
 		<span id="create-event"><a href="/create/event">Event</a></span>
 		<span id="create-quote"><a href="/create/quote">Quote</a></span>
-		<span id="create-listing"><a href="/create/listing">Listing</a></span>
+		<span id="create-listing" class="create-type-selected">Listing</span>
 	</div>
-	<form action="/posts/add" method="post">
-	<div class="create-title">
-		<input type="text" name="post-title" placeholder="Title" />
+	<form action="/marketplace/add" method="post">
+	<div class="create-item">
+		<input type="text" name="listing-title" placeholder="Item name" />
+	</div>
+	<div class="create-asking">
+		<input type="text" name="listing-asking" placeholder="Asking (number only)" />
 	</div>
 	<div class="create-body">
-		<textarea name="post-body" id="create-body" oninput="this.editor.update()" placeholder="Start typing here (Markdown enabled)"></textarea>
+		<textarea name="listing-body" id="create-body" oninput="this.editor.update()" placeholder="Start typing here (Markdown enabled)"></textarea>
 	</div>
 	<div class="create-actions">
 		<button class="btn btn-default">Submit</button>

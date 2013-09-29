@@ -1,5 +1,6 @@
 <div class="panel-users">
 <input id="user-search" type="text" class="form-control" placeholder="Search" /><br />
+<div class="alert alert-info">Check out the new <a class="alert-link" href="/users/index/grid">grid directory view</a>!</div>
 <table class="table table-hover">
 	<tr>
 		<th>First Name</th>
@@ -7,7 +8,8 @@
 		<th>Email</th>
 		<th>Location</th>
 		<th>Role</th>
-		<!-- <th>Profile</th> -->
+		<th>Year</th>
+		<th>Profile</th>
 	</tr>
 	<? foreach ($users as $user) { ?>
 	<tr class="user-row">
@@ -16,7 +18,8 @@
 		<td><? echo $user->sunet; ?>@stanford.edu</td>
 		<td><? echo ucfirst($user->house) . ' ' . $user->room; ?></td>
 		<td><? echo ucfirst($user->role); ?></td>
-		<!-- <td><a href="/users/view/<? echo $user->id; ?>">View</a></td>-->
+		<td><? echo $user->year; ?></td>
+		<td><a href="/users/view/<? echo $user->id; ?>">View</a></td>
 	</tr>
 	<? } ?>
 </table>

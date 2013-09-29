@@ -11,6 +11,8 @@ class Events extends CI_Controller {
 	{
 
 		$event = new Event();
+		$event->where('start >', date('Y-m-d H:m:s'));
+		$event->order_by('start', 'asc');
 		$event->get();
 		$data['events'] = $event;
 
@@ -61,15 +63,19 @@ class Events extends CI_Controller {
 
 
 	/**
-	 * Create a new event
+	 * Create a new event, or saves an edited event
 	 *
-	 * Route: /events/add
+	 * Route: /events/save
 	 */
-	public function add()
+	public function save($id = NULL)
 	{
 
 		// Get the POST parameters
 		$e = new Event();
+		if ($id != NULL) {
+			$e = new Event($id);
+		}
+
 		$e->name = $this->input->post('event-name');
 		$e->location = $this->input->post('event-location');
 		
@@ -101,7 +107,52 @@ class Events extends CI_Controller {
 
 		// Return JSON data for approved signup
 		echo json_encode(array('success' => true));
+ 
+	}
+
+	public function edit($id = NULL)
+	{
+
+		if (!$this->authorized()) {
+			header('Location: /login');
+		}
+
+		// Get the event
+		$event = new Event($id);
+
+		// Cannot edit event, go somewhere
+		if (!$this->canEdit($event)) {
+			header('Location: /event/view/' . $id);
+		}
+
+		$data['event'] = $event;
+
+		// Create the view
+		$this->template->title = 'Edit Event';
+        $this->template->javascript->add('assets/js/markdown.js');
+        $this->template->stylesheet->add('//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/smoothness/jquery-ui.min.css');
+        $this->template->stylesheet->add('assets/css/jquery-ui-timepicker-addon.css');
+        $this->template->javascript->add('assets/js/jquery-ui-timepicker-addon.js');
+		$this->template->content->view('events/edit', $data);
+		$this->template->publish();		
 
 	}
+
+	/**
+	 * Checks to see if a user is authorized based on session storage
+	 */
+	private function authorized() {
+		if (!$this->session->userdata('id')) {
+			return false;
+		} return true;
+	}
+
+	private function canEdit($event) {
+		$sessionUser = new User($this->session->userdata('id'));
+		if ($sessionUser->id == $event->user_id) {
+			return true;
+		} return false;
+	}
+
 
 }

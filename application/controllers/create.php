@@ -78,6 +78,21 @@ class Create extends CI_Controller {
 
 	}
 
+	public function listing()
+	{
+
+		if (!$this->authorized()) {
+			header('Location: /login');
+		}
+
+		// Create the view
+		$this->template->title = 'Create Listing';
+        $this->template->javascript->add('assets/js/markdown.js');
+		$this->template->content->view('create/listing');
+		$this->template->publish();		
+
+	}
+
 	/**
 	 * Checks to see if a user is authorized based on session storage
 	 */

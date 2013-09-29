@@ -3,8 +3,9 @@
 		<span id="create-post"><a href="/create/post">Post</a></span>
 		<span id="create-event" class="create-type-selected">Event</span>
 		<span id="create-quote"><a href="/create/quote">Quote</a></span>
+		<span id="create-listing"><a href="/create/listing">Listing</a></span>
 	</div>
-	<form action="/events/add" method="post">
+	<form action="/events/save" method="post">
 	<div class="create-text">
 		<input type="text" name="event-name" placeholder="Name" />
 	</div>

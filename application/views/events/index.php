@@ -7,7 +7,7 @@
 	<? if ($this->session->userdata('id')) { ?>
 		<div class="content-attending">You're going!</div>
 	<? } ?>
-	<div class="content-summary"><? echo $event->description; ?></div>
+	<div class="content-summary"><? echo $event->getExcerpt(); ?></div>
 	<div class="content-info">
 		<span class="content-author">
 			<img class="img-rounded" src="<? echo $event->user->get()->getPhoto(); ?>" /> <? echo $event->user->get()->getName(); ?>

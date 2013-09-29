@@ -10,6 +10,15 @@ class Event extends DataMapper {
 		parent::__construct($id);
 	}
 
+	function getExcerpt()
+	{
+		if (strlen($this->description) > 300) {
+			return substr($this->description, 0, 300) . '...';
+		} else {
+			return $this->description;
+		}
+	}
+
 }
 
 /* End of file event.php */

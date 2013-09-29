@@ -3,6 +3,7 @@
 		<span id="create-post"><a href="/create/post">Post</a></span>
 		<span id="create-event"><a href="/create/event">Event</a></span>
 		<span id="create-quote" class="create-type-selected">Quote</span>
+		<span id="create-listing"><a href="/create/listing">Listing</a></span>
 	</div>
 	<form action="/quotes/add" method="post">
 	<div class="create-quote">

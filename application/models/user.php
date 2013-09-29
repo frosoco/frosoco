@@ -2,7 +2,7 @@
 
 class User extends DataMapper {
 	
-	var $has_many = array('event', 'upload', 'signup', 'post', 'quote');
+	var $has_many = array('event', 'upload', 'signup', 'post', 'quote', 'item');
 
 	function __construct($id = NULL)
 	{
@@ -28,6 +28,10 @@ class User extends DataMapper {
 
 	function getLocation() {
 		return ucfirst($this->house . ' ' . $this->room);
+	}
+
+	function isStaff() {
+		return strstr($this->role, 'staff');
 	}
 
 }

@@ -2,30 +2,33 @@
 	<div class="view-content-title"><? echo $event->name; ?></div>
 	<div class="view-content-start"><? echo $event->start; ?></div>
 	<div class="view-content-body"><? echo $this->markdown->parse($event->description); ?></div>
+	<? if ($event->user->get()->id == $this->session->userdata('id')) { ?>
+	<div class="view-content-edit"><a href="/events/edit/<? echo $event->id;?>">Edit this Event</a></div>
+	<? } ?>
 </div>
-<div class="panel view-addendum">
-	<div class="view-addendum-author">
-		<div class="view-addendum-author-image">
+<div class="panel view-information">
+	<div class="view-information-person">
+		<div class="view-information-person-image">
 			<img class="img-rounded" src="<? echo $event->user->get()->getPhoto(); ?>" /> 
 		</div>
-		<div class="view-addendum-author-name">
+		<div class="view-information-person-name">
 			<? echo $event->user->get()->getName(); ?>
-			<div class="view-addendum-author-email">
+			<div class="view-information-person-email">
 				<? echo $event->user->get()->getEmail(); ?>
 			</div>
 		</div>
 	</div>
-	<div class="view-addendum-attendees">
+	<div class="view-information-attendees">
 		<? foreach ($signups as $signup) { ?>
 		<? $attendee = $signup->user->get(); ?>
 		<a href="/users/view/<? echo $attendee->id; ?>">
-		<div class="view-addendum-attendee">
+		<div class="view-information-attendee">
 			<img class="img-rounded" src="<? echo $attendee->getPhoto(); ?>" />
 		</div>
 		</a>
 		<? } ?>
 	</div>
-	<div class="view-addendum-actions">
+	<div class="view-information-actions">
 		<? if ($this->session->userdata('id')) { ?>
 		<? if ($signedup) { ?>
 			<button type="button" class="btn btn-success" disabled="disabled">Signed up!</button>
