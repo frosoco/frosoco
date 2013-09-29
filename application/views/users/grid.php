@@ -1,4 +1,6 @@
 <div class="container">
+	<div class="people">
+	<div class="alert alert-info">Not your cup of tea? <a href="/users/index/list">Return to the list view</a></div>
 	<div class="people-grid">
 <? foreach ($users as $user) { ?> 
 <div class="people-grid-person">
@@ -11,6 +13,8 @@
 	</div>
 </div>
 <? } ?>
+</div>
+</div>
 </div>
 </div>
 <script>

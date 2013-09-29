@@ -248,14 +248,33 @@ body {
   .feed .feed-item .feed-activity {
     width: 87%; }
 
-.people-grid {
+.people {
   margin-top: 20px; }
-  .people-grid .people-grid-person {
-    width: 193px;
-    height: 290px; }
-    .people-grid .people-grid-person img {
-      width: 100%; }
-    .people-grid .people-grid-person .people-grid-info {
-      padding: 3px 5px; }
-    .people-grid .people-grid-person .people-grid-lastname {
-      font-weight: 500; }
+  .people .people-grid {
+    margin-top: 20px; }
+    .people .people-grid .people-grid-person {
+      width: 193px;
+      height: 290px; }
+      .people .people-grid .people-grid-person img {
+        width: 100%; }
+      .people .people-grid .people-grid-person .people-grid-info {
+        padding: 3px 5px; }
+      .people .people-grid .people-grid-person .people-grid-lastname {
+        font-weight: 500; }
+
+.autocomplete-suggestions {
+  border: 1px solid #999;
+  background: #FFF;
+  overflow: auto; }
+
+.autocomplete-suggestion {
+  padding: 2px 5px;
+  white-space: nowrap;
+  overflow: hidden; }
+
+.autocomplete-selected {
+  background: #F0F0F0; }
+
+.autocomplete-suggestions strong {
+  font-weight: normal;
+  color: #3399FF; }
