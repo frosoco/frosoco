@@ -2,7 +2,15 @@
 
 class User extends DataMapper {
 	
-	var $has_many = array('event', 'upload', 'signup', 'post', 'quote', 'item');
+	var $has_many = array('event', 'upload', 'signup', 'post', 'quote', 'item',
+		'course' => array(
+			'class' => 'course',
+			'other_field' => 'user',
+			'join_self_as' => 'user',
+			'join_other_as' => 'course',
+			'join_table' => 'users_courses'
+			)
+		);
 
 	function __construct($id = NULL)
 	{

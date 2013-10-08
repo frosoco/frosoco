@@ -89,6 +89,12 @@ class Home extends CI_Controller {
 		$this->template->publish();
 	}
 
+	public function dormgov()
+	{
+		$this->template->title = 'Dorm Gov Elections';
+		$this->template->content->view('static/dormgov');
+		$this->template->publish();	}
+
 }
 
 /* End of file home.php */

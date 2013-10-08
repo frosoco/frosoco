@@ -9,7 +9,7 @@
 		<img src="/assets/images/highlight.jpg" />
 	</div>
 	<div class="feed-notification">
-		The Ricker Dining menu for NSO week is available <a href="/assets/documents/nso2013menu_ricker.doc">here</a> (menu subject to change)
+		Want to contribute to the community? Check out the <a href="/home/dormgov">dorm gov roles and candidates here</a>, and join the race!
 	</div>
 	<div class="feed-item">
 		<div class="feed-picture"><img src="https://frosoco.stanford.edu/assets/images/shield.png" /></div>

@@ -182,6 +182,11 @@ body {
 		p {
 			margin-bottom: 15px;
 		}
+		input[type="text"].autocomplete {
+			width: 100%;
+			padding: 2px 5px;
+			border: 1px solid #CCC;
+		}
 	}
 
 	.view-information {
@@ -405,6 +410,18 @@ body {
 			.people-grid-lastname {
 				font-weight: 500;
 			}
+		}
+	}
+}
+
+.user-courses {
+	.user-course {
+		margin: 10px 0px;
+		.user-course-number {
+			font-weight: 500;
+		}
+		.user-course-title {
+
 		}
 	}
 }

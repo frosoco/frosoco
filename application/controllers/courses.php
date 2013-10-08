@@ -15,14 +15,27 @@ class Courses extends CI_Controller {
 		$arr = Array();
 		foreach ($courses as $course) {
 			$arr_course = Array();
-			$arr_course['value'] = $course->number;
-			$arr_course['data'] = $course->number;
+			$arr_course['value'] = $course->number . ': ' . $course->title;
+			$arr_course['data'] = $course->id;
 			array_push($arr, $arr_course);
 		}
 
 		$arr_wrapper = Array();
 		$arr_wrapper['suggestions'] = $arr;
 		echo json_encode($arr_wrapper);
+
+	}
+
+	public function retrieve_data() 
+	{
+
+		$id = $this->input->get('id', TRUE);
+		$course = new Course($id);
+		$arr = Array();
+		$arr['number'] = $course->number;
+		$arr['title'] = $course->title;
+		// header('Content-Type: application/json');
+		echo json_encode($arr);
 
 	}
 

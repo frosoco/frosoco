@@ -4,7 +4,7 @@
 	<div class="people-grid">
 <? foreach ($users as $user) { ?> 
 <div class="people-grid-person">
-	<a href="/users/views/<? echo $user->id; ?>"><img src="<? echo $user->getPhoto(); ?>" /></a>
+	<a href="/users/view/<? echo $user->id; ?>"><img src="<? echo $user->getPhoto(); ?>" /></a>
 	<div class="people-grid-info">
 		<div class="people-grid-firstname"><? echo $user->first_name; ?></div>
 		<div class="people-grid-lastname"><? echo $user->last_name; ?></div>

@@ -115,6 +115,10 @@ body {
       margin-bottom: 5px; }
     .content .view-content p {
       margin-bottom: 15px; }
+    .content .view-content input[type="text"].autocomplete {
+      width: 100%;
+      padding: 2px 5px;
+      border: 1px solid #CCC; }
   .content .view-information .view-information-person {
     font-size: 1.4em; }
     .content .view-information .view-information-person div {
@@ -261,6 +265,11 @@ body {
         padding: 3px 5px; }
       .people .people-grid .people-grid-person .people-grid-lastname {
         font-weight: 500; }
+
+.user-courses .user-course {
+  margin: 10px 0px; }
+  .user-courses .user-course .user-course-number {
+    font-weight: 500; }
 
 .autocomplete-suggestions {
   border: 1px solid #999;
