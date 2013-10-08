@@ -9,7 +9,7 @@
 		<img src="/assets/images/highlight.jpg" />
 	</div>
 	<div class="feed-notification">
-		Want to contribute to the community? Check out the <a href="/home/dormgov">dorm gov roles and candidates here</a>, and join the race!
+		Check out the first <a href="/events/view/35">Dean's Dinner with Rob Urstein</a> and sign up for it today!
 	</div>
 	<div class="feed-item">
 		<div class="feed-picture"><img src="https://frosoco.stanford.edu/assets/images/shield.png" /></div>

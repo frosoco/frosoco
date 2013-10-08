@@ -1,6 +1,6 @@
 <div class="panel view-content">
 	<div class="view-content-title"><? echo $event->name; ?></div>
-	<div class="view-content-start"><? echo $event->start; ?></div>
+	<div class="view-content-start"><? echo date('Y-m-d g:i A', strtotime($event->start)); ?> to <? echo date('Y-m-d g:i A', strtotime($event->end)); ?></div>
 	<div class="view-content-body"><? echo $this->markdown->parse($event->description); ?></div>
 	<? if ($event->user->get()->id == $this->session->userdata('id')) { ?>
 	<div class="view-content-edit"><a href="/events/edit/<? echo $event->id;?>">Edit this Event</a></div>
@@ -21,7 +21,7 @@
 	<div class="view-information-attendees">
 		<? foreach ($signups as $signup) { ?>
 		<? $attendee = $signup->user->get(); ?>
-		<a href="/users/view/<? echo $attendee->id; ?>">
+	    <a href="/users/view/<? echo $attendee->id; ?>" title="<? echo $attendee->getName(); ?>">
 		<div class="view-information-attendee">
 			<img class="img-rounded" src="<? echo $attendee->getPhoto(); ?>" />
 		</div>
