@@ -99,6 +99,10 @@ class Events extends CI_Controller {
 	public function signup() 
 	{
 
+		if (!$this->authorized()) {
+			header('Location: /login');
+		}	
+
 		// Get the POST parameters
 		$s = new Signup();
 		$s->event_id = $this->input->post('event_id');

@@ -150,7 +150,8 @@ body {
     .content .view-information .view-information-attendees .view-information-attendee {
       display: inline-block; }
       .content .view-information .view-information-attendees .view-information-attendee img {
-        width: 40px; }
+        width: 40px;
+        margin-bottom: 5px; }
   .content .view-information .view-information-actions {
     margin-top: 0px; }
   .content .view-information .view-information-comments {
