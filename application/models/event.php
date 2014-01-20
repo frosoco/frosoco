@@ -19,6 +19,23 @@ class Event extends DataMapper {
 		}
 	}
 
+	function getStart()
+	{
+		return date('Y-m-d g:i A', strtotime($this->start));
+	}
+
+	function getEnd()
+	{
+		return date('Y-m-d g:i A', strtotime($this->end));
+	}
+
+	function getSignups()
+	{
+		// Get all of the people who are signed up
+		$signups = new Signup();
+		return $signups->where('event_id', $this->id)->count();
+	}
+
 }
 
 /* End of file event.php */

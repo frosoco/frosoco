@@ -84,6 +84,7 @@ class Events extends CI_Controller {
 
 		$e->user_id = $this->session->userdata('id');
 		$e->description = $this->input->post('event-description');
+		$e->open = 1;
 		$e->save(); 
 
 		// Redirect to page for that event

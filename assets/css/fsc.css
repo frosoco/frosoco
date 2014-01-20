@@ -3,11 +3,11 @@ html {
   font-weight: 300; }
 
 body {
-  background-color: #fbfbf9; }
+  background-color: #fbfbfa; }
 
 .sidebar {
   position: fixed;
-  background-color: #f2f1eb;
+  background-color: #e9e6df;
   height: 100%; }
   .sidebar .sidebar-content {
     padding: 2% 0px 2% 6%; }
@@ -37,7 +37,7 @@ body {
         .sidebar .sidebar-content .sidebar-menu ul li {
           padding: 4% 3% 4% 10%; }
           .sidebar .sidebar-content .sidebar-menu ul li:hover {
-            background-color: #e9e6df; }
+            background-color: #f2f1eb; }
     .sidebar .sidebar-content .sidebar-logo {
       text-align: center; }
       .sidebar .sidebar-content .sidebar-logo img {
@@ -58,7 +58,8 @@ body {
       padding: 1%;
       margin: 0.8%;
       width: 31.333333333%;
-      background-color: #fafafa;
+      border: 1px solid #CCC;
+      background-color: #fefefe;
       margin-bottom: 10px; }
       .content .content-cards .content-card .content-title {
         font-size: 1.3em;
@@ -110,7 +111,7 @@ body {
     line-height: 1.8em; }
     .content .view-content .view-content-title {
       font-size: 1.8em;
-      margin-bottom: 20px; }
+      margin-bottom: 10px; }
     .content .view-content .view-content-start {
       margin-bottom: 5px; }
     .content .view-content p {
@@ -142,7 +143,7 @@ body {
     margin-top: 10px; }
   .content .view-information .view-information-attendees {
     margin-top: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     border-top: 1px solid #CCC;
     padding-top: 20px; }
     .content .view-information .view-information-attendees a {
@@ -154,6 +155,12 @@ body {
         margin-bottom: 5px; }
   .content .view-information .view-information-actions {
     margin-top: 0px; }
+  .content .view-information .view-information-export {
+    margin-top: 10px;
+    padding: 10px 0px; }
+    .content .view-information .view-information-export td {
+      font-size: 0.9em;
+      padding: 2px 5px; }
   .content .view-information .view-information-comments {
     margin-top: 15px;
     border-top: 1px solid #CCC;
@@ -271,6 +278,39 @@ body {
   margin: 10px 0px; }
   .user-courses .user-course .user-course-number {
     font-weight: 500; }
+
+.events {
+  padding: 1.2% 0.3% 1% 0.3%; }
+  .events .events-listing-date {
+    background-color: #e9e6df;
+    padding: 3px 8px; }
+    .events .events-listing-date:not(:first-child) {
+      margin-top: 15px; }
+  .events .events-listing {
+    padding: 10px 0px; }
+    .events .events-listing .event-listing-time {
+      display: inline-block;
+      vertical-align: top;
+      width: 100px; }
+    .events .events-listing .event-listing-image {
+      display: inline-block;
+      vertical-align: top;
+      height: 100px;
+      width: 100px; }
+    .events .events-listing .event-listing-description {
+      display: inline-block;
+      vertical-align: top;
+      padding-left: 10px; }
+      .events .events-listing .event-listing-description div {
+        margin-bottom: 2px; }
+      .events .events-listing .event-listing-description .event-listing-title {
+        font-size: 1.2em;
+        font-weight: regular; }
+
+.events-actions {
+  padding: 1.2% 0.3% 1% 0.3%; }
+  .events-actions button {
+    margin: 4px; }
 
 .autocomplete-suggestions {
   border: 1px solid #999;

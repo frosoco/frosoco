@@ -16,7 +16,9 @@ $beige-30: #E3DFD5;
 $beige-40: #D5D0C0;
 $beige-60: #C4BFA9;
 $beige-85: #ACA68D;
-$white: #FAFAFA;
+$white: #FCFCFC;
+$background-white: #FBFBFA;
+$white-FE: #FEFEFE;
 
 html {
 	color: $black;
@@ -24,12 +26,12 @@ html {
 }
 
 body {
-	background-color: $beige-5;
+	background-color: $background-white;
 }
 
 .sidebar {
 	position: fixed;
-	background-color: $beige-10;
+	background-color: $beige-20;
 	height: 100%;
 	.sidebar-content {
 		padding: 2% 0px 2% 6%;
@@ -65,7 +67,7 @@ body {
 				li {
 					padding: 4% 3% 4% 10%;
 					&:hover {
-						background-color: $beige-20;
+						background-color: $beige-10;
 					}
 				}
 			}
@@ -95,7 +97,8 @@ body {
 			padding: 1%;
 			margin: 0.8%;
 			width: 31.333333333%;
-			background-color: $white;
+			border: 1px solid #CCC;
+			background-color: $white-FE;
 			margin-bottom: 10px;
 			.content-title {
 				font-size: 1.3em;
@@ -147,6 +150,9 @@ body {
 				color: #00A613;
 				margin-top: 5px;
 			}
+			.content-recurring {
+				
+			}
 		}
 	}
 
@@ -173,7 +179,7 @@ body {
 	.view-content {
 		.view-content-title {
 			font-size: 1.8em;
-			margin-bottom: 20px;
+			margin-bottom: 10px;
 		}
 		.view-content-start {
 			margin-bottom: 5px;
@@ -222,7 +228,7 @@ body {
 		}
 		.view-information-attendees {
 			margin-top: 20px;
-			margin-bottom: 20px;
+			margin-bottom: 10px;
 			border-top: 1px solid #CCC;
 			padding-top: 20px;
 			a {
@@ -238,6 +244,14 @@ body {
 		}
 		.view-information-actions {
 			margin-top: 0px;
+		}
+		.view-information-export {
+			margin-top: 10px;
+			padding: 10px 0px;
+			td {
+				font-size: 0.9em;
+				padding: 2px 5px;
+			}
 		}
 		.view-information-comments {
 			margin-top: 15px;
@@ -424,6 +438,50 @@ body {
 		.user-course-title {
 
 		}
+	}
+}
+
+.events {
+	padding: 1.2% 0.3% 1% 0.3%;
+	.events-listing-date {
+		background-color: $beige-20;
+		padding: 3px 8px;
+		&:not(:first-child) {
+			margin-top: 15px;
+		}
+	}
+	.events-listing {
+		padding: 10px 0px;
+		.event-listing-time {
+			display: inline-block;
+			vertical-align: top;
+			width: 100px;
+		}
+		.event-listing-image {
+			display: inline-block;
+			vertical-align: top;
+			height: 100px;
+			width: 100px;
+		}
+		.event-listing-description {
+			div {
+				margin-bottom: 2px;
+			}
+			display: inline-block;
+			vertical-align: top;
+			padding-left: 10px;
+			.event-listing-title {
+				font-size: 1.2em;
+				font-weight: regular;
+			}
+		}
+	}
+}
+
+.events-actions {
+	padding: 1.2% 0.3% 1% 0.3%;	
+	button {
+		margin: 4px;
 	}
 }
 
