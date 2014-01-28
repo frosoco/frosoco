@@ -18,6 +18,9 @@
 	<div class="create-text">
 		<input type="text" id="event-dtpicker-end" name="event-end" placeholder="End time" />
 	</div>
+	<div class="create-text">
+		<input type="text" name="event-capacity" placeholder="Capacity" />
+	</div>
 	<div class="create-body">
 		<textarea name="event-description" id="create-body" oninput="this.editor.update()" placeholder="Description (Markdown enabled)"></textarea>
 	</div>

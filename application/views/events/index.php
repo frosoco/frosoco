@@ -35,7 +35,7 @@
 	</div>
 	<div class="col-xs-4">
 		<div class="events-actions">
-			<button class="btn btn-success" href="/create/event">+ Create Event</button>
+			<a href="/create/event"><button class="btn btn-success">+ Create Event</button></a>
 		</div>
 		<!-- Calendar goes here -->
 	</div>
