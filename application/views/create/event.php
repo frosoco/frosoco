@@ -7,21 +7,27 @@
 	</div>
 	<form action="/events/save" method="post">
 	<div class="create-text">
+		<div class="create-label">Name</div>
 		<input type="text" name="event-name" placeholder="Name" />
 	</div>
 	<div class="create-text">
+		<div class="create-label">Location</div>
 		<input type="text" name="event-location" placeholder="Location" />
 	</div>
 	<div class="create-text">
+		<div class="create-label">Start</div>
 		<input type="text" id="event-dtpicker-start" name="event-start" placeholder="Start time" />
 	</div>
 	<div class="create-text">
+		<div class="create-label">Finish</div>
 		<input type="text" id="event-dtpicker-end" name="event-end" placeholder="End time" />
 	</div>
 	<div class="create-text">
+		<div class="create-label">Capacity</div>
 		<input type="text" name="event-capacity" placeholder="Capacity" />
 	</div>
 	<div class="create-body">
+		<div class="create-label">Description</div>
 		<textarea name="event-description" id="create-body" oninput="this.editor.update()" placeholder="Description (Markdown enabled)"></textarea>
 	</div>
 	<div class="create-actions">

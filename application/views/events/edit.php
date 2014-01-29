@@ -10,11 +10,15 @@
 	</div>
 	<div class="create-text">
 		<div class="create-label">Start</div>
-		<input type="text" id="event-dtpicker-start" name="event-start" placeholder="Start time" value="<? echo date("m/d/Y H:i a", strtotime($event->start)); ?>" />
+		<input type="text" id="event-dtpicker-start" name="event-start" placeholder="Start time" value="<? echo date("m/d/Y h:i a", strtotime($event->start)); ?>" />
 	</div>
 	<div class="create-text">
 		<div class="create-label">Finish</div>
-		<input type="text" id="event-dtpicker-end" name="event-end" placeholder="End time" value="<? echo date("m/d/Y H:i a", strtotime($event->end)); ?>" />
+		<input type="text" id="event-dtpicker-end" name="event-end" placeholder="End time" value="<? echo date("m/d/Y h:i a", strtotime($event->end)); ?>" />
+	</div>
+	<div class="create-text">
+		<div class="create-label">Capacity</div>
+		<input type="text" name="event-capacity" placeholder="Capacity" value="<? echo $event->capacity; ?>" />
 	</div>
 	<div class="create-body">
 		<div class="create-label">Description</div>
