@@ -93,7 +93,15 @@ class Home extends CI_Controller {
 	{
 		$this->template->title = 'Dorm Gov Elections';
 		$this->template->content->view('static/dormgov');
-		$this->template->publish();	}
+		$this->template->publish();	
+	}
+
+	public function preassignment()
+	{
+		$this->template->title = 'Preassignment';
+		$this->template->content->view('static/preassignment');
+		$this->template->publish();
+	}
 
 }
 
