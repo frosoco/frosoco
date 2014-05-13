@@ -19,8 +19,10 @@
 			</div>
 		</div>
 	</div>
-	<div class="view-information-attendees">
-		<? foreach ($signups as $signup) { ?>
+    <div class="view-information-attendees">
+        <? $signup_count = 0; ?>
+        <? foreach ($signups as $signup) { ?>
+        <? $signup_count += 1; ?>
 		<? $attendee = $signup->user->get(); ?>
 	    <a href="/users/view/<? echo $attendee->id; ?>" title="<? echo $attendee->getName(); ?>">
 		<div class="view-information-attendee">
@@ -29,37 +31,31 @@
 		</a>
 		<? } ?>
 	</div>
-	<div class="view-information-actions">
-		<? if ($this->session->userdata('id') && $event->open && count($signups) < $event->capacity && $event->capacity != 0) { ?>
-		<? if ($signedup) { ?>
-			<button type="button" class="btn btn-success" disabled="disabled">Signed up!</button>
-		<? } else { ?>
-			<button type="button" id="signup" class="btn btn-default">Sign up</button>
-		<? } ?>
-		<i style="display: none;" id="action-spinner" class="icon-spinner icon-spin icon-large"></i>
+    <div class="view-information-actions">
+		<? if ($this->session->userdata('id') && $event->open && $signup_count < $event->capacity) { ?>
+	    	<? if ($signedup) { ?>
+		    	<button type="button" class="btn btn-success" disabled="disabled">Signed up!</button>
+		    <? } else { ?>
+			    <button type="button" id="signup" class="btn btn-default">Sign up</button>
+		    <? } ?>
+		    <i style="display: none;" id="action-spinner" class="icon-spinner icon-spin icon-large"></i>
         <? } else { ?>
             <button type="button" class="btn btn-default" disabled="disabled">Closed</button>
         <? } ?>
-	</div>
-	<? if (strstr($this->session->userdata('role'), 'staff')) { ?>
-	<div class="view-information-export">
-		<table class="table">
-		<tr>
-			<th>Name</th>
-			<th>Email</th>
-			<th>Signup Time</th>
-		</tr>
-		<? foreach ($signups as $signup) { ?>
-		<? $attendee = $signup->user->get(); ?>
-		<tr>
-			<td><? echo $attendee->getName(); ?></td>
-			<td><? echo $attendee->getEmail(); ?></td>
-			<td><? echo $signup->time; ?></td>
-		</tr>
-		<? } ?>
-		</table>
-	</div>
-	<? } ?>
+    </div>
+    <? if (strstr($this->session->userdata('role'), 'staff')) { ?>
+    <div class="view-information-attendees">
+        <table class="table">
+        <? foreach ($signups as $signup) { ?>
+        <? $attendee = $signup->user->get(); ?>
+        <tr>
+            <td><? echo $attendee->getName(); ?></td>
+            <td><? echo $signup->time; ?></td>
+        </tr>
+        <? } ?>
+        </table>
+    </div>
+    <? } ?>
 </div>
 <script>
 	$('#signup').click(function() {

@@ -296,7 +296,10 @@ body {
       display: inline-block;
       vertical-align: top;
       height: 100px;
-      width: 100px; }
+      width: 100px;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover; }
     .events .events-listing .event-listing-description {
       display: inline-block;
       vertical-align: top;
@@ -311,6 +314,10 @@ body {
   padding: 1.2% 0.3% 1% 0.3%; }
   .events-actions button {
     margin: 4px; }
+
+.roster-group {
+  padding: 5px 0px;
+  border-top: 1px solid #CCC; }
 
 .autocomplete-suggestions {
   border: 1px solid #999;

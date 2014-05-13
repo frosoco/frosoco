@@ -1,5 +1,6 @@
 <!doctype html>
 <head>
+	<meta name="robots" content="noindex">
 	<title><?php echo $this->template->title->default("FroSoCo"); ?> | FroSoCo</title>
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
@@ -54,6 +55,7 @@
 						<a href="/posts"><li>Posts</li></a>
 						<a href="/quotes"><li>Quotes</li></a>
 						<a href="/marketplace"><li>Marketplace</li></a>
+						<a href="/nexus"><li>Nexus</li></a>
 					</ul>
 				</div>
 				<div class="sidebar-logo">

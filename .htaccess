@@ -2,6 +2,7 @@ DirectoryIndex index.php
 
 RewriteEngine on
 RewriteBase /
+RewriteCond %{REQUEST_URI} !^/webgrind
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond $1 !^(index\.php|conf|login|assets|uploads|robots\.txt)
