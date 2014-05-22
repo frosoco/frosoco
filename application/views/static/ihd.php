@@ -25,8 +25,8 @@
 	Note that the section about Gender Neutral housing does not apply to FroSoCo.</p>
 
 	<h4>I want a single, what should I do?</h4>
-	<p>Fill out the singles form and turn it in by ----- and we will let you know whether or not your draw number is good enough to guarantee you 
-	a single. It will be linked on the right as soon as it is released.</p>
+	<p>Fill in <a href="https://docs.google.com/a/stanford.edu/forms/d/1NDRgEhw8b82jNgs50fRbT2pRSp_fvVVWrGIZdPXoWnY/viewform">
+        this form</a>, and we'll let you know whether your draw number is good enough to be guaranteed a single.</p>
 
 	<h4>I need a roommate! What should I do?</h4>
 	<p>Attend the mixer at <b>8:30pm in Schiff lounge</b> and see if you can't nab one.</p>
@@ -34,6 +34,10 @@
 	<h4>I have more questions! Who should I contact?</h4>
 	<p>Kay Dannenmaier, your awesome OCT next year, is the point person for all your In-House Draw questions! 
 	Email her at kdanne@stanford.edu.</p>
+
+    <h4>You don't sound like Roger, who are you?</h4>
+    <p>Hi! I'm Mindy, your RMC for next year. The in-house draw is run by next year's staff, and we look forward
+    to meeting you all!</p>
 
 </div>
 
@@ -45,4 +49,9 @@
 		<p><a href="/assets/documents/proxyform.pdf">Proxy Form</a></p>
         <p><a href="/assets/documents/RoomList.pdf">Rooms for 2014-15</a></p>
 	</div>
+    <div>
+        <p><strong>Links</strong></p>
+        <p><a href="https://docs.google.com/a/stanford.edu/forms/d/1NDRgEhw8b82jNgs50fRbT2pRSp_fvVVWrGIZdPXoWnY/viewform">
+        Singles Application Form</a></p>
+    </div>
 </div>
