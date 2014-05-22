@@ -6,4 +6,4 @@ RewriteCond %{REQUEST_URI} !^/webgrind
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond $1 !^(index\.php|conf|login|assets|uploads|robots\.txt)
-RewriteRule ^(.*)$ \public
+RewriteRule ^(.*)$ index.php?/$1 [L]
