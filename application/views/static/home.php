@@ -1,5 +1,10 @@
 <div class="panel home">
-	<div class="alert alert-info">Want information on preassignment? <a href="/home/preassignment">Check out our page on preassignment.</a></div>
+	<? if ($this->session->userdata('id')) { ?>
+		<div class="alert alert-info">
+			In-House Draw is June 2nd! <a href="/home/inhousedraw">Click here for 
+			for FAQs and forms.</a></div>
+	<? } ?>
+	
 	<p>The Freshman-Sophomore College has the vibrant residential intellectual community of a small, elite, liberal-arts college while providing enhanced access to the academic resources of one of the world's premier research universities.</p>
 	<p>In addition to all of the energy and excitement that typifies the freshman-year experience, FroSoCo is specifically designed to create a close-knit community by bringing together the most talented students at Stanford and then helping them achieve a balance of academic preparation, personal exploration, cultural enrichment, and self-reflection at the highest level. They emerge with the critical self-understanding needed for the life-long project of designing a meaningful life and are already connected to the resources at Stanford that can set them on the path towards being exceptional individuals and community leaders.</p>
 	<p>Part of what helps us achieve these goals is a fun community of students that share their extraordinary abilities and help each other develop, flourish and enjoy life: at the College you will live, study, and play with like-minded individuals who are academically driven, excited about the arts, give back to their community, play Frisbee in the Quad, build a trebuchet to apply their knowledge of physics, attend plays, sporting events, concerts, restaurants - all supported by the College and its extensive staff. Each house of the college has a senior staff or faculty couple, our College Directors, that live in attached residences; the College Dean lives across from the College.</p>

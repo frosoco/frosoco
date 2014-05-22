@@ -103,6 +103,32 @@ class Home extends CI_Controller {
 		$this->template->publish();
 	}
 
+	/**
+	 * Info on 2014-2015 in house draw
+	 *
+	 * URL: /home/inhousedraw
+	 */
+	public function inhousedraw()
+	{
+		// authenticate first
+		if (!$this->authorized()) {
+			header('Location: /auth/login');
+		}
+
+		$this->template->title = 'In-House Draw';
+		$this->template->content->view('static/ihd');
+		$this->template->publish();
+	}
+	
+
+	/**
+	 * Checks to see if a user is authorized based on session storage
+	 */
+	private function authorized() {
+		if (!$this->session->userdata('id')) {
+			return false;
+		} return true;
+	}
 }
 
 /* End of file home.php */
