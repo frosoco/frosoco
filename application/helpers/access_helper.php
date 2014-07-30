@@ -119,8 +119,6 @@ if (!function_exists('get_permissions')) {
         $staff
       );
 
-      echo 'in here!';
-
       $permissions = array(
         'PUBLIC' => $public,
         'STANFORD' => $stanford,
