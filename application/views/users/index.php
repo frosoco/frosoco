@@ -1,38 +1,43 @@
-<div class="panel-users">
-<input id="user-search" type="text" class="form-control" placeholder="Search" /><br />
-<div class="alert alert-info">Check out the new <a class="alert-link" href="/users/index/grid">grid directory view</a>!</div>
-<table class="table table-hover">
-	<tr>
-		<th>First Name</th>
-		<th>Last Name</th>
-		<th>Email</th>
-		<th>Location</th>
-		<th>Role</th>
-		<th>Year</th>
-		<th>Profile</th>
-	</tr>
-	<? foreach ($users as $user) { ?>
-	<tr class="user-row">
-		<td><? echo $user->first_name; ?></td>
-		<td><? echo $user->last_name; ?></td>
-		<td><? echo $user->sunet; ?>@stanford.edu</td>
-		<td><? echo ucfirst($user->house) . ' ' . $user->room; ?></td>
-		<td><? echo ucfirst($user->role); ?></td>
-		<td><? echo $user->year; ?></td>
-		<td><a href="/users/view/<? echo $user->id; ?>">View</a></td>
-	</tr>
-	<? } ?>
-</table>
+
+<div class="container">
+	<div class="people">
+		<input id="user-search" type="text" class="form-control" placeholder="Search" />
+
+		<!-- <div class="alert alert-info">Return to <a class="alert-link" href="/users/index/index">list view</a>.</div> -->
+
+			<div class="people-grid">
+				<? foreach ($users as $user) { ?> 
+				<div class="people-grid-person">
+					<img src="<? echo $user->getPhoto(); ?>" />
+					<!-- <a href="/users/view/<? echo $user->id; ?>"><img src="<? echo $user->getPhoto(); ?>" /></a> -->
+					<div class="people-grid-info">
+						<div class="people-grid-firstname"><? echo $user->first_name; ?></div>
+						<div class="people-grid-lastname"><? echo $user->last_name; ?></div>
+						<div class="people-grid-email"><? echo $user->getEmail(); ?></div>
+						<div class="people-grid-location"><? echo $user->getLocation(); ?></div>
+					</div>
+				</div>
+				<? } ?>
+			</div>
+		</div>
+	</div>
 </div>
+
 <script>
-$('#user-search').keyup(function() {
-	var query = $(this).val().toLowerCase();
-	$('.user-row').each(function() {
-		if ($(this).html().toLowerCase().indexOf(query) >= 0) {
-			$(this).show();
-		} else {
-			$(this).hide();
-		}
+	var $container = $('.people-grid');
+	$container.isotope({
+	  itemSelector: '.people-grid-person',
+	  layoutMode: 'fitRows',
+	  transitionDuration: 0,
 	});
-});
+
+	$('#user-search').keyup(function() {
+		var query = $(this).val().toLowerCase();
+
+		$container.isotope({
+			filter: function(){
+				return ($(this).html().toLowerCase().indexOf(query) >= 0);
+			}
+		});
+	});
 </script>

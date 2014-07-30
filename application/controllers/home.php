@@ -60,8 +60,18 @@ class Home extends CI_Controller {
 	 */
 	public function staff()
 	{
+		$staff_members = new User();
+		$staff_members->where('role = "staff"');
+		foreach ($staff_members as $staff) {
+			echo $staff->first_name;
+		}
+		$staff_members->order_by("last_name", "asc");
+		$staff_members->order_by("first_name", "asc");
+		$staff_members->get();
+		$data['staff_members'] = $staff_members;
+
 		$this->template->title = 'Staff';
-		$this->template->content->view('static/staff');
+		$this->template->content->view('static/staff', $data);
 		$this->template->publish();
 	}
 
