@@ -266,6 +266,7 @@ body {
     margin-top: 20px; }
     .people .people-grid .people-grid-person {
       width: 193px;
+      margin: 0 8px;
       height: 290px; }
       .people .people-grid .people-grid-person img {
         width: 100%; }
@@ -318,6 +319,25 @@ body {
 .roster-group {
   padding: 5px 0px;
   border-top: 1px solid #CCC; }
+
+.caption {
+  color: #8a887d;
+  margin-bottom: 20px; }
+
+.bio {
+  margin: 20px 0; }
+
+.bio-desc {
+  float: right;
+  width: 80%; }
+
+.bio-pic {
+  margin-top: 20px;
+  width: 15%; }
+
+#user-search {
+  margin-left: 8px;
+  width: 90%; }
 
 .autocomplete-suggestions {
   border: 1px solid #999;
