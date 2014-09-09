@@ -59,7 +59,9 @@
 						<a href="/home/dining"><li>Dining</li></a>
 						<!-- <a href="/posts"><li>Posts</li></a> -->
 						<a href="/quotes"><li>Quotes</li></a>
+						<? if ($this->session->userdata('id')) { ?>
 						<a href="/marketplace"><li>Marketplace</li></a>
+						<? } ?>
 						<!-- <a href="/nexus"><li>Nexus</li></a> -->
 					</ul>
 				</div>

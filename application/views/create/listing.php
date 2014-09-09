@@ -1,10 +1,10 @@
 <div class="panel create-editor">
-	<div class="create-types">
+<!-- 	<div class="create-types">
 		<span id="create-post"><a href="/create/post">Post</a></span>
 		<span id="create-event"><a href="/create/event">Event</a></span>
 		<span id="create-quote"><a href="/create/quote">Quote</a></span>
 		<span id="create-listing" class="create-type-selected">Listing</span>
-	</div>
+	</div> -->
 	<form action="/marketplace/add" method="post">
 	<div class="create-item">
 		<input type="text" name="listing-title" placeholder="Item name" />

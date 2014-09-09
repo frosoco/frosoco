@@ -1,10 +1,10 @@
 <div class="panel create-editor">
-	<div class="create-types">
+<!-- 	<div class="create-types">
 		<span id="create-post"><a href="/create/post">Post</a></span>
 		<span id="create-event"><a href="/create/event">Event</a></span>
 		<span id="create-quote" class="create-type-selected">Quote</span>
 		<span id="create-listing"><a href="/create/listing">Listing</a></span>
-	</div>
+	</div> -->
 	<form action="/quotes/add" method="post">
 	<div class="create-quote">
 		<textarea name="body" id="create-body" oninput="this.editor.update()" placeholder="Insanity: doing the same thing over and over again and expecting different results."></textarea>

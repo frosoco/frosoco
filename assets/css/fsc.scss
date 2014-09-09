@@ -519,6 +519,18 @@ body {
 	width: 90%;
 }
 
+.create-btn {
+	float: right;
+	display: block;
+	height: 34px;
+}
+
+.create-actions {
+	height: 34px;
+	padding: 10px
+}
+
+
 .autocomplete-suggestions { border: 1px solid #999; background: #FFF; overflow: auto; }
 .autocomplete-suggestion { padding: 2px 5px; white-space: nowrap; overflow: hidden; }
 .autocomplete-selected { background: #F0F0F0; }
