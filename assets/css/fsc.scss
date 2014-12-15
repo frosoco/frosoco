@@ -412,6 +412,7 @@ body {
 		margin-top: 20px;
 		.people-grid-person {
 			width: 193px;
+			margin: 0 8px;
 			img {
 				width: 100%;
 			}
@@ -493,7 +494,74 @@ body {
 	border-top: 1px solid #CCC;
 }
 
+.caption {
+	color: $gray-60;
+	margin-bottom: 20px;
+}
+
+.bio {
+	margin: 20px 0;
+}
+
+.bio-desc {
+	float: right;
+	width: 80%
+}
+
+.bio-pic {
+	margin-top: 20px;
+	width: 15%;
+}
+
+#user-search {
+	// margin: 2em 0;
+	margin-left: 8px;
+	width: 90%;
+}
+
+#filters {
+	padding: 10px 0 0 8px;
+
+	p {
+		display: inline;
+	}
+
+	label {
+		font-weight: normal;
+		display: inline-block;
+	}
+
+	input {
+		display: inline-block;
+		vertical-align: -10%;
+		margin: 0 2px 0 5px;
+	}
+}
+
+.create-btn {
+	float: right;
+	display: block;
+	height: 34px;
+}
+
+.create-actions {
+	height: 34px;
+	padding: 10px
+}
+
+
 .autocomplete-suggestions { border: 1px solid #999; background: #FFF; overflow: auto; }
 .autocomplete-suggestion { padding: 2px 5px; white-space: nowrap; overflow: hidden; }
 .autocomplete-selected { background: #F0F0F0; }
 .autocomplete-suggestions strong { font-weight: normal; color: #3399FF; }
+
+/**** Isotope filtering ****/
+
+.isotope-item {
+  z-index: 2;
+}
+
+.isotope-hidden.isotope-item {
+  pointer-events: none;
+  z-index: 1;
+}

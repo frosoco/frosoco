@@ -1,10 +1,10 @@
 <div class="panel create-editor">
-	<div class="create-types">
+<!-- 	<div class="create-types">
 		<span id="create-post"><a href="/create/post">Post</a></span>
 		<span id="create-event" class="create-type-selected">Event</span>
 		<span id="create-quote"><a href="/create/quote">Quote</a></span>
 		<span id="create-listing"><a href="/create/listing">Listing</a></span>
-	</div>
+	</div> -->
 	<form action="/events/save" method="post">
 	<div class="create-text">
 		<div class="create-label">Name</div>

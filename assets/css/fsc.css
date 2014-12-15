@@ -266,6 +266,7 @@ body {
     margin-top: 20px; }
     .people .people-grid .people-grid-person {
       width: 193px;
+      margin: 0 8px;
       height: 290px; }
       .people .people-grid .people-grid-person img {
         width: 100%; }
@@ -319,6 +320,46 @@ body {
   padding: 5px 0px;
   border-top: 1px solid #CCC; }
 
+.caption {
+  color: #8a887d;
+  margin-bottom: 20px; }
+
+.bio {
+  margin: 20px 0; }
+
+.bio-desc {
+  float: right;
+  width: 80%; }
+
+.bio-pic {
+  margin-top: 20px;
+  width: 15%; }
+
+#user-search {
+  margin-left: 8px;
+  width: 90%; }
+
+#filters {
+  padding: 10px 0 0 8px; }
+  #filters p {
+    display: inline; }
+  #filters label {
+    font-weight: normal;
+    display: inline-block; }
+  #filters input {
+    display: inline-block;
+    vertical-align: -10%;
+    margin: 0 2px 0 5px; }
+
+.create-btn {
+  float: right;
+  display: block;
+  height: 34px; }
+
+.create-actions {
+  height: 34px;
+  padding: 10px; }
+
 .autocomplete-suggestions {
   border: 1px solid #999;
   background: #FFF;
@@ -335,3 +376,11 @@ body {
 .autocomplete-suggestions strong {
   font-weight: normal;
   color: #3399FF; }
+
+/**** Isotope filtering ****/
+.isotope-item {
+  z-index: 2; }
+
+.isotope-hidden.isotope-item {
+  pointer-events: none;
+  z-index: 1; }

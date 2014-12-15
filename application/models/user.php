@@ -38,6 +38,10 @@ class User extends DataMapper {
 		return ucfirst($this->house . ' ' . $this->room);
 	}
 
+	function getYear() {
+		return $this->year;
+	}
+
 	function isStaff() {
 		return strstr($this->role, 'staff');
 	}

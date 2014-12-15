@@ -25,16 +25,20 @@
 				} ?>
 				<div class="sidebar-image">
 					<? if ($this->session->userdata('id')) { ?>
-						<img src="<? echo $user->getPhoto(); ?>" class="img-circle" />
+						<a href="/">
+							<img src="<? echo $user->getPhoto(); ?>" class="img-circle" />
+						</a>
 					<? } else { ?>
-						<img src="/assets/images/shield.png" class="img-circle" />
+						<a href="/">
+							<img src="/assets/images/shield.png" class="img-circle" />
+						</a>
 					<? } ?>
 				</div>
 				<div class="sidebar-profile">
 					<? if ($this->session->userdata('id')) { ?>
 					<div class="sidebar-name"><? echo $user->getName(); ?></div>
 					<div class="sidebar-edit">
-						<span><a href="/create/post">Create</a></span> |
+						<!-- <span><a href="/create/post">Create</a></span> | -->
 						<span><a href="/auth/logout">Logout</a></span>
 					</div>
 					<? } else { ?>
@@ -45,17 +49,24 @@
 					<? } ?>
 				</div>
 				<div class="sidebar-menu">
-					<ul>
-						<a href="/home/seniorstaff"><li>Senior Staff</li></a>
+					<ul>  
+						<a href="/"><li>Home</li></a>
 						<? if ($this->session->userdata('id')) { ?>
-						<a href="/users/index/list"><li>Directory</li></a>
+						<a href="/users/"><li>Directory</li></a>
 						<? } ?>
+						<a href="/home/events"><li>Events</li></a>
+						<a href="/home/staff"><li>Staff</li></a>
+						<a href="/home/seniorstaff"><li>Senior Staff</li></a>
 						<a href="/home/dining"><li>Dining</li></a>
-						<a href="/events"><li>Events</li></a>
-						<a href="/posts"><li>Posts</li></a>
+						<!-- <a href="/posts"><li>Posts</li></a> -->
+						<? if ($this->session->userdata('id')) { ?>
+						<a href="https://docs.google.com/a/stanford.edu/forms/d/1fvJt8WsocJ0_vD6hUh3uFmUYw-Jlbwktvj4aTJY6sHQ/viewform">
+							<li>Kudos</li>
+						</a>
 						<a href="/quotes"><li>Quotes</li></a>
-						<a href="/marketplace"><li>Marketplace</li></a>
-						<a href="/nexus"><li>Nexus</li></a>
+						<!-- <a href="/marketplace"><li>Marketplace</li></a> -->
+						<? } ?>
+						<!-- <a href="/nexus"><li>Nexus</li></a> -->
 					</ul>
 				</div>
 				<div class="sidebar-logo">
