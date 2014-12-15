@@ -1,4 +1,3 @@
-
 <div class="container">
 	<div class="people">
 		<input id="user-search" type="text" class="form-control" placeholder="Search" />

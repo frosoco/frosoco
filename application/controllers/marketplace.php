@@ -27,7 +27,6 @@ class Marketplace extends CI_Controller {
 		// Redirect to view mode
 		header('Location: /marketplace');
 	}
-
 }
 
 ?>
