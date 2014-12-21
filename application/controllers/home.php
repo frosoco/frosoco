@@ -10,15 +10,16 @@ class Home extends CI_Controller {
 	 */
 	public function index()
 	{
+		$this->under_construction();
 
-		$post = new Post();
-		$post->limit(10);
-		$post->get();
+		// $post = new Post();
+		// $post->limit(10);
+		// $post->get();
 
-		$this->template->title = 'Home';
-		$this->template->javascript->add('assets/js/masonry.min.js');
-		$this->template->content->view('static/home');
-		$this->template->publish();	
+		// $this->template->title = 'Home';
+		// $this->template->javascript->add('assets/js/masonry.min.js');
+		// $this->template->content->view('static/home');
+		// $this->template->publish();	
 	}
 
 	// page with calendar of events
