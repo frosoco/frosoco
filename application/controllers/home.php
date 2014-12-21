@@ -22,6 +22,14 @@ class Home extends CI_Controller {
 		// $this->template->publish();	
 	}
 
+	// URL: /home/temp_home
+	public function temp_home()
+	{
+		$this->template->title = 'Home';
+		$this->template->content->view('static/temp_home');
+		$this->template->publish();	
+	}
+
 	// page with calendar of events
 	// URL: /home/staff
 	public function events()

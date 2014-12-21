@@ -1,0 +1,405 @@
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+}
+.clearfix:after {
+  clear: both;
+}
+.hide-text {
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+}
+.input-block-level {
+  display: block;
+  width: 100%;
+  min-height: 28px;
+  /* Make inputs at least the height of their button counterpart */
+
+  /* Makes inputs behave like true block-level elements */
+  box-sizing: border-box;
+}
+/*@green: #ccff99;*/
+body {
+  font-size: 16px;
+  background-color: #cccccc;
+  background-image: url("/assets/images/bg.png");
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+input[type="text"] {
+  min-height: 24px;
+}
+ul 
+{
+  -webkit-padding-start: 0;
+}
+ 
+#outer {
+  z-index: -2;
+}
+#page {
+  z-index: 2;
+  width: 1200px;
+  margin: auto;
+  position: relative;
+  background-color: white;
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2);
+  font-family: 'Source Sans Pro', sans-serif;
+}
+#page p {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 16px;
+}
+
+#page h2, #page h1 {
+  font-family: 'Crimson Text', serif;
+}
+#page form {
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+}
+#main {
+  width: 1000px;
+  margin: auto;
+  *zoom: 1;
+}
+#main:before,
+#main:after {
+  display: table;
+  content: "";
+}
+#main:after {
+  clear: both;
+}
+#bg-footer {
+  height: 657px;
+  width: 1000px;
+  margin: auto;
+  display: block;
+  background-image: url("/assets/images/bg-footer.png");
+  background-repeat: no-repeat;
+  padding: 40px 0;
+  background-position: left 40px;
+}
+
+#header {
+  width: 100%;
+  height: 120px;
+  margin: auto;
+  margin-bottom: 80px;
+  box-shadow: 0 2px 10px rgba(0,0,0,.2);
+  position: relative;
+}
+img#header-logo {
+  height: 160px;
+  margin-left: 110px;
+  margin-top: 25px;
+  position:absolute;
+}
+
+#stanford-seal {
+  background-image: url("/assets/images/stanford-seal.png");
+  background-repeat: no-repeat;
+  background-position: right top;
+  width: 271px;
+  height: 292px;
+  position: absolute;
+  display: block;
+  right: 0;
+  top: 122px;
+  z-index: -1;
+}
+.menu {
+  height: 50px;
+  margin-left: 400px;
+  padding-top: 50px;
+}
+
+.menu, .menu a{
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #999999;
+}
+
+.menu .nav {
+  float: left;
+}
+
+.menu ul {
+  list-style-type: none;
+}
+
+.menu .nav > li {
+  display: block;
+  float: left;
+  position: relative;
+  /*&:hover .submenu, &.active .submenu {*/
+}
+.menu .nav > li a {
+  padding: 1px 10px;
+  line-height: 19px;
+}
+.menu .nav > li .submenu {
+  display: none;
+  border-top: 1px solid #8C1515;
+  position: absolute;
+  left: 0;
+  margin: 0;
+  white-space: nowrap;
+  padding-bottom: 4px;
+  background-color: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.menu .nav > li .submenu  > li {
+  padding: 5px 2px;
+  float: left;
+}
+.menu .nav > li .submenu  > li  > a {
+  text-decoration: none;
+}
+.menu .nav > li .submenu  > li  > a:hover,
+.menu .nav > li .submenu  > li  > a.active {
+  color: #8C1515;
+}
+.menu .nav > li.hover > a,
+.menu .nav > li.active > a,
+.menu .nav > li.active.hide.hover > a,
+.menu .nav > li  > a.active {
+  background-color: #8C1515;
+  color: #ffffff;
+}
+.menu .nav > li.active.hide > a {
+  background-color: inherit;
+  color: #999999;
+}
+.menu .nav > li.hover .submenu,
+.menu .nav > li.active .submenu,
+.menu .nav > li.active.hide.hover .submenu {
+  display: block;
+}
+.menu .nav > li.active.hide .submenu {
+  display: none;
+}
+
+.menu div.login {
+  float: right;
+  padding-right: 100px;
+  text-align: right;
+  position: relative;
+  top: -14px;
+}
+
+.login img.profile-img {
+  height: 52px;
+  margin-right: 12px;
+}
+
+.login span {
+  margin-right: 25px;
+}
+
+#content.sidebar {
+  width: 55%;
+  margin: 0 25px;
+  float: left;
+}
+#content .section h2 {
+  padding-top: 10px;
+}
+#content .header {
+  font-weight: bold;
+  font-size: 42px;
+  line-height: 42px;
+}
+#content .title {
+  font-weight: bold;
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+  background-repeat: repeat-x;
+  background-position: left bottom;
+  background-image: url("/assets/images/horiz-color-bar-1.png");
+}
+#content h1.title {
+  font-size: 38px;
+}
+#content h2.title {
+  font-size: 28px;
+}
+#content .list .item {
+  margin: 40px 0;
+}
+#content img {
+  max-width: 100%;
+}
+#content img.right {
+  float: right;
+  margin-left: 10px;
+}
+#content img.left {
+  float: left;
+  margin-right: 10px;
+}
+#content .copy img {
+  box-shadow: 0 0 20px #333333;
+}
+#content .copy img.noshadow {
+  box-shadow: 0 0 0 #333333;
+}
+#content .copy img.right {
+  float: right;
+  margin-left: 30px;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+#content .copy img.left {
+  float: left;
+  margin-right: 30px;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+#content .copy .section {
+  *zoom: 1;
+}
+
+// clearfix
+#content .copy .section:before,
+#content .copy .section:after {
+  display: table;
+  content: "";
+}
+#content .copy .section:after {
+  clear: both;
+}
+#content .map {
+  float: left;
+  width: 50%;
+}
+
+hr {
+  margin: 0px;
+  width: 100%;
+  height: 3px;
+  background-repeat: repeat-x;
+  background-position: left bottom;
+  border: 0px;
+}
+
+hr.v1{
+  background-image: url("/assets/images/horiz-color-bar-1.png");
+  margin-bottom: 20px;
+}
+hr.v2 {
+  background-image: url("/assets/images/horiz-color-bar-2.png");
+}
+hr.v3 {
+  background-image: url("/assets/images/horiz-color-bar-3.png");
+}
+hr.v4 {
+  background-image: url("/assets/images/horiz-color-bar-4.png");
+}
+
+#sidebar {
+  font-family: 'Lato', sans-serif;
+  width: 37%;
+  min-height: 1px;
+  margin-left: 10px;
+  margin-right: 0px;
+  float: right;
+  display: block;
+}
+#sidebar img {
+  display: block;
+  margin: auto;
+}
+#sidebar .section {
+  margin-top: 30px;
+}
+#sidebar .remove-icon {
+  float: right;
+  padding: 4px;
+  margin-right: -10px;
+}
+#sidebar .remove-icon:hover {
+  background-color: #ff9999;
+}
+#sidebar a {
+  cursor: pointer;
+}
+
+#sidebar .graphic {
+  font-family: 'Crimson Text', serif;
+}
+
+.people ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 20px;
+  *zoom: 1;
+}
+.people ul .photo {
+  float: left;
+  min-width: 200px;
+  min-height: 100px;
+}
+.people ul .check {
+  float: left;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+.people ul:hover {
+  background-color: #eeeeee;
+}
+.people ul:before,
+.people ul:after {
+  display: table;
+  content: "";
+}
+.people ul:after {
+  clear: both;
+}
+.photo {
+  width:300px;
+  height:300px;
+}
+.photo_taller {
+  width:300px;
+  height:400px;
+}
+.photo_even_taller {
+  width:300px;
+  height:500px;
+}
+
+.bio {
+  margin: 20px 0; }
+
+.bio-desc {
+  float: right;
+  width: 80%; }
+
+.bio-pic {
+  margin-top: 20px;
+  width: 15%; }
+
+#user-search {
+  margin-left: 8px;
+  width: 90%; }
+
+#filters {
+  padding: 10px 0 0 8px; }
+  #filters p {
+    display: inline; }
+  #filters label {
+    font-weight: normal;
+    display: inline-block; }
+  #filters input {
+    display: inline-block;
+    vertical-align: -10%;
+    margin: 0 2px 0 5px; }

@@ -1,81 +1,151 @@
 <!doctype html>
-<head>
-	<meta name="robots" content="noindex">
-	<title><?php echo $this->template->title->default("FroSoCo"); ?> | FroSoCo</title>
-	<!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
 	<!-- Font Awesome -->
-	<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
-	<!-- FSC theme -->
-	<link rel="stylesheet" href="/assets/css/fsc.css">
-	<?php echo $this->template->stylesheet; ?>
+	<!-- <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet"> -->
 	<!-- Obligatory jQuery -->
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-	<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
-	<!-- Latest compiled and minified JavaScript -->
-	<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-	<?php echo $this->template->javascript; ?>
+	<!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>-->
+
+	<html>
+	<head>
+		<title><?php echo $this->template->title->default("FroSoCo"); ?> | FroSoCo</title>
+
+		<!-- css -->
+		<link href='https://fonts.googleapis.com/css?family=Lato:400,900|Source+Sans+Pro:300|Crimson+Text:400' rel='stylesheet' type='text/css'>
+		<link href="/assets/css/bootstrap.css" type="text/css" rel="stylesheet"/>
+		<link href="/assets/css/fsc.css" type="text/css" rel="stylesheet"/>
+		<?php echo $this->template->stylesheet; ?>
+
+		<!-- js -->
+		<?php echo $this->template->javascript; ?>
+		<script type="text/javascript" src="/assets/js/jquery.js"></script>
+		<!--<script type="text/javascript" src="/js/jquery-ui.js"></script>
+		<script type="text/javascript" src="/assets/js/setup.js"></script>-->
+		<script type="text/javascript" src="/assets/js/menu.js"></script>
+		<script type="text/javascript" src="/assets/js/backbone.js"></script>
+	<!--<script type="text/javascript" src="/assets/js/plupload.full.js"></script>
+	<script type="text/javascript" src="/assets/js/jquery.plupload.queue.js"></script>-->
+
+	<link rel="icon" href="http://frosoco.stanford.edu/assets/img/common/favicon.ico"/>
 </head>
+
 <body>
-	<div class="row">
-		<div class="sidebar col-xs-2">
-			<div class="sidebar-content">
-				<? if ($this->session->userdata('id')) {
-					$user = new User($this->session->userdata('id'));
-				} ?>
-				<div class="sidebar-image">
-					<? if ($this->session->userdata('id')) { ?>
-						<a href="/">
-							<img src="<? echo $user->getPhoto(); ?>" class="img-circle" />
-						</a>
-					<? } else { ?>
-						<a href="/">
-							<img src="/assets/images/shield.png" class="img-circle" />
-						</a>
-					<? } ?>
-				</div>
-				<div class="sidebar-profile">
-					<? if ($this->session->userdata('id')) { ?>
-					<div class="sidebar-name"><? echo $user->getName(); ?></div>
-					<div class="sidebar-edit">
-						<!-- <span><a href="/create/post">Create</a></span> | -->
-						<span><a href="/auth/logout">Logout</a></span>
+	<div id="outer">
+		<div id="page">
+			<? if ($this->session->userdata('id')) {
+				$user = new User($this->session->userdata('id'));
+			} ?>
+
+			<div id="header"> 
+				<a href="/"><img src="/assets/images/flat_logo_filled.png" id="header-logo"/></a> 
+				<div class='menu'>
+					<ul class='nav'>
+						<li ><a href="#" >Discover</a>
+							<ul class='submenu'>
+								<li>
+									<a  href='#' >
+										Housing
+									</a>
+								</li>
+
+								<li>
+									<a  href='#' >
+										Programming
+									</a>
+								</li>
+
+
+								<li>
+									<a href="/home/dining">
+										Dining
+									</a>
+								</li>
+
+								<li>
+									<a  href='#' >
+										FAQ
+									</a>
+								</li>
+							</ul>
+						</li><!--About-->
+
+						<li ><a href="#">Meet</a>
+							<ul class='submenu'>
+								<li>
+									<a  href='/home/staff' >
+										Staff
+									</a>
+								</li>
+
+								<li>
+									<a  href='/home/seniorstaff' >
+										Senior Staff
+									</a>
+								</li>
+								<? if ($this->session->userdata('id')) { ?>
+								<li>
+									<a  href='/users/' >
+										Residents
+									</a>
+								</li>
+								<? } ?>
+							</ul>
+						</li><!--Meet-->
+
+						<li ><a href="#" >Do</a>
+							<ul class='submenu'>
+								<li>
+									<a href="/home/events/" >Events</a>
+								</li>
+
+								<? if ($this->session->userdata('id')) { ?>
+								<li>
+									<a href="https://docs.google.com/a/stanford.edu/forms/d/1fvJt8WsocJ0_vD6hUh3uFmUYw-Jlbwktvj4aTJY6sHQ/viewform" >
+										Kudos
+									</a>
+								</li>
+
+								<li>
+									<a href='/quotes'>Quotes</a>
+								</li>
+								<? }?>
+							</ul>
+						</li><!--Do-->
+
+						<li ><a   >Help</a>
+							<ul class='submenu'>
+								<li>
+									<a href='/home/academic' >Academic</a>
+								</li>
+
+								<li>
+									<a href='/home/housing' >Housing</a>
+								</li>
+							</ul>
+						</li><!--Help-->
+					</ul><!--nav--> 
+
+					<div class="login">
+						<? if ($this->session->userdata('id')) { ?>
+						<img src="<? echo $user->getPhoto(); ?>" class="profile-img img-circle" />
+						<span><? echo $user->getName(); ?></span>
+						<a href="/auth/logout">Logout</a>
+						<? } else { ?>
+						<img src="/assets/images/shield.png" class="profile-img img-circle" />
+						<span>Welcome, Guest!</span>
+						<a href="/login">Login</a>
+						<? } ?>
 					</div>
-					<? } else { ?>
-					<div class="sidebar-name">Visitor</div>
-					<div class="sidebar-edit">
-						<span><a href="/login">Login</a></span>
-					</div>			
-					<? } ?>
-				</div>
-				<div class="sidebar-menu">
-					<ul>  
-						<a href="/"><li>Home</li></a>
-						<? if ($this->session->userdata('id')) { ?>
-						<a href="/users/"><li>Directory</li></a>
-						<? } ?>
-						<a href="/home/events"><li>Events</li></a>
-						<a href="/home/staff"><li>Staff</li></a>
-						<a href="/home/seniorstaff"><li>Senior Staff</li></a>
-						<a href="/home/dining"><li>Dining</li></a>
-						<!-- <a href="/posts"><li>Posts</li></a> -->
-						<? if ($this->session->userdata('id')) { ?>
-						<a href="https://docs.google.com/a/stanford.edu/forms/d/1fvJt8WsocJ0_vD6hUh3uFmUYw-Jlbwktvj4aTJY6sHQ/viewform">
-							<li>Kudos</li>
-						</a>
-						<a href="/quotes"><li>Quotes</li></a>
-						<!-- <a href="/marketplace"><li>Marketplace</li></a> -->
-						<? } ?>
-						<!-- <a href="/nexus"><li>Nexus</li></a> -->
-					</ul>
-				</div>
-				<div class="sidebar-logo">
-					<a href="/"><img src="/assets/images/logo.png" /></a>
-				</div>
-			</div>
-		</div>
-		<div class="content col-xs-10">
-			<?php echo $this->template->content; ?>
-		</div>
-	</div>
+				</div><!--menu-->
+			</div><!--header-->
+
+
+			<div id="main">
+				<div id="stanford-seal"></div>
+				<?php echo $this->template->content; ?>
+			</div><!--main-->
+
+			<div id="bg-footer"></div>
+		</div><!--page-->
+	</div><!--outer-->
 </body>
+</html>
