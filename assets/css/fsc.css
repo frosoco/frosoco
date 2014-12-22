@@ -216,6 +216,9 @@ img#header-logo {
   width: 55%;
   float: left;
 }
+.content .housing {
+  width: 50%;
+}
 .content .section h2 {
   padding-top: 10px;
 }
@@ -395,6 +398,15 @@ hr.v4 {
   margin-top: 20px;
   width: 15%; }
 
+ .bio .panel.pic {
+      width: 40%;
+     // margin-top: 40px;
+  }
+ 
+ .bio h2 {
+    margin-top: 0;
+  }
+
 #user-search {
   margin-left: 8px;
   width: 90%; }
@@ -485,6 +497,7 @@ div.faq {
   }
   .content .panel img {
       //width: 100%; } 
+
   .content .panel-users {
     width: 94%;
     margin: 1.0% 0.8% 0.3% 1%;

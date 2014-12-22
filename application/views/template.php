@@ -25,7 +25,7 @@
 	<!--<script type="text/javascript" src="/assets/js/plupload.full.js"></script>
 	<script type="text/javascript" src="/assets/js/jquery.plupload.queue.js"></script>-->
 		<?php echo $this->template->javascript; ?>
-		
+
 	<link rel="icon" href="http://frosoco.stanford.edu/assets/img/common/favicon.ico"/>
 </head>
 
@@ -43,17 +43,10 @@
 						<li ><a href="#" >Discover</a>
 							<ul class='submenu'>
 								<li>
-									<a  href='#' >
+									<a  href='/home/housing' >
 										Housing
 									</a>
 								</li>
-
-								<li>
-									<a  href='#' >
-										Programming
-									</a>
-								</li>
-
 
 								<li>
 									<a href="/home/dining">
@@ -72,14 +65,13 @@
 						<li ><a href="#">Meet</a>
 							<ul class='submenu'>
 								<li>
-									<a  href='/home/staff' >
-										Staff
-									</a>
-								</li>
-
-								<li>
 									<a  href='/home/seniorstaff' >
 										Senior Staff
+									</a>
+								</li>
+								<li>
+									<a  href='/home/staff' >
+										Student Staff
 									</a>
 								</li>
 								<? if ($this->session->userdata('id')) { ?>
@@ -112,14 +104,14 @@
 							</ul>
 						</li><!--Do-->
 
-						<li ><a   >Help</a>
+						<li ><a>Help</a>
 							<ul class='submenu'>
 								<li>
-									<a href='/home/academic' >Academic</a>
+									<a href='/home/ad' >Academic Director</a>
 								</li>
 
 								<li>
-									<a href='/home/housing' >Housing</a>
+									<a href='/home/hfd' >Housing Front Desk</a>
 								</li>
 							</ul>
 						</li><!--Help-->

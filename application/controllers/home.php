@@ -49,14 +49,26 @@ class Home extends CI_Controller {
 	}
 
 	/**
-	 * Location information.
+	 * Housing information.
 	 *
-	 * URL: /home/location
+	 * URL: /home/housing
 	 */
-	public function location()
+	public function housing()
 	{
-		$this->template->title = 'Location';
-		$this->template->content->view('static/location');
+		$this->template->title = 'Housing';
+		$this->template->content->view('static/housing');
+		$this->template->publish();
+	}
+
+	/**
+	 * Housing front desk info.
+	 *
+	 * URL: /home/hfd
+	 */
+	public function hfd()
+	{
+		$this->template->title = 'HFD';
+		$this->template->content->view('static/hfd');
 		$this->template->publish();
 	}
 
@@ -89,7 +101,7 @@ class Home extends CI_Controller {
 		$staff_members->get();
 		$data['staff_members'] = $staff_members;
 
-		$this->template->title = 'Staff';
+		$this->template->title = 'Student Staff';
 		$this->template->content->view('static/staff', $data);
 		$this->template->publish();
 	}
