@@ -490,8 +490,13 @@ div.faq {
     margin: 1.8% 0.8% 1.8% 1%;
     padding: 1.4%;
     height: 80%; 
-      margin-top: 0;
+    margin-top: 0;
     padding-top: 0;
+  }
+
+  .panel .panel {
+    padding-left: 0;
+    margin-left: 0;
   }
   .content .panel img {
       //width: 100%; } 
