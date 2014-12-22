@@ -10,13 +10,7 @@ class Home extends CI_Controller {
 	 */
 	public function index()
 	{
-
-		$post = new Post();
-		$post->limit(10);
-		$post->get();
-
 		$this->template->title = 'Home';
-		$this->template->javascript->add('assets/js/masonry.min.js');
 		$this->template->content->view('static/home');
 		$this->template->publish();	
 	}
@@ -40,14 +34,51 @@ class Home extends CI_Controller {
 	}
 
 	/**
-	 * Location information.
+	 * Housing information.
 	 *
-	 * URL: /home/location
+	 * URL: /home/housing
 	 */
-	public function location()
+	public function housing()
 	{
-		$this->template->title = 'Location';
-		$this->template->content->view('static/location');
+		$this->template->title = 'Housing';
+		$this->template->content->view('static/housing');
+		$this->template->publish();
+	}
+
+	/**
+	 * Event Programming information.
+	 *
+	 * URL: /home/programming
+	 */
+	public function programming()
+	{
+		$this->template->title = 'Programming';
+		$this->template->content->view('static/programming');
+		$this->template->publish();
+	}
+
+	/**
+	 * Academic resources information.
+	 *
+	 * URL: /home/academic
+	 */
+	public function academic()
+	{
+		$this->template->title = 'Academic';
+		$this->template->content->view('static/academic');
+		$this->template->publish();
+	}
+
+
+	/**
+	 * Housing front desk info.
+	 *
+	 * URL: /home/hfd
+	 */
+	public function hfd()
+	{
+		$this->template->title = 'HFD';
+		$this->template->content->view('static/hfd');
 		$this->template->publish();
 	}
 
@@ -80,7 +111,7 @@ class Home extends CI_Controller {
 		$staff_members->get();
 		$data['staff_members'] = $staff_members;
 
-		$this->template->title = 'Staff';
+		$this->template->title = 'Student Staff';
 		$this->template->content->view('static/staff', $data);
 		$this->template->publish();
 	}
@@ -109,12 +140,6 @@ class Home extends CI_Controller {
 		$this->template->publish();
 	}
 
-	public function dormgov()
-	{
-		$this->template->title = 'Dorm Gov Elections';
-		$this->template->content->view('static/dormgov');
-		$this->template->publish();	
-	}
 
 	public function preassignment()
 	{
@@ -122,6 +147,15 @@ class Home extends CI_Controller {
 		$this->template->content->view('static/preassignment');
 		$this->template->publish();
 	}
+
+
+	public function faq()
+	{
+		$this->template->title = 'FAQ';
+		$this->template->content->view('static/faq');
+		$this->template->publish();
+	}
+
 
 	/**
 	 * Info on 2014-2015 in house draw

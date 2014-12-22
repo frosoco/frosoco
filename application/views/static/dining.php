@@ -12,6 +12,7 @@
 	<p>In response to a clear need for peanut allergy awareness in university dining services nationwide, Stanford Dining has made Ricker Dining the first on-campus dining facility in the country to designate itself a peanut sensitive environment. Stanford Dining is paving the way for other institutions to follow in our footsteps, and we are proud to be able to meet such a pressing health need of our students.</p>
     <p>For more information, go to <a href="https://web.stanford.edu/dept/rde/cgi-bin/drupal/dining/ricker-dining">Ricker's website here.</a></p>
 </div>
+ 
 <div class="panel">
     <h3>Dining Hours</h3>
     <p><b>Monday - Thursday:</b></p>

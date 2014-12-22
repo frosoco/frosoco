@@ -1,8 +1,8 @@
-<div class="create-actions">
-	<a href="/create/quote"><button class="btn btn-success create-btn">+ Add Quote</button></a>
-</div>
+<div class="create-actions clearfix">
+	<a href="/create/quote"><button class="btn create-btn">+ Add Quote</button></a>
+</div> 
 
-<div class="content-cards">
+<div class="content-cards">   
 <? foreach ($quotes as $quote) { ?>
 <div class="content-card content-quote">
 	<div class="content-body"><? echo $quote->text; ?></div>
