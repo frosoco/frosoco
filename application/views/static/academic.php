@@ -16,7 +16,7 @@
 	<p>
 		Every department has a Student Services Officer or Student Services Administrator, etc., who's job it is to introduce students to that department.
 		It is totally fine to present yourself as someone interested in Topic X and see how they guide you in preparing for the major, suggesting people to talk to, research topics, etc. 
-		You don’t need to be a declared major in that department to approach the SSO.
+		You don't need to be a declared major in that department to approach the SSO.
 	</p>
 
 	<p>
