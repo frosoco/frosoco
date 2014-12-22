@@ -1,7 +1,7 @@
 <!doctype html>
-	<!-- Font Awesome -->
-	<!-- <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet"> -->
-	<!-- Obligatory jQuery -->
+<!-- Font Awesome -->
+<!-- <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet"> -->
+<!-- Obligatory jQuery -->
 	<!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>-->
 
@@ -16,15 +16,16 @@
 		<?php echo $this->template->stylesheet; ?>
 
 		<!-- js -->
-		<?php echo $this->template->javascript; ?>
-		<script type="text/javascript" src="/assets/js/jquery.js"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
 		<!--<script type="text/javascript" src="/js/jquery-ui.js"></script>
 		<script type="text/javascript" src="/assets/js/setup.js"></script>-->
 		<script type="text/javascript" src="/assets/js/menu.js"></script>
-		<script type="text/javascript" src="/assets/js/backbone.js"></script>
+		<!--<script type="text/javascript" src="/assets/js/backbone.js"></script>-->
 	<!--<script type="text/javascript" src="/assets/js/plupload.full.js"></script>
 	<script type="text/javascript" src="/assets/js/jquery.plupload.queue.js"></script>-->
-
+		<?php echo $this->template->javascript; ?>
+		
 	<link rel="icon" href="http://frosoco.stanford.edu/assets/img/common/favicon.ico"/>
 </head>
 
@@ -61,7 +62,7 @@
 								</li>
 
 								<li>
-									<a  href='#' >
+									<a  href='/home/faq' >
 										FAQ
 									</a>
 								</li>
@@ -141,7 +142,9 @@
 
 			<div id="main">
 				<div id="stanford-seal"></div>
-				<?php echo $this->template->content; ?>
+				<div class="content">
+					<?php echo $this->template->content; ?>
+				</div>
 			</div><!--main-->
 
 			<div id="bg-footer"></div>

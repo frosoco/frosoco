@@ -132,6 +132,14 @@ class Home extends CI_Controller {
 		$this->template->publish();
 	}
 
+	public function faq()
+	{
+		$this->template->title = 'FAQ';
+		$this->template->content->view('static/faq');
+		$this->template->publish();
+	}
+
+
 	/**
 	 * Info on 2014-2015 in house draw
 	 *

@@ -1,7 +1,6 @@
-<div class="container">
-	<div class="page-header">
-	    <h1>Senior Staff</h1>
-	</div> 
+<div class="page-header">
+    <h1>Senior Staff</h1>
+</div> 
 
 	<div class="row bio">
 		<div class="panel home">
@@ -110,4 +109,3 @@
             </div>
         </div>
 	</div>
-</div>
