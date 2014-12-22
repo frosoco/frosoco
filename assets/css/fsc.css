@@ -40,8 +40,8 @@ body {
 }
 input[type="text"] {
   min-height: 24px;
-}
-ul 
+}  
+.menu ul 
 {
   -webkit-padding-start: 0;
 }
@@ -255,35 +255,33 @@ img#header-logo {
   float: left;
   margin-right: 10px;
 }
-.content .copy img {
-  box-shadow: 0 0 20px #333333;
+.content img {
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
 }
-.content .copy img.noshadow {
+.content img.noshadow {
   box-shadow: 0 0 0 #333333;
 }
-.content .copy img.right {
+.content img.right {
   float: right;
-  margin-left: 30px;
-  margin-bottom: 15px;
-  margin-top: 15px;
 }
-.content .copy img.left {
+.content img.left {
   float: left;
-  margin-right: 30px;
-  margin-bottom: 15px;
-  margin-top: 15px;
 }
-.content .copy .section {
+.content .section {
   *zoom: 1;
 }
 
+.content .section {
+  display: block;
+}
+
 // clearfix
-.content .copy .section:before,
-.content .copy .section:after {
+.content .section:before,
+.content .section:after {
   display: table;
   content: "";
 }
-.content .copy .section:after {
+.content .section:after {
   clear: both;
 }
 .content .map {
@@ -564,6 +562,10 @@ div.faq {
     border-top: 1px solid #CCC;
     padding-top: 10px;
     font-size: 1em; }
+  .content .create-editor.quote {
+    width: 400px;
+    margin: 0 auto;
+  }
   .content .create-editor .create-types {
     margin-bottom: 4%; }
     .content .create-editor .create-types span {
@@ -594,12 +596,13 @@ div.faq {
   .content .create-editor .create-quote {
     margin-top: 2%; }
     .content .create-editor .create-quote textarea {
-      height: 80px;
-      font-size: 1.4em; }
+      font-size: 1.4em; 
+    }
   .content .create-editor .create-author input[type="text"] {
     text-align: right;
     font-size: 1em;
-    margin: 10px 0px 20px 0px; }
+    margin: 10px 0px 20px 0px; 
+  }
   .content .create-editor textarea {
     width: 100%;
     resize: none;
@@ -624,13 +627,26 @@ div.faq {
         display: none;
         position: absolute; }
 
+  .create-btn {
+    float: right;
+    display: block; 
+    height: 34px; 
+    color: rgb(97, 0, 0);
+  }
+
+  .create-actions {
+    height: 34px;
+    padding: 10px; 
+    margin: 0 10px;
+  }
+
 .feed .feed-highlight {
   margin-bottom: 2%; }
   .feed .feed-highlight img {
     width: 100%; }
 .feed .feed-notification {
-  background-color: #f6f3e5;
-  padding: 0.9% 2.0%;
+  background-color: #eee;
+  padding: 1% 2.0%;
   margin: 2% 0%; }
 .feed .feed-item {
   margin: 2% 0%; }

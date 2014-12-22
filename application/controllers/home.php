@@ -10,23 +10,8 @@ class Home extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->under_construction();
-
-		// $post = new Post();
-		// $post->limit(10);
-		// $post->get();
-
-		// $this->template->title = 'Home';
-		// $this->template->javascript->add('assets/js/masonry.min.js');
-		// $this->template->content->view('static/home');
-		// $this->template->publish();	
-	}
-
-	// URL: /home/temp_home
-	public function temp_home()
-	{
 		$this->template->title = 'Home';
-		$this->template->content->view('static/temp_home');
+		$this->template->content->view('static/home');
 		$this->template->publish();	
 	}
 
@@ -59,6 +44,31 @@ class Home extends CI_Controller {
 		$this->template->content->view('static/housing');
 		$this->template->publish();
 	}
+
+	/**
+	 * Event Programming information.
+	 *
+	 * URL: /home/programming
+	 */
+	public function programming()
+	{
+		$this->template->title = 'Programming';
+		$this->template->content->view('static/programming');
+		$this->template->publish();
+	}
+
+	/**
+	 * Academic resources information.
+	 *
+	 * URL: /home/academic
+	 */
+	public function academic()
+	{
+		$this->template->title = 'Academic';
+		$this->template->content->view('static/academic');
+		$this->template->publish();
+	}
+
 
 	/**
 	 * Housing front desk info.
@@ -130,12 +140,6 @@ class Home extends CI_Controller {
 		$this->template->publish();
 	}
 
-	public function dormgov()
-	{
-		$this->template->title = 'Dorm Gov Elections';
-		$this->template->content->view('static/dormgov');
-		$this->template->publish();	
-	}
 
 	public function preassignment()
 	{
@@ -143,6 +147,7 @@ class Home extends CI_Controller {
 		$this->template->content->view('static/preassignment');
 		$this->template->publish();
 	}
+
 
 	public function faq()
 	{

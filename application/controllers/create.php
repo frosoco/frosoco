@@ -73,6 +73,7 @@ class Create extends CI_Controller {
 
 		// Create the view
 		$this->template->title = 'Create Quote';
+        $this->template->javascript->add('assets/js/markdown.js');
 		$this->template->content->view('create/quote', $data);
 		$this->template->publish();		
 
