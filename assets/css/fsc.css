@@ -405,6 +405,37 @@ hr.v4 {
     margin-top: 0;
   }
 
+ #rubiks.sosem .bio-desc {
+  float: right;
+  display: inline-block;
+  width: 70%; }
+  
+  #rubiks.sosem .bio-pic {
+    display: inline-block;
+    width: 25%;
+  }
+
+ #humans.sosem .bio-desc {
+  float: right;
+  display: inline-block;
+  width: 40%; }
+  
+  #humans.sosem .bio-pic {
+    display: inline-block;
+    width: 55%;
+  }
+
+  #humans.sosem .bio-pic img.left {
+    display: inline-block;
+    width: 55%;
+  }
+
+  #humans.sosem .bio-pic img.right {
+    display: inline-block;
+    width: 40%;
+  }
+
+
 #user-search {
   margin-left: 8px;
   width: 90%; }

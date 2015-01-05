@@ -83,6 +83,19 @@ class Home extends CI_Controller {
 	}
 
 	/**
+	 * Sophomore Seminar info
+	 *
+	 * URL: /home/sosem
+	 */
+	public function sosem()
+	{
+		$this->template->title = 'Sophomore Seminar';
+		$this->template->content->view('static/sosem');
+		$this->template->publish();
+	}
+
+
+	/**
 	 * Location information.
 	 *
 	 * URL: /home/dining
