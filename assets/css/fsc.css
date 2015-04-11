@@ -168,6 +168,7 @@ img#header-logo {
 .menu .nav > li .submenu  > li {
   padding: 5px 2px;
   float: left;
+  width: 100%;
 }
 .menu .nav > li .submenu  > li  > a {
   text-decoration: none;
@@ -405,36 +406,46 @@ hr.v4 {
     margin-top: 0;
   }
 
+  .sosem .bio-desc {
+    float: right;
+    display: inline-block;
+    width: 60%; 
+  }
+  
+  .sosem .bio-pic {
+    margin-top: 0;
+    display: inline-block;
+    width: 35%;
+  }
+
  #rubiks.sosem .bio-desc {
-  float: right;
-  display: inline-block;
   width: 70%; }
   
   #rubiks.sosem .bio-pic {
-    display: inline-block;
+    width: 25%;
+  }
+
+   #laid.sosem .bio-desc {
+  width: 70%; }
+  
+  #laid.sosem .bio-pic {
     width: 25%;
   }
 
  #humans.sosem .bio-desc {
-  float: right;
-  display: inline-block;
   width: 40%; }
   
   #humans.sosem .bio-pic {
-    display: inline-block;
     width: 55%;
   }
 
   #humans.sosem .bio-pic img.left {
-    display: inline-block;
     width: 55%;
   }
 
   #humans.sosem .bio-pic img.right {
-    display: inline-block;
     width: 40%;
   }
-
 
 #user-search {
   margin-left: 8px;

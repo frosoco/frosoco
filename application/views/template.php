@@ -83,17 +83,20 @@
 								<li>
 									<a href="/home/events/" >Events</a>
 								</li>
+								<li>
+									<a href="/home/sosem/">Sophomore Seminars</a>
+								</li>
 
 								<? if ($this->session->userdata('id')) { ?>
-								<li>
-									<a href="https://docs.google.com/a/stanford.edu/forms/d/1fvJt8WsocJ0_vD6hUh3uFmUYw-Jlbwktvj4aTJY6sHQ/viewform" >
-										Kudos
-									</a>
-								</li>
+									<li>
+										<a href="https://docs.google.com/a/stanford.edu/forms/d/1fvJt8WsocJ0_vD6hUh3uFmUYw-Jlbwktvj4aTJY6sHQ/viewform" >
+											Kudos
+										</a>
+									</li>
 
-								<li>
-									<a href='/quotes'>Quotes</a>
-								</li>
+									<li>
+										<a href='/quotes'>Quotes</a>
+									</li>
 								<? }?>
 							</ul>
 						</li><!--Do-->
@@ -106,6 +109,9 @@
 
 								<li>
 									<a href='/home/hfd' >Housing/Maintenance</a>
+								</li>
+								<li>
+									<a href='/home/preassignment' >Preassignment</a>
 								</li>
 							</ul>
 						</li><!--Help-->
