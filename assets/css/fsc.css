@@ -220,6 +220,11 @@ img#header-logo {
 .content .housing {
   width: 50%;
 }
+
+.content .dining { 
+  width: 60%;
+}
+
 .content .section h2 {
   padding-top: 10px;
 }
@@ -319,7 +324,7 @@ hr.v4 {
   min-height: 1px;
   margin-left: 10px;
   margin-right: 0px;
-  margin-top: 30px;
+  /*margin-top: 30px;*/
   float: right;
   display: block;
 }
@@ -345,6 +350,11 @@ hr.v4 {
 #sidebar .graphic {
   font-family: 'Crimson Text', serif;
 }
+
+#sidebar.dining { 
+  width: 30%;
+}
+
 
 .people ul {
   list-style-type: none;
@@ -462,10 +472,6 @@ hr.v4 {
     display: inline-block;
     vertical-align: -10%;
     margin: 0 2px 0 5px; }
-
-.dining { 
-  width: 65%;
-}
 
 .page-header {
   padding-left: 14px;

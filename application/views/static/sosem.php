@@ -13,71 +13,70 @@
 
 <!-- origami -->                                                                                                                                   
 <div id="origami" class="row bio sosem">                                                                                                                                                                                                                                                                
-        <div class="bio-pic">                                    
-	  Photos and descriptions to be uploaded shortly. 
-          <!--  <img src="/assets/images/sosem/origami.jpg" />-->                                                                                            
+        <div class="bio-pic">                            
+            <img src="/assets/images/sosem/origami.jpg" />                                                                                            
         </div>                                                                                                                                       
                                                                                                                                                      
     <div class="bio-desc">                                                                                                                           
         <h2>FroSoFold: The Art and Science of Origami</h2>                                                                                                                                                                                                                                            
         <h4>Ian Lim and Boris Perkhounkov</h4>                                                             
-       <!-- <h4>Tuesday evenings, 7:15-8:30 PM (flexible)</h4>
+        <!-- <h4>Tuesday evenings, 7:15-8:30 PM (flexible)</h4> -->
         <p>
          FroSoFold is a hands-on exploration of the mathematical and aesthetic principles behind origami, the art of paper-folding. We'll be walking students step-by-step through the construction of a variety of models every session ranging from the simple to the highly complex, as well as discussing the history and science behind this ancient art form. In the context of origami, your instructors will cover topics such as mathematical constructibility, graph theory, and more- no background required, but an interest in mathematical thinking is recommended! Paper will be provided for all in-class activities, and there will be additional paper for students to keep folding their own models even after the conclusion of the class. Warning: you may never see a sheet of paper the same way again.
-        </p>-->                                                                                                                                         
+        </p>                                                                                                                                         
     </div>                                                                                                                                           
 </div> 
 
 
-<!--cooking-->
-<div id="cooking" class="row bio sosem">                                                                                                              
-        <!--<div class="bio-pic">                                                                                                                        
-            <img src="/assets/images/sosem/diversity.JPG" />                                                                              
-        </div>-->                                                                                                                                       
-                                                                                                                                                     
-    <div class="bio-desc">                                                                                                                           
-        <h2>FroSoCooking</h2>                                                                                                
-        <h4>Dashiell and Angela </h4>  
-        <!--<h4>Wednesdays evenings, 5 - 6 pm </h4>
-        <p>                                                                                                         <p>                                                                                                                                        
-          We will take a close look at the struggles faced by marginalized groups and the actions community members can take to create a more respectful and inclusive environment for them. We will discuss issues of race, sexuality, gender, class - amongst other social statuses, how identity is created and destroyed, what privilege is and how to use it, and examine popular culture to come to conclusions about the media's role in perpetuating stereotypes and erasing large aspects of identity.
-        </p>    
-        <p><a href="/assets/documents/sosem/diversity.pdf">See our flyer here.</a></p>-->                                                                                                                             
-    </div>                                                                                                                                           
-</div>
-
 <!--games-->
 <div id="games" class="row bio sosem">
-        <!--<div class="bio-pic">                                                                                                                        
-            <img src="/assets/images/sosem/diversity.JPG" />                                                                              
-        </div>-->                                                                                                                                     
+        <div class="bio-pic">                                                                                                                        
+            <img src="/assets/images/sosem/games.jpg" />                                                                              
+        </div>                                                                                                                                     
 
     <div class="bio-desc">
-        <h2>Analyzing Popular Media through Interactive Experiences (Videogames)</h2>
-        <h4>Nathalia</h4>
-        <!--<h4>Wednesdays evenings, 5 - 6 pm </h4>
-        <p>                                                                                                         <p>                                                                                                                                        
-          We will take a close look at the struggles faced by marginalized groups and the actions community members can take to create a more respectful and inclusive environment for them. We will discuss issues of race, sexuality, gender, class - amongst other social statuses, how identity is created and destroyed, what privilege is and how to use it, and examine popular culture to come to conclusions about the media's role in perpetuating stereotypes and erasing large aspects of identity.
+        <h2>Video Games: Art, Design and Interaction</h2>
+        <h4>Nathalia Scrimshaw</h4>
+        <h4>Sundays, 7:30-9, Seminar Room and Adams Lounge </h4>
+        <p>                                                                                                         
+           If you want to come and talk about different elements that make video games one of the most popular media today, and experience the beauty of game design for yourself, this soph sem is for you! Together we'll look at the psychological impact of various games, how art and sound affect the playing experience, and the history of interaction design. Gaming enthusiasts of all levels welcome!
         </p>    
-        <p><a href="/assets/documents/sosem/diversity.pdf">See our flyer here.</a></p>-->                                                             
+        <p><a href="/assets/documents/sosem/games.pdf">See our flyer here.</a></p>                                                             
     </div>
 </div>
 
 <!--rpg-->
 <div id="rpg" class="row bio sosem">                                                                                                              
-        <!--<div class="bio-pic">                                                                                                                        
-            <img src="/assets/images/sosem/diversity.JPG" />                                                                              
-        </div>-->                                                                                                                                     
+        <div class="bio-pic">                                                                                                                        
+            <img src="/assets/images/sosem/rpg.jpg" />                                                                              
+        </div>                                                                                                                                     
 
     <div class="bio-desc">
-        <h2>Roll for Initiative! A Guide to Tabletop RPGs</h2>
-        <h4>Mary and Sarah </h4>  
-        <!--<h4>Wednesdays evenings, 5 - 6 pm </h4>
-        <p>                                                                                                         <p>                                                                                                                                        
-          We will take a close look at the struggles faced by marginalized groups and the actions community members can take to create a more respectful and inclusive environment for them. We will discuss issues of race, sexuality, gender, class - amongst other social statuses, how identity is created and destroyed, what privilege is and how to use it, and examine popular culture to come to conclusions about the media's role in perpetuating stereotypes and erasing large aspects of identity.
+        <h2>Roll for Initiative: A Guide to Tabletop RPGs</h2>
+        <h4>Mary Cirino and Sarah Keglovits</h4>  
+        <h4>Fridays 8PM</h4>
+        <p>     
+        Do you like creative writing, game design, and/or improv? Have you ever been curious about tabletop games? What is the deal with all those funny-shaped dice? Find out in our SoSem!                                                                                                    <p>                                                                                                                                        
         </p>    
-        <p><a href="/assets/documents/sosem/diversity.pdf">See our flyer here.</a></p>-->                                                             
+        <!-- <p><a href="/assets/documents/sosem/rpg.pdf">See our flyer here.</a></p>                                                              -->
     </div>
+</div>
+
+<!--cooking-->
+<div id="cooking" class="row bio sosem">                                                                                                              
+        <div class="bio-pic">                                                                                                                        
+            <img src="/assets/images/sosem/cooking1.jpg" />                                                                              
+        </div>                                                                                                                              
+                                                                                                                                                     
+    <div class="bio-desc">                                                                                                                           
+        <h2>FroSoCooking</h2>                                                                                                
+        <h4>Dashiell and Angela </h4>  
+        <!-- <h4>Wednesdays evenings, 5 - 6 pm </h4> -->
+        <p>                      
+            Description coming soon!                                                                                                                                        
+        </p>    
+        <!-- <p><a href="/assets/documents/sosem/diversity.pdf">See our flyer here.</a></p>                                                                                                                              -->
+    </div>                                                                                                                                           
 </div>
 
 <!--winter quarter-->

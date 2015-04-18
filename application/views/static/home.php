@@ -3,7 +3,10 @@
   <div class="section">
     <h1 class="title">Welcome to FroSoCo</h1>
 
-	<div class="alert alert-info">Questions about <a href="/home/preassignment/">preassigning? Click here.</a></div>
+	<div class="alert alert-info">
+    Welcome ProFos! <a href="/home/admitweekend/">Click for FroSoCo Admit Weekend Events!</a>
+    We'll see you at the BBQ!
+  </div>
 
     <? if ($this->session->userdata('id')) { // if authorized ?>
       <!-- notif-->

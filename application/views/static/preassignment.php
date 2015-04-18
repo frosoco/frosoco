@@ -42,7 +42,7 @@
 	<p>This takes place annually in May. Students applying for housing for any quarter in the next academic year must apply by the Draw deadline. Students who participate in the Draw will receive a first-round (random) Draw number, and are therefore more likely to receive their preferred housing. Also, students have the option of participating in the Draw in groups of up to eight people.</p>
 	<h3>The Waitlist</h3>
 	<p>This occurs each quarter. Single (that is not in a group) undergraduate students who are not assigned housing during the Draw, participate in the waitlist round. Students who participate in the Draw but do not receive their first housing option may request reassignment during this round.</p>
-	<h3>Walk-ins</h3>
+	<h3>Walk-ins</h3>gj
 	<p>Walk-ins take place after each Waitlist round and for the first 5 weeks of each quarter. This is an assignment period in which remaining vacancies in University housing are available to unassigned single students.</p>
 	<h3>Freshman-Sophomore College Housing Process Timeline</h3>
 	<p>Pre-assignment applications available on SAAS on Wednesday March 31st, 2015: <a href="http://saas.stanford.edu/">http://saas.stanford.edu/</a></p>
@@ -56,7 +56,7 @@
 	<p><a href="http://studentaffairs.stanford.edu/resed/profiles/theme/how-to-apply">Pre-Assignment Website</a></p>
 	<p><a href="http://studentaffairs.stanford.edu/resed/profiles/theme/list">Review Theme House Requirements</a></p>
 	<p><a href="http://studentaffairs.stanford.edu/resed/profiles/regular/govco/frosoco">FroSoCo's Information Page</a></p>
-	<p><a href="https://sawebapp.stanford.edu/resjobs/applicant/preassign/">Pre-Assignment Application</a></p>
+	<p><a href="http://saas.stanford.edu/">Pre-Assignment Application</a></p>
 	<p><a href="http://www.stanford.edu/dept/rde/cgi-bin/drupal/housing/">Student Housing</a></p>
 	<p><a href="http://www.stanford.edu/dept/rde/cgi-bin/drupal/housing/charts/draw-stats-2012">Undergraduate Housing Residence Chart 2011-12</a></p>
 	<p><a href="http://houserank.stanford.edu">House Rank</a></p>

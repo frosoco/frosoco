@@ -154,12 +154,30 @@ class Home extends CI_Controller {
 	}
 
 
+	/**
+	 * 
+	 *
+	 * URL: /home/preassignment
+	 */
 	public function preassignment()
 	{
 		$this->template->title = 'Preassignment';
 		$this->template->content->view('static/preassignment');
 		$this->template->publish();
 	}
+
+	/**
+	 * 
+	 *
+	 * URL: /home/admitweekend
+	 */
+	public function admitweekend()
+	{
+		$this->template->title = 'Admit Weekened';
+		$this->template->content->view('static/admit_weekend');
+		$this->template->publish();
+	}
+
 
 
 	public function faq()
