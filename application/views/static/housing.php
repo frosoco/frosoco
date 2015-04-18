@@ -1,7 +1,7 @@
 <div class="page-header">
 	<h1>Housing</h1>
 </div>
-<div class=" section">
+<div class="section">
 	<div class="panel housing">
 		<p>
 			FroSoCo is located on the west side of campus, occupying two adjoining houses, Adams and Schiff, in Governor's Corner. 
@@ -11,9 +11,10 @@
 		 </p>
 
 		<p>
-			FroSoCo is close to the Engineering Quad, where engineering classes tend to be held. The distance from FroSoCo to Main Quad, where social science and humanities classes tend to be held, is about the same distance as from
-			We also have easy-acces to the newly built Arrillaga Outdoors Recreation Center with its gym, swimming pool, and rock-climbing room - it's just across the street. 
-			the east campus dorms to the Engineering Quad. 
+			FroSoCo is close to the Engineering Quad, where engineering classes tend to be held. 
+			The distance from FroSoCo to Main Quad, where social science and humanities classes tend
+			 to be held, is about the same distance as from the east campus dorms to the Engineering Quad. We are also just across the street from 
+			 the new Arrillaga Outdoors Recreation Center with its gym, swimming pool, and rock-climbing room.  
 			And while we are further from the bookstore and post office, we are right by the golf course, tennis courts, the historic Stanford barn, and the scenic surroundings of Lake Lagunita with easy access to the trails leading up to the gorgeous views of the Bay from Stanford's "Dish".
 			Come enjoy the quiet calm and beautiful open spaces unique to west campus.
 		</p>

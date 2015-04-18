@@ -68,7 +68,7 @@
 	</div>
 
 	<div class="section faq">
-		<h3>My door creaks/my light's burnt out/I have a insect problem/etc.</h3>
+		<h3>My door creaks/my light's burnt out/I have an insect problem/etc.</h3>
 		<p>
 			For regular maintenance requests, please use <a href="//fixit.stanford.edu">fixit</a>.
 			They usually respond within a day or two, depending on the severity of the issue.

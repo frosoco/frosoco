@@ -13,7 +13,7 @@
     <p>For more information, go to <a href="https://web.stanford.edu/dept/rde/cgi-bin/drupal/dining/ricker-dining">Ricker's website here.</a></p>
 </div>
  
-<div class="panel">
+<div id="sidebar" class="dining">
     <h3>Dining Hours</h3>
     <p><b>Monday - Thursday:</b></p>
     <p>Continental Breakfast: 7:30am - 9:30am</p>

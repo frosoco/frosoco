@@ -1,18 +1,7 @@
-
+  
 <div class="panel home "> 
   <div class="section">
     <h1 class="title">Welcome to FroSoCo</h1>
-
-	<div class="alert alert-info">
-    Welcome ProFos! <a href="/home/admitweekend/">Click for FroSoCo Admit Weekend Events!</a>
-    We'll see you at the BBQ!
-  </div>
-
-    <? if ($this->session->userdata('id')) { // if authorized ?>
-      <!-- notif-->
-      <!-- <div class="alert alert-info">See our</div>-->
-    <? } ?>
-
     <p>
      The Freshman-Sophomore College has the vibrant residential intellectual community of a small, elite, liberal-arts college while providing enhanced access to the academic resources of one of the world's premier research universities.
    </p>

@@ -168,6 +168,7 @@ img#header-logo {
 .menu .nav > li .submenu  > li {
   padding: 5px 2px;
   float: left;
+  width: 100%;
 }
 .menu .nav > li .submenu  > li  > a {
   text-decoration: none;
@@ -219,6 +220,11 @@ img#header-logo {
 .content .housing {
   width: 50%;
 }
+
+.content .dining { 
+  width: 60%;
+}
+
 .content .section h2 {
   padding-top: 10px;
 }
@@ -318,7 +324,7 @@ hr.v4 {
   min-height: 1px;
   margin-left: 10px;
   margin-right: 0px;
-  margin-top: 30px;
+  /*margin-top: 30px;*/
   float: right;
   display: block;
 }
@@ -344,6 +350,11 @@ hr.v4 {
 #sidebar .graphic {
   font-family: 'Crimson Text', serif;
 }
+
+#sidebar.dining { 
+  width: 30%;
+}
+
 
 .people ul {
   list-style-type: none;
@@ -405,6 +416,47 @@ hr.v4 {
     margin-top: 0;
   }
 
+  .sosem .bio-desc {
+    float: right;
+    display: inline-block;
+    width: 60%; 
+  }
+  
+  .sosem .bio-pic {
+    margin-top: 0;
+    display: inline-block;
+    width: 35%;
+  }
+
+ #rubiks.sosem .bio-desc {
+  width: 70%; }
+  
+  #rubiks.sosem .bio-pic {
+    width: 25%;
+  }
+
+   #laid.sosem .bio-desc {
+  width: 70%; }
+  
+  #laid.sosem .bio-pic {
+    width: 25%;
+  }
+
+ #humans.sosem .bio-desc {
+  width: 40%; }
+  
+  #humans.sosem .bio-pic {
+    width: 55%;
+  }
+
+  #humans.sosem .bio-pic img.left {
+    width: 55%;
+  }
+
+  #humans.sosem .bio-pic img.right {
+    width: 40%;
+  }
+
 #user-search {
   margin-left: 8px;
   width: 90%; }
@@ -420,10 +472,6 @@ hr.v4 {
     display: inline-block;
     vertical-align: -10%;
     margin: 0 2px 0 5px; }
-
-.dining { 
-  width: 65%;
-}
 
 .page-header {
   padding-left: 14px;
@@ -490,8 +538,13 @@ div.faq {
     margin: 1.8% 0.8% 1.8% 1%;
     padding: 1.4%;
     height: 80%; 
-      margin-top: 0;
+    margin-top: 0;
     padding-top: 0;
+  }
+
+  .panel .panel {
+    padding-left: 0;
+    margin-left: 0;
   }
   .content .panel img {
       //width: 100%; } 
