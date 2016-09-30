@@ -13,15 +13,14 @@
 			<? foreach ($users as $user) { ?>
 			<? $hall = $user->house[0] . strval($user->room)[0]; ?>
 			<div class="people-grid-person <? echo $hall ?>">
-				<img src="<? echo $user->getPhoto(); ?>" />
-				<!-- <a href="/users/view/<? echo $user->id; ?>"><img src="<? echo $user->getPhoto(); ?>" /></a> -->
+				<a href="/users/view/<? echo $user->id; ?>"><img src="<? echo $user->getPhoto(); ?>" /></a>
 				<div class="people-grid-info">
 					<? $display_name = '';
 					if ($user->isStaff())  {
 						$display_name = $user->getName() . ' (' . $user->title . ')';
 					} else {
 						$display_name = $user->getName();
-					} 
+					}
 					?>
 					<div class="people-grid-name"><? echo $display_name; ?></div>
 					<div class="people-grid-email"><? echo $user->getEmail(); ?></div>

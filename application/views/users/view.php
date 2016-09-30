@@ -4,7 +4,7 @@
 <div class="panel view-information">
 	<div class="view-information-person">
 		<div class="view-information-person-image view-information-person-image-large">
-			<img class="img-rounded" src="<? echo $user->getPhoto(); ?>" /> 
+			<img class="img-rounded" src="<? echo $user->getPhoto(); ?>" />
 		</div>
 		<div class="view-information-person-block">
 			<div class="view-information-person-name"><? echo $user->getName(); ?></div>
@@ -16,8 +16,7 @@
 	</div>
 </div>
 
-
-<!-- <div class="container">
+<div class="container">
 <div class="profile">
 <div class="row">
 	<div class="col-md-3">
@@ -48,6 +47,5 @@
 </div>
 <script>
 	$('#profile-picture').click(function() {
-
 	});
-</script> -->
+</script>

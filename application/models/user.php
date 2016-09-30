@@ -1,7 +1,7 @@
 <?
 
 class User extends DataMapper {
-	
+
 	var $has_many = array('event', 'upload', 'signup', 'post', 'quote', 'item',
 		'course' => array(
 			'class' => 'course',
@@ -43,7 +43,11 @@ class User extends DataMapper {
 	}
 
 	function isStaff() {
-		return strstr($this->role, 'staff');
+		// testing
+		if (strstr($this->role, 'staff')) {
+			return strstr($this->role, 'staff');
+		}
+
 	}
 
 }

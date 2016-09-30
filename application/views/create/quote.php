@@ -17,19 +17,20 @@
 	</div>
 	</form>
 </div>
- 
-<!-- <div class="panel create-preview">
+
+<!-- Commented out due to formatting issues.
+<div class="panel create-preview">
 	<div class="create-preview-title">Preview</div>
 	<div id="create-preview" class="create-preview-body"> </div>
-</div>  -->
+</div>
 <script>
-	// function Editor(input, preview) {
-	// 	this.update = function() {
-	// 		preview.innerHTML = markdown.toHTML(input.value);
-	// 	};
-	// 	input.editor = this;
-	// 	this.update();
-	// }
-	// var $ = function(id) { return document.getElementById(id); };
-	// new Editor($("create-body"), $("create-preview"));
-</script>
+	function Editor(input, preview) {
+	 	this.update = function() {
+	 		preview.innerHTML = markdown.toHTML(input.value);
+	 	};
+	 	input.editor = this;
+	 	this.update();
+	}
+	 var $ = function(id) { return document.getElementById(id); };
+	 new Editor($("create-body"), $("create-preview"));
+</script>-->

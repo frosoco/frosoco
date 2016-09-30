@@ -34,36 +34,31 @@
 	</ul>
 	<h3>Are you ready to apply for pre-assignment?</h3>
 	<p>You can apply for pre-assignment by submitting an application through the SAAS  website at <a href="http://saas.stanford.edu">http://saas.stanford.edu/</a></p>
-	<p>More Info: <a href="http://studentaffairs.stanford.edu/resed/profiles/theme/how-to-apply">http://studentaffairs.stanford.edu/resed/profiles/theme/how-to-apply</a></p>
-	<p>The deadline for submitting an application for pre-assignment is 1:00 p.m. on April 9, 2015.</p>
+	<p>More Info: <a href="https://resed.stanford.edu/house-profiles/preassignment-process">https://resed.stanford.edu/house-profiles/preassignment-process</a></p>
+	<p>The deadline for submitting an application for pre-assignment is 1:00 p.m. on April 7, 2016.</p>
 	<h3>Housing at-a-glance</h3>
 	<p>Undergraduate students at Stanford University are guaranteed 4 years of housing on campus. All freshmen are automatically assigned to a house. Upper-class undergraduate students (sophomores, juniors, and seniors) may receive on-campus housing by entering the annual Housing Draw, which takes place every spring. Applications for housing are submitted online through Axess. To assign undergraduate students to campus residences, Housing Assignments employs a process that includes three application rounds in the academic year</p>
 	<h3>The Draw</h3>
 	<p>This takes place annually in May. Students applying for housing for any quarter in the next academic year must apply by the Draw deadline. Students who participate in the Draw will receive a first-round (random) Draw number, and are therefore more likely to receive their preferred housing. Also, students have the option of participating in the Draw in groups of up to eight people.</p>
 	<h3>The Waitlist</h3>
 	<p>This occurs each quarter. Single (that is not in a group) undergraduate students who are not assigned housing during the Draw, participate in the waitlist round. Students who participate in the Draw but do not receive their first housing option may request reassignment during this round.</p>
-	<h3>Walk-ins</h3>gj
+	<h3>Walk-ins</h3>
 	<p>Walk-ins take place after each Waitlist round and for the first 5 weeks of each quarter. This is an assignment period in which remaining vacancies in University housing are available to unassigned single students.</p>
 	<h3>Freshman-Sophomore College Housing Process Timeline</h3>
-	<p>Pre-assignment applications available on SAAS on Wednesday March 31st, 2015: <a href="http://saas.stanford.edu/">http://saas.stanford.edu/</a></p>
-	<p>Open House schedules will be available on the Pre-assignment section of the ResEd website: <a href="http://studentaffairs.stanford.edu/resed/profiles/theme/how-to-apply">http://studentaffairs.stanford.edu/resed/profiles/theme/how-to-apply</a></p>
-	<p><strong>FROSOCO'S PREASSIGNMENT OPEN HOUSE BBQ IS ON Friday, April 3, 2015 (5PM in Sterling Quad Courtyard)</strong></p>
-	<p>Pre-assignment applications due at 1:00 p.m. on April 9, 2015:  <a href="http://saas.stanford.edu/">http://saas.stanford.edu/</a></p>
-	<p>Check for Pre-assignment offer on SAAS at <a href="http://saas.stanford.edu/">http://saas.stanford.edu//</a> April 29, 2014 after 2p.m. If you have been pre-assigned, you will be exempted from The Draw &amp; automatically placed into the house to which you have applied. Again, once accepted, you CANNOT decline an offer.</p>
+	<p>Pre-assignment applications available on SAAS on Tuesday March 29th, 2016: <a href="http://saas.stanford.edu/">http://saas.stanford.edu/</a></p>
+	<p><strong>FROSOCO'S PRE-ASSIGNMENT IN-HOUSE EVENT IS ON Tuesday, April 5, 2016 (8:00 p.m. - 9:15 p.m. at the Dean's Residence)</strong></p>
+	<p>Pre-assignment applications due at 1:00 p.m. on April 7, 2016:  <a href="http://saas.stanford.edu/">http://saas.stanford.edu/</a></p>
+	<p>If you have been pre-assigned, you will be exempted from The Draw &amp; automatically placed into the house to which you have applied. Again, once accepted, you CANNOT decline an offer.</p>
 </div>
 <div id="sidebar">
-	<h3>Useful links for information about pre-assignment and housing</h3>
-	<p><a href="http://studentaffairs.stanford.edu/resed/profiles/theme/how-to-apply">Pre-Assignment Website</a></p>
-	<p><a href="http://studentaffairs.stanford.edu/resed/profiles/theme/list">Review Theme House Requirements</a></p>
-	<p><a href="http://studentaffairs.stanford.edu/resed/profiles/regular/govco/frosoco">FroSoCo's Information Page</a></p>
-	<p><a href="http://saas.stanford.edu/">Pre-Assignment Application</a></p>
-	<p><a href="http://www.stanford.edu/dept/rde/cgi-bin/drupal/housing/">Student Housing</a></p>
-	<p><a href="http://www.stanford.edu/dept/rde/cgi-bin/drupal/housing/charts/draw-stats-2012">Undergraduate Housing Residence Chart 2011-12</a></p>
-	<p><a href="http://houserank.stanford.edu">House Rank</a></p>
-	<p>For questions about pre-assignment to FroSoCo, contact Mona Kitasoe (kitasoe@stanford.edu). You can also speak with the staff and/or CDs if you have questions.</p>
+	<h3>Questions?</h3>
+	<p>For questions about pre-assignment to FroSoCo, contact pre-assignment@stanford.edu. You can also speak with the staff and/or CDs if you have questions.</p>
 	<div class="alert alert-info">
-		<p><strong>Downloads</strong></p>
-		<p><a href="/assets/documents/2015-16FSCPreassignmentFAQs.pdf">2015-16 FSC Preassignment FAQs</a></p>
-		<p><a href="/assets/documents/2015-16PreAssignInfo.pdf">2015-16 FSC Preassignment Info</a></p>
+		<p><strong>Useful Links</strong></p>
+		<p><a href="https://resed.stanford.edu/house-profiles/preassignment-process">Pre-Assignment Website</a></p>
+		<p><a href="https://resed.stanford.edu/house-profiles/theme-houses/special-programs/freshman-sophomore-college-frosoco">Review Theme House Requirements</a></p>
+		<p><a href="http://saas.stanford.edu/">Pre-Assignment Application</a></p>
+		<p><a href="http://www.stanford.edu/dept/rde/cgi-bin/drupal/housing/">Student Housing</a></p>
+
 	</div>
 </div>

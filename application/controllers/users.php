@@ -3,13 +3,13 @@
 class Users extends CI_Controller {
 
 	/**
-	 * Main route for events page
+	 * Main route for users page
 	 *
 	 * Route: /users
 	 */
-	public function index() 
+	public function index()
 	{
-		
+
 		if (!$this->authorized()) {
 			header('Location: /auth/login');
 		}
@@ -21,7 +21,7 @@ class Users extends CI_Controller {
 		$users->get();
 		$data['users'] = $users;
 
-        $this->template->title = 'Users';
+    $this->template->title = 'Users';
 		$this->template->javascript->add('assets/js/isotope.min.js');
 	 	$this->template->content->view('users/index', $data);
 
@@ -54,7 +54,7 @@ class Users extends CI_Controller {
 	}
 
 	/**
-	 * Edit a user
+	 * Edit a user -- deprecated; must edit directly through database
 	 *
 	 * Route: /users/edit/{id}
 	 */
@@ -87,9 +87,12 @@ class Users extends CI_Controller {
 	public function flashcards()
 	{
 
+		if (!$this->authorized()) {
+			header('Location: /auth/login');
+		}
 		$user = new User();
-		$user->where('role !=', 'staff');
-		$user->where('role !=', 'seniorstaff');
+		//$user->where('role !=', 'staff');
+		//$user->where('role !=', 'seniorstaff');
 		$user->get();
 
 		$data['people'] = $user;
@@ -106,24 +109,24 @@ class Users extends CI_Controller {
 	 */
 	public function upload_profile()
 	{
-		
+
 		// Set the upload path for the profile pictures
 		$config['upload_path'] = './uploads/profiles';
 		$config['allowed_types'] = 'gif|jpg|jpeg|png';
 		$config['file_name'] = uniqid() . '.jpg';
 		$this->upload->initialize($config);
-		
+
 		// Check to see if it is an upload
-		if (!$this->upload->do_upload()) 
+		if (!$this->upload->do_upload())
 		{
 			echo $this->upload->display_errors();
 		}
 
-		else 
+		else
 		{
-			
+
 			$data = $this->upload->data();
-			
+
 			$upload = new Upload();
 			$upload->url = '/uploads/profiles/' . $data['file_name'];
 			$upload->user_id = $this->input->post('userid');

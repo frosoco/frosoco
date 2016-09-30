@@ -4,7 +4,7 @@
 class Home extends CI_Controller {
 
 	/**
-	 * Index page for this controller. 
+	 * Index page for this controller.
 	 *
 	 * URL: /
 	 */
@@ -12,7 +12,7 @@ class Home extends CI_Controller {
 	{
 		$this->template->title = 'Home';
 		$this->template->content->view('static/home');
-		$this->template->publish();	
+		$this->template->publish();
 	}
 
 	// page with calendar of events
@@ -155,7 +155,7 @@ class Home extends CI_Controller {
 
 
 	/**
-	 * 
+	 *
 	 *
 	 * URL: /home/preassignment
 	 */
@@ -167,7 +167,7 @@ class Home extends CI_Controller {
 	}
 
 	/**
-	 * 
+	 *
 	 *
 	 * URL: /home/admitweekend
 	 */
@@ -204,7 +204,23 @@ class Home extends CI_Controller {
 		$this->template->content->view('static/ihd');
 		$this->template->publish();
 	}
-	
+
+	/**
+	 * Info on 2015-2016 dorm policies
+	 *
+	 * URL: /home/policies
+	 */
+	public function policies()
+	{
+		/*// authenticate first
+		if (!$this->authorized()) {
+			header('Location: /auth/login');
+		}*/
+
+		$this->template->title = 'Dorm Policies';
+		$this->template->content->view('static/policies');
+		$this->template->publish();
+	}
 
 	/**
 	 * Checks to see if a user is authorized based on session storage

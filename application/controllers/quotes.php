@@ -11,13 +11,15 @@ class Quotes extends CI_Controller {
 	public function index() {
 
 		$quote = new Quote();
+		// hacky way to view most recent quotes first (prefer timestamps for future)
+		$quote->order_by("id", "desc");
 		$data['quotes'] = $quote->get();
 
 		// Create the view
 		$this->template->title = 'Quotes';
 		$this->template->javascript->add('assets/js/masonry.min.js');
 		$this->template->content->view('quotes/index', $data);
-		$this->template->publish();	
+		$this->template->publish();
 
 	}
 

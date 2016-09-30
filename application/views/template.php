@@ -4,7 +4,7 @@
 		<title><?php echo $this->template->title->default("FroSoCo"); ?> | FroSoCo</title>
 
 		<!-- css -->
-		<link href='https://fonts.googleapis.com/css?family=Lato:400,900|Source+Sans+Pro:300|Crimson+Text:400' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Lato:400,900|Source+Sans+Pro:300,700|Crimson+Text:400' rel='stylesheet' type='text/css'>
 		<link href="/assets/css/bootstrap.css" type="text/css" rel="stylesheet"/>
 		<link href="/assets/css/fsc.css" type="text/css" rel="stylesheet"/>
 		<?php echo $this->template->stylesheet; ?>
@@ -25,8 +25,8 @@
 				$user = new User($this->session->userdata('id'));
 			} ?>
 
-			<div id="header"> 
-				<a href="/"><img src="/assets/images/flat_logo_filled.png" id="header-logo"/></a> 
+			<div id="header">
+				<a href="/"><img src="/assets/images/flat_logo_filled.png" id="header-logo"/></a>
 				<div class='menu'>
 					<ul class='nav'>
 						<li ><a href="#" >Discover</a>
@@ -80,6 +80,9 @@
 
 						<li ><a href="#" >Do</a>
 							<ul class='submenu'>
+                                                                <li>
+                                                                        <a href="/assets/documents/FSC_Roommate_Contract_1516.pdf">Roommate Contracts</a>
+</li>
 								<li>
 									<a href="/home/events/" >Events</a>
 								</li>
@@ -89,13 +92,19 @@
 
 								<? if ($this->session->userdata('id')) { ?>
 									<li>
-										<a href="https://docs.google.com/a/stanford.edu/forms/d/1fvJt8WsocJ0_vD6hUh3uFmUYw-Jlbwktvj4aTJY6sHQ/viewform" >
+										<a href="https://docs.google.com/a/stanford.edu/forms/d/1dWGlHoRx7X01yEkmsPW21_FQwPOLkVR-ZIvbCiiSkHQ/viewform" >
 											Kudos
 										</a>
 									</li>
 
 									<li>
 										<a href='/quotes'>Quotes</a>
+									</li>
+
+									<li>
+										<a href='https://docs.google.com/forms/d/1A48VQOuA1sHLq-kXgyuWDgdmWddfe9QmcyDWRpw1e5k/viewform'>
+											Tip Box
+										</a>
 									</li>
 								<? }?>
 							</ul>
@@ -104,6 +113,9 @@
 						<li ><a>Help</a>
 							<ul class='submenu'>
 								<li>
+									<a href='/home/preassignment' >Preassign</a>
+								</li>
+								<li>
 									<a href='/home/academic' >Academic Resources</a>
 								</li>
 
@@ -111,11 +123,11 @@
 									<a href='/home/hfd' >Housing/Maintenance</a>
 								</li>
 								<li>
-									<a href='/home/preassignment' >Preassignment</a>
+									<a href='/home/policies' >Dorm Policies</a>
 								</li>
 							</ul>
 						</li><!--Help-->
-					</ul><!--nav--> 
+					</ul><!--nav-->
 
 					<div class="login">
 						<? if ($this->session->userdata('id')) { ?>

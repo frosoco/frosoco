@@ -1,11 +1,9 @@
 <div class="container">
 	<div class="flashcards">
-<? foreach ($people as $person) { ?> 
+<? foreach ($people as $person) { ?>
 <div class="flashcard-card">
-	<div class="flashcard-side">
-		<img src="<? echo $person->getPhoto(); ?>" />
-		<div class="flashcard-name"><? echo $person->getName(); ?></div>
-	</div>
+	<img src="<? echo $person->getPhoto(); ?>" />
+	<div class="flashcard-name"><? echo $person->getName(); ?></div>
 </div>
 <? } ?>
 </div>

@@ -1,4 +1,4 @@
-/* This stylesheet is a mashup between the fsc stylesheets from 2012 and 2013, 
+/* This stylesheet is a mashup between the fsc stylesheets from 2012 and 2013,
   with some modifications and additions thrown in.
     Apologies in advance.
 
@@ -40,12 +40,12 @@ body {
 }
 input[type="text"] {
   min-height: 24px;
-}  
-.menu ul 
+}
+.menu ul
 {
   -webkit-padding-start: 0;
 }
- 
+
 #outer {
   z-index: -2;
 }
@@ -212,7 +212,7 @@ img#header-logo {
 
 .login span {
   margin-right: 25px;
-} 
+}
 .content .home {
   width: 55%;
   float: left;
@@ -221,7 +221,7 @@ img#header-logo {
   width: 50%;
 }
 
-.content .dining { 
+.content .dining {
   width: 60%;
 }
 
@@ -351,7 +351,7 @@ hr.v4 {
   font-family: 'Crimson Text', serif;
 }
 
-#sidebar.dining { 
+#sidebar.dining {
   width: 30%;
 }
 
@@ -383,6 +383,14 @@ hr.v4 {
 .people ul:after {
   clear: both;
 }
+
+.row-eq-height {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+}
 .photo {
   width:300px;
   height:300px;
@@ -411,7 +419,7 @@ hr.v4 {
       width: 40%;
      // margin-top: 40px;
   }
- 
+
  .bio h2 {
     margin-top: 0;
   }
@@ -419,9 +427,9 @@ hr.v4 {
   .sosem .bio-desc {
     float: right;
     display: inline-block;
-    width: 60%; 
+    width: 60%;
   }
-  
+
   .sosem .bio-pic {
     margin-top: 0;
     display: inline-block;
@@ -430,21 +438,21 @@ hr.v4 {
 
  #rubiks.sosem .bio-desc {
   width: 70%; }
-  
+
   #rubiks.sosem .bio-pic {
     width: 25%;
   }
 
    #laid.sosem .bio-desc {
   width: 70%; }
-  
+
   #laid.sosem .bio-pic {
     width: 25%;
   }
 
  #humans.sosem .bio-desc {
   width: 40%; }
-  
+
   #humans.sosem .bio-pic {
     width: 55%;
   }
@@ -537,7 +545,7 @@ div.faq {
     box-shadow: none;
     margin: 1.8% 0.8% 1.8% 1%;
     padding: 1.4%;
-    height: 80%; 
+    height: 80%;
     margin-top: 0;
     padding-top: 0;
   }
@@ -547,7 +555,7 @@ div.faq {
     margin-left: 0;
   }
   .content .panel img {
-      //width: 100%; } 
+      //width: 100%; }
 
   .content .panel-users {
     width: 94%;
@@ -649,12 +657,12 @@ div.faq {
   .content .create-editor .create-quote {
     margin-top: 2%; }
     .content .create-editor .create-quote textarea {
-      font-size: 1.4em; 
+      font-size: 1.4em;
     }
   .content .create-editor .create-author input[type="text"] {
     text-align: right;
     font-size: 1em;
-    margin: 10px 0px 20px 0px; 
+    margin: 10px 0px 20px 0px;
   }
   .content .create-editor textarea {
     width: 100%;
@@ -679,17 +687,16 @@ div.faq {
       .content .flashcards .flashcard-card .flashcard-name {
         display: none;
         position: absolute; }
-
   .create-btn {
     float: right;
-    display: block; 
-    height: 34px; 
+    display: block;
+    height: 34px;
     color: rgb(97, 0, 0);
   }
 
   .create-actions {
     height: 34px;
-    padding: 10px; 
+    padding: 10px;
     margin: 0 10px;
   }
 
@@ -732,3 +739,20 @@ div.faq {
         font-weight: 500; }
 
 // end Roger's stuff
+
+// 15-16 (Liezl's CSS)
+.people {
+  margin-top: 20px; }
+  .people .people-grid {
+    margin-top: 20px; }
+    .people .people-grid .people-grid-person {
+      width: 193px;
+      margin: 0 8px;
+      height: 290px; }
+      .people .people-grid .people-grid-person img {
+        width: 100%; }
+      .people .people-grid .people-grid-person .people-grid-info {
+        padding: 3px 5px; }
+      .people .people-grid .people-grid-person .people-grid-lastname {
+        font-weight: 500; }
+
